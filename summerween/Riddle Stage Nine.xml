@@ -1,0 +1,4 @@
+<Response>
+<Say voice="Polly.Joey">About an hour now!</Say>
+<Play>https://benlilley.neocities.org/laugh.mp3</Play>
+</Response>

@@ -1,0 +1,1 @@
+This is a Jack O' Lantern. Find the amount room he takes up but added together.
