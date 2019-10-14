@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Fishers Enigma</title>
 <meta charset="UTF-8">
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
@@ -9,164 +10,211 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
+<style media="screen">
+  .main-logo{
+    align: center;
+    padding-top: 4%;
+    position: relative;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+  }
+
+.fade-in{
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 
+  @keyframes fadeInOpacity {
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+  }
 
-input{
-   text-align:center;
+  /* The sidebar menu */
+  .sidenav {
+    background-color: rgb(50,0,100,0.9);
+    position: fixed;
+    top: 0px;
+    left:-440px;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    z-index: 100;
+    font-family: verdana, sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    padding: 15px;
+    transition: all 0.3s;
+  }
 
+  .sidenav.active{
+  left:0px;
+  }
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  .close-icon
+  {
+    height: 60px;
+  }
+  .ham-a.active
+  {
+    display: none;
+  }
+  .ham-a:hover
+  {
+    background: white;
+    cursor: pointer;
+  }
+  .ham
+  {
+    position: absolute;
+    margin: auto;
+    height: 65px;
+    width: 65px;
+    top: 10px;
+    left: 10px;
+  }
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.shadowfilter {
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+     filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+   }
+   .button {
+  background-color: darkblue; /* Green */
+  border-radius: 10px;
+  border-color:darkblue;
+  border-style: solid;
   color: white;
   padding: 10px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  cursor: pointer;
 }
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.passInput{
+  border-color: darkblue;
+  border-radius: 5px;
+  border-style: solid;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('https://grantcardonetv.com/wp-content/uploads/gctv-3-doors.jpg');
-  min-height: 200%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-width:1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 600px;
-  }
+.input-area{
+  padding-top: 6%;
+  align: center;
 }
 </style>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>ABOUT</a>
-    <a href="https://www.dropbox.com/s/dg00ldmlwyer35r/word%20search.docx?dl=0" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> STAGE ONE</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> JOIN</a>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="https://www.dropbox.com/s/dg00ldmlwyer35r/word%20search.docx?dl=0" onclick="toggleFunction()">STAGE ONE</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">SIGN UP</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;" id = "title">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">FISHERS <span class="w3-hide-small">ENIGMA:</span></span> <br>
-    <div align = "center" id = "mh">
-    <span align = "center" class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Monty <span class="w3-hide-small">Hall</span></span>
-  </div>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">Join Us</h3>
-  <p class="w3-center"><em>If you dare...</em></p>
-  <p>Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography, and other involved elements. The players will traverse through 30 unique stages, each with different challenges and puzzles. Whichever team/player finishes stage 25 first recieves 100 dollars. Join us for this summerween based event that will run from July 14th to August 3rd.</p>
-  <div class="w3-row">
+</head>
 
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
+<body style = "background-color:#1B003F">
+<p class = "main-logo" align = "center">
+<img src="logos/logo(key).png" alt="" class = "main-logo">
+</p>
 
-    </div>
-  </div>
-<p align = "center">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTv-BopeyVQqNXTE5e2tIruCqASLD8w9y-nx6E4y8qDXOrmmA9Cx4dn46P84HaRmyJCZXBc9ehK2AlO/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="300" height="500" ></iframe>
-  </p>
-  <br>
+<div class="input-area">
+  <p align = "center">
+
+<input type="text" name="Team ID" value="" align = "center" placeholder = "Team ID" id = "userpas" class = "passInput">
 <br>
 <br>
-<br>
-<br>
-<br>
-<h3 align = "center">
-  Enter Stage Password
-  </h3>
-<br>
-<h6 align = "center">
-  When the event has started!
-</h6>
-<br>
-<br>
-<p align = "center">
-<input type="text" name="Stage Password" value="" align = "center" placeholder = "Stage Password" id = "userpas">
+<input type="text" name="Stage Password" value="" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
 <br>
 <br>
 <button class = "button" id = "enter" onclick = "pasCheck()">
-  Enter
+  Submit
   </button>
 </p>
 </div>
 
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">SIGN UP</h3>
+<a id = "ham-a" class = "ham-a" role="button" onclick="showSidebar()">
+  <img src="images/Hamburger_icon.png" class="ham" id = "ham-switch">
+</a>
+<!-- Side navigation -->
+<div class="sidenav">
 
-  <p class="w3-center"><em>Please do both!</em></p>
+  <img src="images/close-icon.png" class="close-icon">
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</div>
 
-<a href = "https://forms.gle/tP6TnAeSPYs7UX8b8">
-  <h3 align = "center">
-  Google Fourms
-  </h3>
-  </a>
+<!-- Page content -->
+<div class="main">
+  ...
+</div>
 
-<h3 align = "center">
-  REMIND CODE: fishenigma (Or text @fishenigma to 81010)
-</h3>
+</body>
 
 
-<!-- Footer -->
-  <script src ="https://benlilley.neocities.org/buttonpress.js">
-  </script>
-  <script src = "https://benlilley.neocities.org/buttonanimation.js">
-  </script>
+
 <script src = "js/index.js">
 
+</script>
+
+<script type = "text/javascript">
+function showSidebar()
+{
+  document.querySelector("#sidenav").classList.toggle('active');
+  document.querySelector("#ham-a").classList.toggle('active');
+
+}
 </script>
 
 </body>
