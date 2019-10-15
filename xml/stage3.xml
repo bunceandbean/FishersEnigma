@@ -3,4 +3,5 @@
 <Play digits= "31543667"></Play>
 <Record transcribe="true" maxLength = "10" playBeep = "false"/>
 <Play digits= "31543667"></Play>
+<Hangup/>
 </Response>
