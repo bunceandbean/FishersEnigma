@@ -30,31 +30,25 @@
   display:none;
 }
 
-.signups.active{
-  align: center;
-  padding-top: 4%;
-  position: relative;
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-}
 .abouts.active{
+  margin-top: 100px;
   align: center;
   padding-top: 4%;
   position: relative;
   opacity: 1;
+  font-size: 30px;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
 }
 .information.active{
+  margin-top: 100px;
   align: center;
   padding-top: 4%;
   position: relative;
   opacity: 1;
+  font-size: 30px;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -91,6 +85,7 @@
     font-size: 30px;
     margin: 0px;
     padding: 15px;
+    opacity: 0.85;
     transition: all 0.4s;
   }
 
@@ -242,7 +237,13 @@
   padding-top: 60px;
   align: center;
 }
-.testtest.active{
+.button.active{
+  display:none;
+}
+.passInput.active{
+  display:none;
+}
+.input-area.active{
   display:none;
 }
 </style>
@@ -314,7 +315,10 @@
 </script>
 
 <script type = "text/javascript">
-
+var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography," +
+"and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.\n"+
+ "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from October 25th to October 27th.";
+ var informationText = "Information will be released on October 16th!";
 window.addEventListener("resize", resizeLogo);
 
 function showSidebar()
@@ -337,17 +341,19 @@ function DisplayAbouts(){
 
   if(logoStatus == "main-logo"){
     document.querySelector(".main-logo").classList.toggle('active');
+    document.querySelector(".input-area").classList.toggle('active');
   }
   if(t != "abouts active"){
     document.querySelector(".abouts").classList.toggle('active');
   }
-  document.getElementById("abouts").textContent = "Another test";
+  document.getElementById("abouts").textContent = aboutText;
 }
 function DisplayLogo(){
 Reset();
 var logoStatus = document.getElementById("main-logo").className;
 if(logoStatus != "main-logo"){
   document.querySelector(".main-logo").classList.toggle('active');
+  document.querySelector(".input-area").classList.toggle('active');
 }
 }
 function DisplayInformation(){
@@ -356,11 +362,12 @@ function DisplayInformation(){
   var t = document.getElementById("information").className;
   if(logoStatus == "main-logo"){
     document.querySelector(".main-logo").classList.toggle('active');
+    document.querySelector(".input-area").classList.toggle('active');
   }
   if(t != "information active"){
     document.querySelector(".information").classList.toggle('active');
   }
-  document.getElementById("information").textContent = "A third test";
+  document.getElementById("information").textContent = informationText;
 }
 function resizeLogo(){
   var screenWidth = screen.width;
