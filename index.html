@@ -13,7 +13,7 @@
 <style media="screen">
   .main-logo{
     align: center;
-    padding-top: 4%;
+    padding-top: 40px;
     position: relative;
     opacity: 1;
     animation-name: fadeInOpacity;
@@ -145,6 +145,13 @@
   animation-timing-function: ease-in;
   animation-duration: 2s;
   cursor: pointer;
+  transition: .5s;
+}
+.button:hover{
+  background-color:#191970;
+  border-color:#191970;
+  transition: .5s;
+
 }
 .passInput{
   border-color: darkblue;
@@ -157,7 +164,7 @@
   animation-duration: 2s;
 }
 .input-area{
-  padding-top: 6%;
+  padding-top: 60px;
   align: center;
 }
 </style>
@@ -166,7 +173,7 @@
 
 <body style = "background-color:#1B003F">
 <p class = "main-logo" align = "center">
-<img src="logos/logo(key).png" alt="" class = "main-logo" height = "236.01" height = "485">
+<img src="logos/logo(key).png" alt="" class = "main-logo" height = "236.01" width = "420" id = "main-logo">
 </p>
 
 <div class="input-area">
@@ -209,12 +216,23 @@
 </script>
 
 <script type = "text/javascript">
+
+window.addEventListener("resize", resizeLogo);
+
 function showSidebar()
 {
   document.querySelector("#sidenav").classList.toggle('active');
   document.querySelector("#ham-a").classList.toggle('active');
 
 }
+function resizeLogo(){
+  var screenWidth = screen.width;
+  var screenHeight = screen.height;
+  var mainLogo = document.querySelector("#main-logo");
+  mainLogo.width = screenWidth*(420/1503);
+  mainLogo.height = screenHeight*(236.01/1003);
+}
+
 </script>
 
 </body>
