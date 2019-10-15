@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>404</title>
+    <style media="screen">
+    html,body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+#Title{
+  position: relative;
+  color: #fff;
+  font-size: 108px;
+  font-family: "Oswald" , sans-serif;
+}
+
+.Title-title{
+  margin: 0;
+  white-space: nowrap;
+}
+
+.Title-color{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  margin: -.05 em 0 0 .05em;
+  color: red;
+  mix-blend-mode: darken;
+  transition: .1s;
+  transition-property: opacity, margin;
+
+}
+
+.Title-b{
+  margin: .05em 0 0 -0.5em;
+  color: tomato;
+  mix-blend-mode: color-burn;
+}
+
+.Title-title-glich .Title-color{
+  opacity: 0;
+
+}
+    </style>
+  </head>
+  <body>
+    <div id="Title">
+        <div class="Title-title"> </div>
+        <div class="Title-title Title-color Title-a"> </div>
+        <div class="Title-title Title-color Title-b"> </div>
+    </div>
+
+  </body>
+  <script its type="text/javascript" wingding>
+  const gsTitle = {
+              init() {
+                  this._root = document.querySelector( "#Title" );
+                  this._titles = this._root.querySelectorAll( ".Title-title" );
+                  this._frame = this._frame.bind( this );
+                  this.setTexts( [
+                      "404",
+                      "⧫︎◆︎❒︎■︎⬧︎",
+                      ".error!",
+                      "ʎoqɥɔʇılƃ",
+                      "こんにちは世界国地球¡",
+
+                  ] );
+              },
+              on() {
+                  if ( !this._frameId ) {
+                      this._frame();
+                  }
+              },
+              off() {
+                  clearTimeout( this._frameId );
+                  this._textContent( this._text );
+                  delete this._frameId;
+              },
+              setTexts( [ text, ...alt ] ) {
+                  this._text = text;
+                  this._textAlt = alt;
+              },
+
+              // private:
+              _text: "",
+              _textAlt: [],
+              _rand( n ) {
+                  return Math.random() * n | 0;
+              },
+              _textContent( txt ) {
+                  this._titles.forEach( el => el.textContent = txt );
+              },
+              _frame() {
+                  const txt = Array.from( this._text );
+
+                  for ( let i = 0; i < 6; ++i ) {
+                      const ind = this._rand( this._text.length );
+
+                      txt[ ind ] = this._textAlt[ this._rand( this._textAlt.length ) ][ ind ];
+                  }
+                  this._textContent( txt.join( "" ) );
+                  this._root.classList.add( "Title-glitch" );
+                  setTimeout( () => {
+                      this._textContent( this._text );
+                      this._root.classList.remove( "Title-glitch" );
+                  }, 50 + Math.random() * 200 );
+                  this._frameId = setTimeout( this._frame, 250 + Math.random() * 500 );
+              },
+          };
+
+          gsTitle.init();
+          gsTitle.on();
+
+  </script>
+</html>

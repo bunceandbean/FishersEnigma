@@ -13,7 +13,7 @@
 <style media="screen">
   .main-logo{
     align: center;
-    padding-top: 40px;
+    padding-top: 60px;
     position: relative;
     opacity: 1;
     animation-name: fadeInOpacity;
@@ -22,6 +22,7 @@
     animation-duration: 1s;
     width: auto ;
   max-width: 100% ;
+  min-width: 25%%;
   height: auto ;
 
   }
@@ -85,6 +86,7 @@
 
   .sidenav.active{
   left:0px;
+
   }
   /* The navigation menu links */
   .sidenav p {
@@ -98,6 +100,7 @@
 
   /* When you mouse over the navigation links, change their color */
   .sidenav p:hover {
+    transition:0.5s;
     color: #f1f1f1;
     cursor: pointer;
   }
@@ -114,6 +117,8 @@
   .sidenav a:hover {
     color: #f1f1f1;
     cursor: pointer;
+    transition:0.5s;
+
   }
   /* Style page content */
   .main {
@@ -126,8 +131,10 @@
     height: 60px;
     left:135px;
     border-radius: 60px;
+    transition:0.5s;
   }
   .close-icon:hover{
+    transition:0.5s;
     background-color: #444;
     opacity: 0.7;
   }
@@ -143,6 +150,8 @@
     width:75px;
     border-radius: 80px;
     background-color: #555;
+    transition:0.5s;
+
   }
   .ham
   {
@@ -153,6 +162,8 @@
     top: 15px;
     left: 15px;
     cursor: pointer;
+    transition:0.5s;
+
   }
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
@@ -183,7 +194,7 @@
      filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
    }
    .button {
-  background-color: darkblue; /* Green */
+  background-color: blue; /* Green */
   border-radius: 10px;
   border-color:darkblue;
   border-style: solid;
@@ -233,6 +244,8 @@
 <p class = "main-logo" id = "main-logo" align = "center">
 <img src="logos/logo(key).png" alt="" class = "main-logo">
 </p>
+
+
 
 
 
@@ -360,6 +373,8 @@ function resizeLogo(){
   mainLogo.width = screenWidth*(420/1503);
   mainLogo.height = screenHeight*(236.01/1003);
 }
+
+
 
 </script>
 
