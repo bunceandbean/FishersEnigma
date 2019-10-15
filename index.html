@@ -291,6 +291,7 @@
   <p onclick = "DisplayLogo()">Home</p>
   <p onclick="DisplayAbouts()">About</p>
   <p onclick= "DisplayContact()">Contact</p>
+  <p onclick= "DisplayInformation()">Informatoin</p>
   <a href= "https://www.youtube.com/watch?v=oHg5SJYRHA0"> Answers?</a>
 </div>
 
@@ -358,6 +359,20 @@ var y = document.getElementById("main-logo").className;
 if(y != "main-logo"){
   document.querySelector(".main-logo").classList.toggle('active');
 }
+
+}
+function DisplayInformation(){
+  Reset();
+  var y = document.getElementById("main-logo").className;
+  var t = document.getElementById("information").className;
+  if(y == "main-logo"){
+    document.querySelector(".main-logo").classList.toggle('active');
+  }
+  if(t != "information active"){
+    document.querySelector(".information").classList.toggle('active');
+  }
+
+  document.getElementById("information").textContent = "A third test";
 
 }
 function resizeLogo(){
