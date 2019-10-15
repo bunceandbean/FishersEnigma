@@ -21,7 +21,30 @@
     animation-timing-function: ease-in;
     animation-duration: 1s;
   }
+.main-logo.active{
+  display:none;
+}
 
+.contacts.active{
+  align: center;
+  padding-top: 4%;
+  position: relative;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+.abouts.active{
+  align: center;
+  padding-top: 4%;
+  position: relative;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
 .fade-in{
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -41,38 +64,53 @@
 
   /* The sidebar menu */
   .sidenav {
-    background-color: rgb(50,0,100,0.9);
+    background-color: #801bb1;
     position: fixed;
     top: 0px;
     left:-440px;
     bottom: 0px;
     right: 0px;
-    width: 150px;
+    width: 200px;
     z-index: 100;
     font-family: verdana, sans-serif;
     font-size: 30px;
     margin: 0px;
     padding: 15px;
-    transition: all 0.3s;
+    transition: all 0.4s;
   }
 
   .sidenav.active{
   left:0px;
   }
   /* The navigation menu links */
+  .sidenav p {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    cursor: pointer;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .sidenav p:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+  }
   .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
+    cursor: pointer;
   }
 
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
     color: #f1f1f1;
+    cursor: pointer;
   }
-
   /* Style page content */
   .main {
     margin-left: 160px; /* Same as the width of the sidebar */
@@ -80,25 +118,37 @@
   }
   .close-icon
   {
+    position: absolute;
     height: 60px;
+    left:135px;
+    border-radius: 60px;
+  }
+  .close-icon:hover{
+    background-color: #444;
+    opacity: 0.7;
   }
   .ham-a.active
   {
     display: none;
   }
-  .ham-a:hover
-  {
-    background: white;
-    cursor: pointer;
+  .ham-a:hover{
+    position: fixed;
+    top:10px;
+    left:10px;
+    height:75px;
+    width:75px;
+    border-radius: 80px;
+    background-color: #555;
   }
   .ham
   {
-    position: absolute;
+    position: fixed;
     margin: auto;
     height: 65px;
     width: 65px;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
   }
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
@@ -160,14 +210,31 @@
   padding-top: 6%;
   align: center;
 }
+.testtest.active{
+  display:none;
+}
 </style>
 </head>
 
 
-<body style = "background-color:#1B003F">
-<p class = "main-logo" align = "center">
+<body style = "background-color:#9e1bD1">
+<p class = "main-logo" id = "main-logo" align = "center">
 <img src="logos/logo(key).png" alt="" class = "main-logo">
 </p>
+
+
+
+<div class = "contacts" id = "contacts" align = "center" >
+<p id = "contacts">
+</p>
+</div>
+
+<div class = "abouts" id= "abouts" align = "center" >
+<p id = "abouts">
+</p>
+</div>
+
+
 
 <div class="input-area">
   <p align = "center">
@@ -189,16 +256,15 @@
 </a>
 <!-- Side navigation -->
 <div class="sidenav">
-
+  <a class = "close-sidebar" role="button" onclick="showSidebar()">
   <img src="images/close-icon.png" class="close-icon">
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+</a>
+  <p onclick = "DisplayLogo()">Home</p>
+  <p onclick="DisplayAbouts()">About</p>
+  <p onclick= "DisplayContact()">Contact</p>
+  <a href= "https://www.youtube.com/watch?v=oHg5SJYRHA0"> Answers?</a>
 </div>
 
-<!-- Page content -->
-<div class="main">
-  ...
-</div>
 
 </body>
 
@@ -211,8 +277,65 @@
 <script type = "text/javascript">
 function showSidebar()
 {
-  document.querySelector("#sidenav").classList.toggle('active');
-  document.querySelector("#ham-a").classList.toggle('active');
+  document.querySelector(".sidenav").classList.toggle('active');
+  document.querySelector(".ham-a").classList.toggle('active');
+
+}
+
+function DisplayContact(){
+var x = document.getElementById("contacts").textContent;
+var t = document.getElementById("contacts").className;
+var y = document.getElementById("main-logo").className;
+var o = document.getElementById("abouts").className;
+var r = document.getElementById("abouts").textContent;
+
+if(y == "main-logo"){
+  document.querySelector(".main-logo").classList.toggle('active');
+}
+if(t != "contacts active"){
+  document.querySelector(".contacts").classList.toggle('active');
+}
+if(o == "abouts active"){
+    document.querySelector(".abouts").classList.toggle('active');
+    if(r.substring(0,2) == "An"){
+      document.getElementById("abouts").textContent = "";
+    }
+}
+
+document.getElementById("contacts").textContent = "This is a test";
+}
+
+function DisplayAbouts(){
+  var x = document.getElementById("abouts").textContent;
+  var t = document.getElementById("abouts").className;
+  var y = document.getElementById("main-logo").className;
+  var o = document.getElementById("contacts").className;
+  var r = document.getElementById("contacts").textContent;
+
+  if(y == "main-logo"){
+    document.querySelector(".main-logo").classList.toggle('active');
+  }
+  if(t != "abouts active"){
+    document.querySelector(".abouts").classList.toggle('active');
+  }
+  if(o == "contacts active"){
+    document.querySelector(".contacts").classList.toggle('active');
+    if(r.substring(0,2) == "Th"){
+      document.getElementById("contacts").textContent = "";
+    }
+  }
+
+  document.getElementById("abouts").textContent = "Another test";
+}
+function DisplayLogo(){
+  document.getElementById("abouts").textContent = "";
+  document.getElementById("abouts").className = "abouts";
+  document.getElementById("contacts").className = "contacts"
+  document.getElementById("contacts").textContent = "";
+var y = document.getElementById("main-logo").className;
+if(y != "main-logo"){
+  document.querySelector(".main-logo").classList.toggle('active');
+}
 
 }
 </script>
