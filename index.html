@@ -259,6 +259,10 @@
 </p>
 </div>
 
+<div class = "information" id= "information" align = "center" >
+<p id = "information">
+</p>
+</div>
 
 
 <div class="input-area">
@@ -309,13 +313,19 @@ function showSidebar()
   document.querySelector(".ham-a").classList.toggle('active');
 
 }
+function Reset(){
+  document.getElementById("abouts").textContent = "";
+  document.getElementById("abouts").className = "abouts";
+  document.getElementById("contacts").className = "contacts"
+  document.getElementById("contacts").textContent = "";
+  document.getElementById("information").className = "information";
+  document.getElementById("information").textContent = "";
+}
 
 function DisplayContact(){
-var x = document.getElementById("contacts").textContent;
-var t = document.getElementById("contacts").className;
+Reset();
 var y = document.getElementById("main-logo").className;
-var o = document.getElementById("abouts").className;
-var r = document.getElementById("abouts").textContent;
+var t = document.getElementById("contacts").className;
 
 if(y == "main-logo"){
   document.querySelector(".main-logo").classList.toggle('active');
@@ -323,22 +333,15 @@ if(y == "main-logo"){
 if(t != "contacts active"){
   document.querySelector(".contacts").classList.toggle('active');
 }
-if(o == "abouts active"){
-    document.querySelector(".abouts").classList.toggle('active');
-    if(r.substring(0,2) == "An"){
-      document.getElementById("abouts").textContent = "";
-    }
-}
 
 document.getElementById("contacts").textContent = "This is a test";
 }
 
 function DisplayAbouts(){
-  var x = document.getElementById("abouts").textContent;
+  Reset();
   var t = document.getElementById("abouts").className;
   var y = document.getElementById("main-logo").className;
-  var o = document.getElementById("contacts").className;
-  var r = document.getElementById("contacts").textContent;
+
 
   if(y == "main-logo"){
     document.querySelector(".main-logo").classList.toggle('active');
@@ -346,20 +349,11 @@ function DisplayAbouts(){
   if(t != "abouts active"){
     document.querySelector(".abouts").classList.toggle('active');
   }
-  if(o == "contacts active"){
-    document.querySelector(".contacts").classList.toggle('active');
-    if(r.substring(0,2) == "Th"){
-      document.getElementById("contacts").textContent = "";
-    }
-  }
 
   document.getElementById("abouts").textContent = "Another test";
 }
 function DisplayLogo(){
-  document.getElementById("abouts").textContent = "";
-  document.getElementById("abouts").className = "abouts";
-  document.getElementById("contacts").className = "contacts"
-  document.getElementById("contacts").textContent = "";
+Reset();
 var y = document.getElementById("main-logo").className;
 if(y != "main-logo"){
   document.querySelector(".main-logo").classList.toggle('active');
