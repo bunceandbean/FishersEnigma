@@ -1,6 +1,6 @@
 <Response>
 <Pause length="3"/>
 <Play digits= "31543667"></Play>
-<Record timeout="10" transcribe="true" />
+<Record timeout="10" transcribe="true" maxLength = "10" />
 <Play digits= "31543667"></Play>
 </Response>
