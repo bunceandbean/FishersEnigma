@@ -55,6 +55,7 @@
   animation-timing-function: ease-in;
   animation-duration: 1.5s;
 }
+
 .fade-in{
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -110,7 +111,9 @@
     display: block;
     cursor: pointer;
   }
-
+  /* .leaderboard{
+    align: center;
+  } */
   /* When you mouse over the navigation links, change their color */
   .sidenav p:hover {
     transition:0.5s;
@@ -166,6 +169,7 @@
     transition:0.5s;
 
   }
+
   .ham
   {
     position: fixed;
@@ -242,6 +246,12 @@
 .input-area.active{
   display:none;
 }
+.load-board{
+  padding-top:50%;
+}
+/* .leaderboard.active{
+  display:none;
+} */
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (orientation:portrait) {
   .sidenav.active {
@@ -300,9 +310,16 @@
 </p>
 </div>
 
+<div id= "leaderboard" align = "center">
+  <p id = "load-board"></p>
+  <iframe src="https://sheetsu.com/a/t/ccff5d413d07?embedded=true"
+width="50%" height="600" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
+style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe>
+</div>
 
-<div class="input-area">
-  <p align = "center">
+
+  <div class="input-area">
+    <p align = "center">
 
 <input type="text" name="Team ID" value="" align = "center" placeholder = "Team ID" id = "userpas" class = "passInput">
 <br>
@@ -327,6 +344,7 @@
   <p onclick = "DisplayLogo()">Home</p>
   <p onclick="DisplayAbouts()">About</p>
   <p onclick= "DisplayInformation()">Information</p>
+  <p onclick= "DisplayLeaderboard()">Leaderboard</p>
   <a href= "https://forms.gle/BdZYkEm8Uwp8Erb88">Sign Up</a>
 </div>
 
@@ -343,9 +361,12 @@
 var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography," +
 "and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.\n"+
  "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from October 25th to October 27th.";
- var informationText = "Information will be released on October 16th!";
+ var informationText = "For this Halloween's puzzle, Fishers Enigma: Puzzler's Dilemmas, contestants can group up in teams of 1-5 people. Each group will be issued a team id at the begining of the competition, which will be used to monitor progress and hints. Whenever you enter in the password for a stage or request a hint, be sure to input in your team id so your team can be be given credit. If you would like to participate in this puzzle, please be sure to fill out the google forum linked under the 'Sign Up' tab.";
+ var boardInnerHTML = "<iframe src='https://sheetsu.com/a/t/ccff5d413d07?embedded=true'  width='100%' height='600' frameBorder='0' style='background: transparent; border: 1px solid #dedede;'></iframe>"
+var loadingContent = "The leaderboard may take a moment to load..."
 
 window.addEventListener("resize", resizeLogo);
+
 
 function showSidebar()
 {
@@ -358,6 +379,9 @@ function Reset(){
   document.getElementById("abouts").className = "abouts";
   document.getElementById("information").className = "information";
   document.getElementById("information").textContent = "";
+  document.getElementById("leaderboard").className = "leaderboard";
+  document.getElementById("leaderboard-frame").style.display = "none";
+  document.getElementById("load-board").textContent = "";
   showSidebar();
 }
 
@@ -396,6 +420,21 @@ function DisplayInformation(){
   }
   document.getElementById("information").textContent = informationText;
 }
+function DisplayLeaderboard(){
+  Reset();
+  var logoStatus = document.getElementById("main-logo").className;
+  var t = document.getElementById("leaderboard").className;
+  if(logoStatus == "main-logo"){
+    document.querySelector(".main-logo").classList.toggle('active');
+    document.querySelector(".input-area").classList.toggle('active');
+  }
+  if(t != "leaderboard active"){
+    document.querySelector(".leaderboard").classList.toggle('leaderboard');
+  }
+  document.getElementById("leaderboard-frame").style.display = "inline";
+  document.getElementById("load-board").textContent = loadingContent;
+  document.getElementById("load-board").style.paddingTop = "400px";
+}
 function resizeLogo(){
   var screenWidth = screen.width;
   var screenHeight = screen.height;
@@ -404,7 +443,9 @@ function resizeLogo(){
   mainLogo.height = screenHeight*(236.01/1003);
 }
 
-
+function loadingOff(){
+  document.getElementById("load-board").style.display = "none";
+}
 
 </script>
 
