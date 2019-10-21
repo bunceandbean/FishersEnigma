@@ -1,5 +1,17 @@
+var teamID = {
+  "example":"the_three_dudes"
+}
+
+
+
+
+
+
+
+
 var button = document.querySelector("#enter");
 var pas = document.querySelector("#userpas");
+var id = document.querySelector("#idpas");
 var title = document.querySelector("#title");
 // Modal Image Gallery
 function onClick(element) {
@@ -212,8 +224,13 @@ function $rk$ ( str ) {
 
 function pasCheck(){
 var userPas = pas.value;
-userPas = userPas.toLowerCase();
-window.location.href = "./montyHall/" + $rk$(userPas);
+var idPas = id.value;
+if(idPas in teamID){
+  userPas = userPas.toLowerCase();
+  window.location.href = "./montyHall/" + $rk$(userPas);
+}else{
+  alert("Your Team ID does not exist. Please enter in a valid Team ID.")
+}
 }
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 
