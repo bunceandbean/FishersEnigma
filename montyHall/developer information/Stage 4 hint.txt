@@ -1,0 +1,6 @@
+Floor()
+Exponent
+addition
+2
+variables
+log()
