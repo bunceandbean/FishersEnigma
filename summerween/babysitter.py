@@ -3,8 +3,8 @@ import time
 
 # Your Account Sid and Auth Token from twilio.com/console
 # DANGER! This is insecure. See http://twil.io/secure
-account_sid = ''
-auth_token = ''
+account_sid = 'AC3388b4a385c22f14144522a8cc68f84b'
+auth_token = 'e26ce4fb7161c95da1a05382ee7a11a8'
 client = Client(account_sid, auth_token)
 
 
@@ -40,37 +40,38 @@ numlist = {
     "Riley":"+13176274005",
     "Mia":"+13175188236",
     "Dylan":"+13176403942",
-    "Ben":"+13174039904"
+    "Ben":"+13174100844"
 
 }
 b1 = "https://benlilley.neocities.org/babysitter1.xml"
 b2 = "https://benlilley.neocities.org/babysitter2.xml"
 b3 = "https://benlilley.neocities.org/babysitter3.xml"
+benphysics = "https://benlilley.neocities.org/benphysics.xml"
 for name in numlist:
-    if name == "Zayd":
+    if name == "Ben":
         call = client.calls.create(
                             method='GET',
                             send_digits='12345#',
                             # url="https://benlilley.neocities.org/runningrivers.xml",
-                            url=b1,
+                            url=benphysics,
                             to=numlist[name],
                             from_='+17542038932'
                         )
-        time.sleep(32)
-        call = client.calls.create(
-                            method='GET',
-                            send_digits='12345#',
-                            # url="https://benlilley.neocities.org/runningrivers.xml",
-                            url=b2,
-                            to=numlist[name],
-                            from_='+17542038932'
-                        )
-        time.sleep(32)
-        call = client.calls.create(
-                            method='GET',
-                            send_digits='12345#',
-                            # url="https://benlilley.neocities.org/runningrivers.xml",
-                            url=b3,
-                            to=numlist[name],
-                            from_='+17542038932'
-                        )
+        # time.sleep(32)
+        # call = client.calls.create(
+        #                     method='GET',
+        #                     send_digits='12345#',
+        #                     # url="https://benlilley.neocities.org/runningrivers.xml",
+        #                     url=b2,
+        #                     to=numlist[name],
+        #                     from_='+17542038932'
+        #                 )
+        # time.sleep(32)
+        # call = client.calls.create(
+        #                     method='GET',
+        #                     send_digits='12345#',
+        #                     # url="https://benlilley.neocities.org/runningrivers.xml",
+        #                     url=b3,
+        #                     to=numlist[name],
+        #                     from_='+17542038932'
+        #                 )
