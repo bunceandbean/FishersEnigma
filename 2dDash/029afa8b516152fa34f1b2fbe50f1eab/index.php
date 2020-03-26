@@ -62,6 +62,6 @@ if(isset($_POST["user"])){
   </body>
   <script type="text/javascript">
     console.log("Schläfli: {4.5} {2.25}");
-    console.log(<?php echo $user; ?>);
+    console.log(<?php echo ".$user."; ?>);
   </script>
 </html>
