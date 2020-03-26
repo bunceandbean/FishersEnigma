@@ -20,12 +20,10 @@ if($result = mysqli_query($link, $sql)){
             echo "<tr>";
                 echo "<td>" . $row['Team'] . "</td>";
                 echo "<td>" . $row['Stage'] . "</td>";
-
-
-                ///////////////////////////////////
             echo "</tr>";
           }
           echo "</table>";
+        }
 ?>
 <!DOCTYPE html>
 <html>
