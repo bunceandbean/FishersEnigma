@@ -312,7 +312,14 @@ canvas {
 
 <div class = "information" id= "information" align = "center" >
 <p id = "information">
-  <?php
+</p>
+</div>
+
+<div id= "leaderboard" align = "center">
+  <p id = "load-board"></p>
+  <iframe
+width="50%" height="600" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
+style="background: transparent;display:none;padding-top:150px;transition:1.5s">  <?php
 
   $link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
   $cal = 0;
@@ -339,15 +346,7 @@ canvas {
             echo "</table>";
           }
         }
-  ?>
-</p>
-</div>
-
-<div id= "leaderboard" align = "center">
-  <p id = "load-board"></p>
-  <iframe
-width="50%" height="600" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
-style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe>
+  ?></iframe>
 
 </div>
 
