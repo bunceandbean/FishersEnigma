@@ -220,7 +220,7 @@ var userPas = pas.value;
 var idPas = id.value;
 if(idPas in teamID){
   userPas = userPas.toLowerCase();
-  window.location.href = "/2dDash/" + $rk$(userPas);
+  window.location.href = "./2dDash/" + $rk$(userPas);
 }else{
   alert("Your Team ID does not exist. Please enter in a valid Team ID.")
 }
