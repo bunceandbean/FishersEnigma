@@ -40,47 +40,39 @@ if($result = mysqli_query($link, $sql)){
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" charset="utf-8"></script>
 <style media="screen">
 body{
   overflow: hidden;
 }
-@import "compass/css3";
 
 table {
-  font-family: 'Arial';
-  margin: 25px auto;
-  border-collapse: collapse;
-  border: 1px solid #eee;
-  border-bottom: 2px solid #00cccc;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
-     0px 10px 20px rgba(0,0,0,0.05),
-     0px 20px 20px rgba(0,0,0,0.05),
-     0px 30px 20px rgba(0,0,0,0.05);
-  tr {
-     &:hover {
-      background: #f4f4f4;
-
-      td {
-        color: #555;
-      }
-    }
-  }
-  th, td {
-    color: #999;
-    border: 1px solid #eee;
-    padding: 12px 35px;
-    border-collapse: collapse;
-  }
-  th {
-    background: #00cccc;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-    &.last {
-      border-right: none;
-    }
-  }
+	 font-family: 'Arial';
+	 margin: 25px auto;
+	 border-collapse: collapse;
+	 border: 1px solid #eee;
+	 border-bottom: 2px solid #0cc;
+	 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+ table tr:hover {
+	 background: #f4f4f4;
+}
+ table tr:hover td {
+	 color: #555;
+}
+ table th, table td {
+	 color: #999;
+	 border: 1px solid #eee;
+	 padding: 12px 35px;
+	 border-collapse: collapse;
+}
+ table th {
+	 background: #0cc;
+	 color: #fff;
+	 text-transform: uppercase;
+	 font-size: 12px;
+}
+ table th.last {
+	 border-right: none;
 }
   .main-logo,.event-logo,.evlog{
     align: center;
