@@ -377,7 +377,9 @@ canvas {
 
 <div id= "leaderboard" align = "center">
   <p id = "load-board"></p>
-  <iframe></iframe>
+  <iframe
+width="1" height="1" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
+style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe>
 </div>
 
 <div class="input-area">
