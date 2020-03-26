@@ -334,6 +334,7 @@ if($result = mysqli_query($link, $sql)){
           }
           echo "</table>";
         }
+      }
 ?>
 </div>
 
