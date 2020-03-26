@@ -387,6 +387,9 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 </body>
 
 
+<?php
+  echo "<script> var loadingContent = $tbData </script>"
+ ?>
 
 <script src = "js/index.js">
 
@@ -398,9 +401,9 @@ var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, c
  "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.";
  var informationText = "<div class =  'event-list'><div class = 'event-winter'><p align = 'center' style = 'display:block'><img src = 'logos/2dDash.png' class = 'evlog'><p>Apr. 1st- Apr. 4th</p></p></div> <br> <div class = 'event-dim'><p align = 'center' style = 'display:block'><img src = 'logos/vector/default-monochrome.svg' width = '30%' height = '30%'><p>Summer</p></p></div></div>";
  var boardInnerHTML = "<iframe src='https://sheetsu.com/a/t/ccff5d413d07?embedded=true'  width='100%' height='600' frameBorder='0' style='background: transparent; border: 1px solid #dedede;'></iframe>"
-var loadingContent = <?php echo $tbData ?>;
+// var loadingContent;
 
-window.addEventListener("resize", resizeLogo);
+// window.addEventListener("resize", resizeLogo);
 
 
 function showSidebar()
