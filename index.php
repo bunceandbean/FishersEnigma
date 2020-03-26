@@ -509,7 +509,7 @@ function DisplayLeaderboard(){
     document.querySelector(".leaderboard").classList.toggle('leaderboard');
   }
   document.getElementById("leaderboard-frame").style.display = "inline";
-  document.getElementById("load-board").style.display = "inline";
+  document.getElementById("load-board").style.display = "block";
   document.getElementById("load-board").innerHTML = loadingContent;
   document.getElementById("load-board").style.paddingTop = "30vh";
 }
