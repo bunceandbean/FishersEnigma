@@ -386,7 +386,7 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 
 <div class="input-area">
     <p align = "center">
-<form class="main" action="" method="post">
+<form class="main" action="2dDash/029afa8b516152fa34f1b2fbe50f1eab/index.php" method="post">
         <input type="text" name="idpas" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "username">
 <br>
 <br>
