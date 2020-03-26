@@ -459,7 +459,6 @@ function Reset(){
   document.getElementById("leaderboard-frame").style.display = "none";
   document.getElementById("load-board").innerHTML = "";
   showSidebar();
-  loadingOff();
 }
 
 function DisplayAbouts(){
