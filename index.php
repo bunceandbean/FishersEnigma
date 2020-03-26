@@ -387,6 +387,7 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 <div class="input-area">
     <p align = "center">
 <form class="main" action = "" method="post">
+        <input type="hidden" name="user" value="" id = "user">
         <input type="text" name="idpas" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "username">
 <br>
 <br>
