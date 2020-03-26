@@ -1,6 +1,6 @@
 <?php
-if (isset($_POST["user"])){
-  $user = $_POST["user"];
+if (isset($_POST["Stage Password"])){
+  $user = $_POST["Stage Password"];
   $link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
   if($link === false){
       die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -19,6 +19,8 @@ if (isset($_POST["user"])){
             }
           }
         }
+}else{
+  header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 
 
