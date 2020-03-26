@@ -457,8 +457,9 @@ function Reset(){
   document.getElementById("information").textContent = "";
   document.getElementById("leaderboard").className = "leaderboard";
   document.getElementById("leaderboard-frame").style.display = "none";
-  document.getElementById("load-board").textContent = "";
+  document.getElementById("load-board").innerHTML = "";
   showSidebar();
+  loadingOff();
 }
 
 function DisplayAbouts(){
