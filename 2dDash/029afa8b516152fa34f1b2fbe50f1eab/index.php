@@ -12,7 +12,7 @@
                   // echo "<td>" . $row['Team'] . "</td>";
                   // echo "<td>" . $row['Stage'] . "</td>";
                   if($row['Team'] == $user){
-                    $update = "UPDATE leaderboard SET Stage='1' WHERE Team = $user";
+                    $update = "UPDATE leaderboard SET Stage=1 WHERE Team = $user";
                     mysqli_query($link,$update);
                   }
             }
