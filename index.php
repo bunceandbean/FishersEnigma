@@ -387,10 +387,10 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 <div class="input-area">
     <p align = "center">
 <form class="main" action="" method="post">
-        <input type="text" name="Team ID" value="" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "username">
+        <input type="text" name="Team ID" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "username">
 <br>
 <br>
-      <input type="text" name="Stage Password" value="" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
+      <input type="text" name="Stage Password" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
 <br>
 <br>
 </form>
