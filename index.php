@@ -44,6 +44,43 @@ if($result = mysqli_query($link, $sql)){
 body{
   overflow: hidden;
 }
+@import "compass/css3";
+
+table {
+  font-family: 'Arial';
+  margin: 25px auto;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #00cccc;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+     0px 10px 20px rgba(0,0,0,0.05),
+     0px 20px 20px rgba(0,0,0,0.05),
+     0px 30px 20px rgba(0,0,0,0.05);
+  tr {
+     &:hover {
+      background: #f4f4f4;
+
+      td {
+        color: #555;
+      }
+    }
+  }
+  th, td {
+    color: #999;
+    border: 1px solid #eee;
+    padding: 12px 35px;
+    border-collapse: collapse;
+  }
+  th {
+    background: #00cccc;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    &.last {
+      border-right: none;
+    }
+  }
+}
   .main-logo,.event-logo,.evlog{
     align: center;
     padding-top: 60px;
@@ -388,7 +425,16 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 
 
  <script>
-    var loadingContent = '<table><thead><tr><th>Team</th><th>Stage</th></tr></thead>' + '<?php echo $tbData ?>'
+    var loadingContent = '<table><thead><tr><th>Team</th><th>Stage</th></tr></thead>' + '<?php echo $tbData ?>';
+    $('table tr').each(function(){
+  $(this).find('th').first().addClass('first');
+  $(this).find('th').last().addClass('last');
+  $(this).find('td').first().addClass('first');
+  $(this).find('td').last().addClass('last');
+});
+
+$('table tr').first().addClass('row-first');
+$('table tr').last().addClass('row-last')
  </script>
 
 <script src = "js/index.js">
@@ -471,7 +517,7 @@ function DisplayLeaderboard(){
   }
   document.getElementById("leaderboard-frame").style.display = "inline";
   document.getElementById("load-board").innerHTML = loadingContent;
-  document.getElementById("load-board").style.paddingTop = "400px";
+  document.getElementById("load-board").style.paddingTop = "30vh";
 }
 function resizeLogo(){
   var screenWidth = screen.width;
