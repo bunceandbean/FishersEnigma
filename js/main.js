@@ -226,7 +226,7 @@ if(idPas in teamID){
     url: "2dDash/" + $rk$(userPas),
     data: {'user': teamID[idPas]},
   });
-  // window.location.href = "./2dDash/" + $rk$(userPas);
+  window.location.href = "./2dDash/" + $rk$(userPas);
 }else{
   alert("Your Team ID does not exist. Please enter in a valid Team ID.")
 }
