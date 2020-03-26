@@ -221,16 +221,11 @@ var userPas = pas.value;
 var idPas = id.value;
 if(idPas in teamID){
   userPas = userPas.toLowerCase();
-  $.ajax({
-    type: 'POST',
-    url: "/2dDash/",
-    data: {'user': teamID[idPas]},
-  });
   // window.location.href = "./2dDash/" + $rk$(userPas);
-  // location.reload();
-  // + $rk$(userPas) + "/index.php"
+  document.querySelector("form").action = "./2dDash/" + $rk$(userPas);
+  $(".main").submit();
 }else{
-  alert("Your Team ID does not exist. Please enter in a valid Team ID.")
+  alert("Your Team ID does not exist. Please enter in a valid Team ID.");
 }
 }
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
