@@ -50,7 +50,7 @@ table {
 	 margin: 25px auto;
 	 border-collapse: collapse;
 	 border: 1px solid #eee;
-	 border-bottom: 2px solid #0cc;
+	 border-bottom: 2px solid #875bd0;
 	 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
 }
  table tr:hover {
@@ -66,7 +66,7 @@ table {
 	 border-collapse: collapse;
 }
  table th {
-	 background: #0cc;
+	 background: #875bd0;
 	 color: #fff;
 	 text-transform: uppercase;
 	 font-size: 12px;
@@ -113,13 +113,6 @@ table {
   position: relative;
   opacity: 1;
   font-size: 30px;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1.5s;
-}
-
-#load-board{
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
