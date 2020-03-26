@@ -1,5 +1,4 @@
 <?php
-if (isset($_POST["Team ID"])){
   $user = $_POST["Team ID"];
   $link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
   if($link === false){
@@ -19,9 +18,8 @@ if (isset($_POST["Team ID"])){
             }
           }
         }
-}else{
-  header('Location: ' . $_SERVER['HTTP_REFERER']);
-}
+
+
 
 
  ?>
