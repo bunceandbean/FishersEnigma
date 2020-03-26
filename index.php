@@ -119,6 +119,13 @@ table {
   animation-duration: 1.5s;
 }
 
+#load-board{
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
 .fade-in{
   opacity: 1;
   animation-name: fadeInOpacity;
