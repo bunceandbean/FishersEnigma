@@ -287,9 +287,10 @@ table {
 
 }
 .passInput{
-  border-color: darkblue;
-  border-radius: 5px;
-  border-style: solid;
+  background: transparent;
+  border-color: purple;
+  border-radius: 20px;
+  border-style: double;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
