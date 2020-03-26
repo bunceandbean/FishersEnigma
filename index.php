@@ -254,6 +254,7 @@ table {
  display: inline-block;
  font-size: 16px;
  opacity: 1;
+ animation-name: fadeInOpacity;
  animation-iteration-count: 1, infinite;
  animation-timing-function: ease-in, ease-in-out;
  animation-duration: 3s, 0.75s;
