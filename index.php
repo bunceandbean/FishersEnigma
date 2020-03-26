@@ -1,30 +1,3 @@
-<?php
-
-$link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
-$cal = 0;
-$splash = 0;
-$numRows = 0;
-$class = "zui-table";
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-$sql = "SELECT * FROM leaderboard";
-if($result = mysqli_query($link, $sql)){
-    if(mysqli_num_rows($result) > 0){
-        echo "<table>";
-            echo "<thead> <tr>";
-                echo "<th>Team</th>";
-                echo "<th>Stage</th>";
-            echo "</tr> </thead>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['Team'] . "</td>";
-                echo "<td>" . $row['Stage'] . "</td>";
-            echo "</tr>";
-          }
-          echo "</table>";
-        }
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -335,6 +308,33 @@ canvas {
 <div class = "abouts" id= "abouts" align = "center" >
 <p id = "abouts">
 </p>
+<?php
+
+$link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
+$cal = 0;
+$splash = 0;
+$numRows = 0;
+$class = "zui-table";
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+$sql = "SELECT * FROM leaderboard";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table>";
+            echo "<thead> <tr>";
+                echo "<th>Team</th>";
+                echo "<th>Stage</th>";
+            echo "</tr> </thead>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['Team'] . "</td>";
+                echo "<td>" . $row['Stage'] . "</td>";
+            echo "</tr>";
+          }
+          echo "</table>";
+        }
+?>
 </div>
 
 <div class = "information" id= "information" align = "center" >
