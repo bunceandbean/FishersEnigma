@@ -246,11 +246,8 @@ table {
 
   }
   .button {
- background-color: blue; /* Green */
  border-radius: 10px;
- border-color:darkblue;
- border-style: solid;
- color: white;
+ color: #FF6347;
  padding: 10px 25px;
  text-align: center;
  text-decoration: none;
@@ -263,7 +260,10 @@ table {
  animation-duration: 3s, 0.75s;
  animation-direction: normal,alternate;
  cursor: pointer;
+ background-color: transparent;
+ border-color: purple;
  transition: .5s;
+ border-style: double;
 }
 
 
@@ -336,10 +336,10 @@ canvas {
     transition:0.5s;
   }
   .button{
-    background-color:#191970;
-    border-color:#191970;
+    background-color: transparent;
+    border-color: purple;
     transition: .5s;
-
+    border-style: double;
   }
 
   .event-logo{
