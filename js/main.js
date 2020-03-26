@@ -226,7 +226,6 @@ if(idPas in teamID){
 }
 }
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-
   title.empty();
   title.textContent = "test";
 
