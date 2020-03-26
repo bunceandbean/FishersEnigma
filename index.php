@@ -21,7 +21,7 @@ if($result = mysqli_query($link, $sql)){
             // echo "<tr>";
                 // echo "<td>" . $row['Team'] . "</td>";
                 // echo "<td>" . $row['Stage'] . "</td>";
-                $tbData = $tbData."<tr><td>" . $row['Team'] . "</td>"."<td>" . $row['Stage'] . "</td></tr>";
+                // $tbData = $tbData."<tr><td>" . $row['Team'] . "</td>"."<td>" . $row['Stage'] . "</td></tr>";
             // echo "</tr>";
           }
           // echo "</table>";
