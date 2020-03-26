@@ -2,13 +2,6 @@ var teamID = {
   "example":"the_three_dudes"
 }
 
-
-
-
-
-
-
-
 var button = document.querySelector("#enter");
 var pas = document.querySelector("#userpas");
 var id = document.querySelector("#idpas");
@@ -227,7 +220,7 @@ var userPas = pas.value;
 var idPas = id.value;
 if(idPas in teamID){
   userPas = userPas.toLowerCase();
-  window.location.href = "./montyHall/" + $rk$(userPas);
+  window.location.href = "./homeHoliday/" + $rk$(userPas);
 }else{
   alert("Your Team ID does not exist. Please enter in a valid Team ID.")
 }

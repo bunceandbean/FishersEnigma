@@ -47,8 +47,9 @@ end = "Thank you all for participating in this trial run of Fishers Enigma. The 
 end2 = "The second event will be more organized with more stages and tuned difficulty. This trial has given good information about what to change and what to keep. While I cannot say too much right now, the new event will start July 14th."
 event = "Here is the link to the website for the next event. https://fishersenigma.github.io/  Please make sure to sign up on the google fourm and to sign up for the remind. Thanks!"
 benphysics = "Bruh Moment"
+aliminecraft = "https://www.youtube.com/watch?v=S3BA5OJclJ4"
 testlist = {
-    "Ben":"+13174100844"
+    "Kam":"+13174350192"
 }
 
 for name in testlist:
@@ -62,7 +63,7 @@ for name in testlist:
                              #  "   The answer " +
                              # "to the riddle is a string of 16 digits, once you have found these digits, add a .com to the end " +
                              # "and go to the website. Good luck. Think."
-                             body = benphysics,
+                             body = aliminecraft,
                              from_='+17542038932',
                              to=testlist[name]
                          )

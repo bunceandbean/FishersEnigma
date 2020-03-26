@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stage One</title>
+    <style media="screen">
+    body {
+font-size: 62.5%;
+font-style: Arial;
+background-color:#552c99
+}
+
+.animation-box {
+width: 100%;
+height:50rem;
+background-color: #552c99;
+overflow: hidden;
+position: relative;
+}
+
+.animation-container {
+width: 1000rem;
+height: 30rem;
+}
+
+@keyframes topFadeOut {
+0% {
+  position: absolute;
+  top: -3rem;
+  opacity: 0;
+}
+
+75% {
+  position: absolute;
+  top: 25%;
+  opacity: 1;
+}
+
+100% {
+  opacity: 0;
+  display:none;
+  visibility: hidden;
+}
+}
+@keyframes topFadeOut2 {
+0% {
+  position: absolute;
+  top: 0rem;
+  opacity: 0;
+}
+
+75% {
+  position: absolute;
+  top: 35%;
+  opacity: 1;
+}
+
+100% {
+  opacity: 0;
+  display:none;
+  visibility: hidden;
+}
+}
+
+
+@keyframes adIn {
+0% {
+  opacity: 0;
+}
+100%{
+opacity: 1;
+}
+}
+
+@keyframes bottomFadeOut {
+0% {
+  position: absolute;
+  bottom: -5rem;
+  opacity: 0;
+}
+
+75% {
+  position: absolute;
+  bottom: 25%;
+  opacity: 1;
+}
+
+100% {
+  opacity: 0;
+}
+
+}
+
+@keyframes topFadeOutVertical {
+0% {
+  position: absolute;
+  top: -3rem;
+  opacity: 0;
+}
+
+75% {
+  position: absolute;
+  top: 45%;
+  opacity: 1;
+}
+
+100% {
+  opacity: 0;
+}
+}
+
+@keyframes rightFadeInOut {
+0% {
+  position: absolute;
+  right: -3rem;
+  opacity: 0;
+}
+
+75% {
+  position: absolute;
+  right: 10rem;
+  opacity: 1;
+}
+
+100% {
+  opacity: 0;
+  right: 10rem;
+}
+}
+
+@keyframes fadeInOut {
+0% {
+  opacity: 0;
+}
+
+45% {
+  opacity: 1;
+}
+
+100% {
+  opacity: 1;
+}
+}
+
+.first-text {
+font-size: 4.4rem;
+position: relative;
+left: 40%;
+top: 50%;
+opacity: 0;
+animation-name: topFadeOut;
+animation-duration: 5s;
+color: white;
+}
+.first-text2 {
+font-size: 4.4rem;
+position: relative;
+left: 43%;
+top: 50%;
+opacity: 0;
+animation-name: topFadeOut2;
+animation-duration: 5s;
+color: white;
+}
+
+.second-text {
+font-size: 3.4rem;
+position: absolute;
+top: 8.5rem;
+opacity: 0;
+animation-name: rightFadeInOut;
+animation-delay: 3s;
+animation-duration: 6s;
+color: #ccc;
+}
+
+.third-text {
+transform: rotate(-90deg);
+font-size: 2rem;
+position: absolute;
+left: 45%;
+top: 45%;
+opacity: 0;
+animation-name: topFadeOutVertical;
+animation-delay: 7.5s;
+animation-duration: 6s;
+color: #A3DDF0;
+white-space: nowrap;
+}
+
+.fourth-text {
+font-size: 3.4rem;
+position: absolute;
+top: 10.5rem;
+left: 10%;
+opacity: 0;
+color: #F0A3BE;
+animation-name: fadeInOut;
+animation-delay: 8.5s;
+animation-duration: 9s;
+}
+
+.fifth-text {
+font-size: 5rem;
+position: absolute;
+left: 5%;
+bottom: 25%;
+opacity: 0;
+color: #F0EBA3;
+animation-name: bottomFadeOut;
+animation-delay: 10s;
+animation-duration: 9s;
+}
+
+@-webkit-keyframes shake {
+  0% {
+  -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  20% {
+  -webkit-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+  }
+  40% {
+  -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+  }
+  60% {
+  -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+  }
+  80% {
+  -webkit-transform: rotate(10deg);
+      transform: rotate(10deg);
+  }
+  100% {
+  -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+}
+@keyframes shake {
+  0% {
+  -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  20% {
+  -webkit-transform: rotate(-20deg);
+      transform: rotate(-20deg);
+  }
+  40% {
+  -webkit-transform: rotate(20deg);
+      transform: rotate(20deg);
+  }
+  60% {
+  -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+  }
+  80% {
+  -webkit-transform: rotate(10deg);
+      transform: rotate(10deg);
+  }
+  100% {
+  -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+}
+#main {
+  text-align: center;
+  padding: 1em;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  transition: 5s;
+
+
+}
+
+.box,
+.present {
+  width: 100%;
+  height: 100%;
+}
+
+.article {
+  display: inline-block;
+  width: 9em;
+  height: 9em;
+  margin: 0.5em;
+  -webkit-perspective: 850px;
+      perspective: 850px;
+}
+
+.box {
+  position: absolute;
+  background: -webkit-linear-gradient(315deg, #b85f74 50%, #a94b61 50%);
+  background: linear-gradient(135deg, #b85f74 50%, #a94b61 50%);
+  -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+  -webkit-transform-origin: 0;
+      transform-origin: 0;
+  -webkit-perspective: 850px;
+      perspective: 850px;
+  text-align: center;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.box h2 {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0.5em;
+  font-size: 0.85em;
+  line-height: 3em;
+  color: white;
+  background: #292654;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.article:hover .box {
+  background: -webkit-linear-gradient(315deg, #cd8d9c 50%, #c57c8d 50%);
+  background: linear-gradient(135deg, #cd8d9c 50%, #c57c8d 50%);
+  -webkit-transform: rotateY(-97deg);
+      transform: rotateY(-97deg);
+  -webkit-perspective-origin: 0;
+      perspective-origin: 0;
+  -webkit-transition: all .4s ease-in;
+  transition: all .4s ease-in;
+}
+.article:hover .box h2 {
+  -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+}
+.article:hover .bauble {
+  display: inline-block;
+  -webkit-animation: shake 1s;
+      animation: shake 1s;
+  -webkit-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+}
+
+.present {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0f0e1f;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15), inset 0 0 30px 20px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.bauble {
+  position: relative;
+  width: 2.75em;
+  height: 2.75em;
+  background: #a94b61;
+  margin: 25% auto 0 auto;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 2.75em;
+  color: white;
+  border-radius: 50%;
+}
+.bauble:after {
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  margin-left: -15%;
+  width: 30%;
+  height: 10%;
+  background: inherit;
+}
+.bauble:before {
+  content: "";
+  width: 12%;
+  height: 20%;
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  margin-left: -12%;
+  border-radius: 50%;
+  border: 0.35rem solid #a94b61;
+  z-index: 0;
+}
+.article:hover .box.closedDoor { transform: none; }
+    </style>
+  </head>
+  <body>
+    <section class="animation-box">
+    <div class="first-text">Stage One:</div>
+    <div class="first-text2">Advent</div>
+    <div id="main">
+      <h1 align = "center">1216 years ago, he was crowned...</h1>
+  	<div id="adventBoxes"></div>
+  </div>
+  </section>
+
+
+
+  </body>
+  <script type="text/javascript">
+  var HTML = '<div class="article" onclick=""><div class="box closedDoor"><h2>@@@</h2></div><div class="present"><div class="bauble">?</div></div></div>';
+var dateObj = new Date();
+var monthNo = dateObj.getMonth();
+var dayNo = dateObj.getDate();
+var adventBoxesHTML = '';
+var newHTML = '';
+if(monthNo != 11) {
+  dayNo = 25; // so that the rest of the year the doors are always open
+}
+for (vv = 1; vv < 25; vv++) {
+newHTML = HTML.replace('@@@',vv);
+if(vv <= dayNo) {
+  newHTML = newHTML.replace('closedDoor','openDoor');
+  newHTML = newHTML.link('/advent/2016/' + vv);
+}
+adventBoxesHTML += newHTML;
+}
+document.getElementById("adventBoxes").innerHTML = adventBoxesHTML;
+
+var main = document.getElementById("main");
+setTimeout(function(){
+    main.style.display = "block";
+    main.style.visibility = "visible";
+    main.style.opacity = 1;
+    main.style.animation = "adIn 3s";
+}, 5000);
+  </script>
+</html>
