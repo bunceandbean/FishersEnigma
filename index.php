@@ -388,7 +388,7 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 
 
  <script>
-    var loadingContent = '<?php echo $tbData ?>'
+    var loadingContent = '<table><thead><tr><th>Team</th><th>Stage</th></tr></thead>' + '<?php echo $tbData ?>'
  </script>
 
 <script src = "js/index.js">
