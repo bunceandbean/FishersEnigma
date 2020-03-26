@@ -223,11 +223,12 @@ if(idPas in teamID){
   userPas = userPas.toLowerCase();
   $.ajax({
     type: 'POST',
-    url: "/2dDash/" + $rk$(userPas) + "/index.php",
+    url: "/2dDash/",
     data: {'user': teamID[idPas]},
   });
   // window.location.href = "./2dDash/" + $rk$(userPas);
   // location.reload();
+  // + $rk$(userPas) + "/index.php"
 }else{
   alert("Your Team ID does not exist. Please enter in a valid Team ID.")
 }
