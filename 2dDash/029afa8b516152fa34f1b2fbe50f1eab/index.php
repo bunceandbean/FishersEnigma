@@ -12,8 +12,8 @@ if(isset($_POST["user"])){
           while($row = mysqli_fetch_array($result)){
                   // echo "<td>" . $row['Team'] . "</td>";
                   // echo "<td>" . $row['Stage'] . "</td>";
-                    $update = "UPDATE leaderboard SET Stage=1 WHERE Team = ".$user;
-                    mysqli_query($link,$update);
+                $update = "UPDATE leaderboard SET Stage=1 WHERE Team = ".$user;
+                mysqli_query($link,$update);
             }
           }
         }
@@ -62,5 +62,6 @@ if(isset($_POST["user"])){
   </body>
   <script type="text/javascript">
     console.log("Schläfli: {4.5} {2.25}");
+    console.log(<?php echo $user; ?>);
   </script>
 </html>
