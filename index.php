@@ -131,17 +131,19 @@ table {
   0% {
   opacity: 0;
   }
-  100% {0]0]0]0]0]0]0]n
+  100% {
   opacity: 1;
   }
   }
-  @-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 50px #f00, 0 0 60px #F00, 0 0 70px #F00;
+  @-webkit-keyframes fadeInOpacity {
+  0% {
+  opacity: 0;
   }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 25px #F00, 0 0 30px #F00, 0 0 35px #F00;
+  100% {
+  opacity: 1;
   }
+  }
+
 }
   /* The sidebar menu */
   .sidenav {
