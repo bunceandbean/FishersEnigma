@@ -482,6 +482,7 @@ if(logoStatus != "main-logo"){
   document.querySelector(".main-logo").classList.toggle('active');
   document.querySelector(".input-area").classList.toggle('active');
 }
+loadingOff();
 }
 function DisplayInformation(){
   Reset();
