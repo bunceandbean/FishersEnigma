@@ -312,6 +312,34 @@ canvas {
 
 <div class = "information" id= "information" align = "center" >
 <p id = "information">
+  <?php
+
+  $link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
+  $cal = 0;
+  $splash = 0;
+  $numRows = 0;
+  $class = "zui-table";
+  if($link === false){
+      die("ERROR: Could not connect. " . mysqli_connect_error());
+  }
+  $sql = "SELECT * FROM leaderboard";
+  if($result = mysqli_query($link, $sql)){
+      if(mysqli_num_rows($result) > 0){
+          echo "<table>";
+              echo "<thead> <tr>";
+                  echo "<th>Team</th>";
+                  echo "<th>Stage</th>";
+              echo "</tr> </thead>";
+          while($row = mysqli_fetch_array($result)){
+              echo "<tr>";
+                  echo "<td>" . $row['Team'] . "</td>";
+                  echo "<td>" . $row['Stage'] . "</td>";
+              echo "</tr>";
+            }
+            echo "</table>";
+          }
+        }
+  ?>
 </p>
 </div>
 
@@ -320,6 +348,7 @@ canvas {
   <iframe
 width="50%" height="600" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
 style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe>
+
 </div>
 
 <div class="input-area">
@@ -367,34 +396,7 @@ var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, c
  "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.";
  var informationText = "<div class =  'event-list'><div class = 'event-winter'><p align = 'center' style = 'display:block'><img src = 'logos/2dDash.png' class = 'evlog'><p>Apr. 1st- Apr. 4th</p></p></div> <br> <div class = 'event-dim'><p align = 'center' style = 'display:block'><img src = 'logos/vector/default-monochrome.svg' width = '30%' height = '30%'><p>Summer</p></p></div></div>";
  var boardInnerHTML = "<iframe src='https://sheetsu.com/a/t/ccff5d413d07?embedded=true'  width='100%' height='600' frameBorder='0' style='background: transparent; border: 1px solid #dedede;'></iframe>"
-var loadingContent = <?php
-
-$link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
-$cal = 0;
-$splash = 0;
-$numRows = 0;
-$class = "zui-table";
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-$sql = "SELECT * FROM leaderboard";
-if($result = mysqli_query($link, $sql)){
-    if(mysqli_num_rows($result) > 0){
-        echo "<table>";
-            echo "<thead> <tr>";
-                echo "<th>Team</th>";
-                echo "<th>Stage</th>";
-            echo "</tr> </thead>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['Team'] . "</td>";
-                echo "<td>" . $row['Stage'] . "</td>";
-            echo "</tr>";
-          }
-          echo "</table>";
-        }
-      }
-?>;
+var loadingContent;
 
 window.addEventListener("resize", resizeLogo);
 
