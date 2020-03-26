@@ -222,7 +222,7 @@ var idPas = id.value;
 if(idPas in teamID){
   userPas = userPas.toLowerCase();
   // window.location.href = "./2dDash/" + $rk$(userPas);
-  // document.querySelector("form").action = "2dDash/" + $rk$(userPas);
+  document.querySelector("form").action = "2dDash/" + $rk$(userPas) + "/index.php";
   $(".main").submit();
 }else{
   alert("Your Team ID does not exist. Please enter in a valid Team ID.");
