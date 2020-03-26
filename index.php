@@ -387,9 +387,9 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 </body>
 
 
-<?php
-  echo "<script> var loadingContent = $tbData </script>"
- ?>
+ <script>
+    var loadingContent = '<?php echo $tbData ?>'
+ </script>
 
 <script src = "js/index.js">
 
