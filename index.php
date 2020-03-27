@@ -310,7 +310,7 @@ table {
   animation-duration: 2.5s;
 }
 .input-area{
-  /* padding-top: 60px; */
+  padding-top: 10px;
   align: center;
 }
 
