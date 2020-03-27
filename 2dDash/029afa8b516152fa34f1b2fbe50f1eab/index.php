@@ -13,7 +13,7 @@ if(isset($_POST["user"])){
                   // echo "<td>" . $row['Team'] . "</td>";
                   // echo "<td>" . $row['Stage'] . "</td>";
                 if($row['Stage'] <= 1){
-                  $update = "UPDATE `leaderboard` SET `Stage`=0 WHERE `Team` = '".$user."'";
+                  $update = "UPDATE `leaderboard` SET `Stage`=1 WHERE `Team` = '".$user."'";
                   mysqli_query($link,$update);
               }
             }
