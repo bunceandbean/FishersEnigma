@@ -202,8 +202,15 @@ table {
   }
   /* Style page content */
   .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+    padding-top: 60px;
+    align: center;
+    text-align: center;
+  }
+  #idpas{
+    text-align: center;
+  }
+  #userpas{
+    text-align:center;
   }
   .close-icon
   {
@@ -265,6 +272,7 @@ table {
  border-color: purple;
  transition: .5s;
  border-style: double;
+ text-align: center;
 }
 
 
@@ -287,6 +295,9 @@ table {
   transition: .5s;
 
 }
+.butcent{
+  text-align:center;
+}
 .passInput{
   background: transparent;
   border-color: purple;
@@ -302,6 +313,7 @@ table {
   padding-top: 60px;
   align: center;
 }
+
 .button.active{
   display:none;
 }
@@ -341,6 +353,7 @@ canvas {
     border-color: purple;
     transition: .5s;
     border-style: double;
+    align:center;
   }
 
   .event-logo{
@@ -396,9 +409,11 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 <br>
 </form>
 
+    <p class ="butcent">
       <button type = "submit" class = "button" id = "enter" onclick = "pasCheck()">
         Submit
       </button>
+    </p>
 
     </p>
 </div>
