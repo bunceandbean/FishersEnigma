@@ -1,6 +1,10 @@
 var teamID = {
   "example":"the_three_dudes",
-  "67ttr1":"Tommy & Ali"
+  "67ttr1":"Tommy & Ali",
+  "95xco3":"Josh & Kam",
+  "52bov6":"Zayd & Braden",
+  "11zif7":"Libby, Brynn, & Kaylin",
+  "27khg4":"Zach & Gracey"
 }
 
 var button = document.querySelector("#enter");
