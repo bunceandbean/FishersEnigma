@@ -202,7 +202,7 @@ table {
   }
   /* Style page content */
   .main {
-    padding-top: 60px;
+    padding-top: 50px;
     align: center;
     text-align: center;
   }
