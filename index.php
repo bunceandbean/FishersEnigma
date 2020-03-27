@@ -202,7 +202,7 @@ table {
   }
   /* Style page content */
   .main {
-    padding-top: 50px;
+    /* padding-top: 50px; */
     align: center;
     text-align: center;
   }
@@ -310,7 +310,7 @@ table {
   animation-duration: 2.5s;
 }
 .input-area{
-  padding-top: 60px;
+  /* padding-top: 60px; */
   align: center;
 }
 
