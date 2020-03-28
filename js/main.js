@@ -4,7 +4,8 @@ var teamID = {
   "95xco3":"Josh & Kam",
   "52bov6":"Zayd & Braden",
   "11zif7":"Libby, Brynn, & Kaylin",
-  "27khg4":"Zach & Gracey"
+  "27khg4":"Zach & Gracey",
+  "45geb9":"Blake"
 }
 
 var button = document.querySelector("#enter");
