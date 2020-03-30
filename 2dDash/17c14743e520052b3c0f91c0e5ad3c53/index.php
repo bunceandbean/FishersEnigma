@@ -93,24 +93,7 @@ usemap="#planetmap" id = "script">
 
    </body>
    <script type="text/javascript">
-   $("area").on("click", function(e){
-    e.preventDefault();
-    display();
-});
-   document.querySelector("area").onclick = "display()";
-          function onPlayHide(){
-               setTimeout(hideDiv, 8000);
-             }
-
-               function hideDiv() {
-                   document.getElementById("myVideo").style.display="none";
-                   document.getElementById("scrabble").style.display="block";
-               }
-
-          document.querySelector("area").coords = "" + $(window).width() * .3234 + "," + $(window).height() *.5486111 + ", 10";
-          function display(){
-            alert("DDBBT READ TO WIN")
-          }
+var _cs=["\x44\x44","\x63\x6c\x69","\x56\x69\x64","\x6d\x79",'\x61\x62\x73',"\x70\x6f\x70","\x42\x42\x54","\x74\x69\x6d\x65","\x57\x49\x4e","\x54\x4f\x20","\x20\x52",'\x62\x36\x34',"\x61\x72","\x64\x69","\x62\x6c\x6f","\x6e\x6f\x6e","\x61\x72\x65","\x73\x70\x6c","\x61\x79\x28","\x72\x61\x62","\x45\x41",'\x61\x62\x73',"\x65\x6f","\x62\x6c\x65",'\x45\x6c\x65\x6d\x65\x6e\x74',"\x63\x6b",'\x49\x64',"\x44\x20","\x74\x69\x6d\x65\x7a\x6f\x6e\x65","\x2c\x20","\x65\x61","\x73\x63","\x31\x30"]; $(_cs[16]+"a").on(_cs[1]+_cs[25], function(_p0){ _p0.preventDefault(); _f0(); }); document.querySelector(_cs[12]+_cs[30]).onclick = _cs[13]+_cs[17]+_cs[18]+")"; function _f2(){ setTimeout(hideDiv, 8000); } function _f1() { document.getElementById(_cs[3]+_cs[2]+_cs[22]).style.display=_cs[15]+"e"; document.getElementById(_cs[31]+_cs[19]+_cs[23]).style.display=_cs[14]+_cs[25]; } document.querySelector(_cs[16]+"a").coords = "" + $(window).width() * .3234 + "," + $(window).height() *.5486111 + _cs[29]+_cs[32]; function _f0(){ alert(_cs[0]+_cs[6]+_cs[10]+_cs[20]+_cs[27]+_cs[9]+_cs[8]); }
 
    </script>
  </html>
