@@ -87,7 +87,7 @@ area{
 usemap="#planetmap" id = "script">
 
 <map name="planetmap" id = "#script">
-  <area target="_blank" alt="" title="" href="book.html" shape = "rect">
+  <area target="_blank" alt="" title="" href="book.html" >
 </map>
 </div>
 
