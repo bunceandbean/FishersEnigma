@@ -401,7 +401,7 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
     <p align = "center">
 <form class="main" action = "" method="post">
         <input type="hidden" name="user" value="" id = "user">
-        <input type="text" name="idpas" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "username">
+        <input type="text" name="idpas" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "teamid">
 <br>
 <br>
       <input type="text" name="userpas" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
