@@ -94,28 +94,7 @@ usemap="#planetmap" id = "script">
 
    </body>
    <script type="text/javascript">
-   $("area").on("click", function(e){
-    e.preventDefault();
-    display();
-});
-   document.querySelector("area").onclick = "display()";
-          function onPlayHide(){
-               setTimeout(hideDiv, 8000);
-             }
-
-               function hideDiv() {
-                   document.getElementById("myVideo").style.display="none";
-                   document.getElementById("scrabble").style.display="block";
-                   document.getElementById("script").style.display="block";
-
-               }
-
-          document.querySelector("area").coords = "" + $(window).width() * .3234 + "," + $(window).height() *.5486111 + ", 10";
-          function display(){
-            alert("What's the title...");
-            alert("DDBBT READ TO WIN");
-          }
-
+var _cs=["\x20\x6e\x6f","\x73\x20\x6d","\x48\x69",'\x6d\x61\x74\x68',"\x65\x61","\x4f\x20","\x70\x6f\x70","\x74\x61\x62","\x31\x30","\x20\x52\x45","\x6c\x65\x2e",'\x62\x36\x34',"\x41\x44","\x70\x6f\x70","\x42\x54","\x79\x28","\x72\x61","\x66\x75\x6e\x63\x74\x69\x6f\x6e",'\x66\x75\x6e\x63',"\x42\x79","\x61\x72\x65","\x73\x63","\x66\x75\x6e\x63\x74\x69\x6f\x6e","\x6f\x73\x74",'\x67\x65\x74',"\x42\x79","\x57\x49\x4e","\x74\x69\x74","\x2c\x20","\x64\x69\x73","\x6c\x65\x20",'\x49\x64','\x30',"\x72\x69\x70","\x6d\x79","\x20\x54","\x56\x69","\x44\x44\x42",'\x62\x36\x34',"\x70\x6c\x61",'\x6d\x61\x74\x68',"\x63\x6c\x69","\x62\x6c\x6f","\x61\x72","\x64\x65","\x63\x6b","\x6e\x6f\x6e","\x2e\x2e","\x62\x62\x6c"]; $(_cs[43]+_cs[4]).on(_cs[41]+_cs[45], function(_p0){ _p0.preventDefault(); _f0(); }); document.querySelector(_cs[43]+_cs[4]).onclick = _cs[29]+_cs[39]+_cs[15]+")"; function _f2(){ setTimeout(hideDiv, 8000); } function _f1() { document.getElementById(_cs[34]+_cs[36]+_cs[44]+"o").style.display=_cs[46]+"e"; document.getElementById(_cs[21]+_cs[16]+_cs[48]+"e").style.display=_cs[42]+_cs[45]; document.getElementById(_cs[21]+_cs[33]+"t").style.display=_cs[42]+_cs[45]; } document.querySelector(_cs[20]+"a").coords = "" + $(window).width() * .3234 + "," + $(window).height() *.5486111 + _cs[28]+_cs[8]; function _f0(){ alert(_cs[2]+_cs[1]+_cs[23]+_cs[0]+_cs[7]+_cs[30]+_cs[27]+_cs[10]+_cs[47]); alert(_cs[37]+_cs[14]+_cs[9]+_cs[12]+_cs[35]+_cs[5]+_cs[26]); }
 
    </script>
  </html>
