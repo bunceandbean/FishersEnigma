@@ -61,6 +61,7 @@ if(isset($_POST["user"])){
   z-index:-100;
   display:none;
   position: relative;
+  visibility: hidden;
  	}
 
  h1{
@@ -206,6 +207,8 @@ function onPlayHide(){
      function hideDiv() {
          document.getElementById("myVideo").style.display="none";
          document.getElementById("cont").style.display="block";
+         document.getElementById("cont").style.visibility="visible";
+
 
      }
 
