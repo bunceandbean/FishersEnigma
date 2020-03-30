@@ -87,12 +87,13 @@ area{
 usemap="#planetmap" id = "script">
 
 <map name="planetmap" id = "#script">
-  <area target="_blank" alt="" title="" href="book.html" shape = "circle">
+  <area target="_blank" alt="" title="" shape = "circle">
 </map>
 </div>
 
    </body>
    <script type="text/javascript">
+   document.querySelector("area").onclick = "display()";
           function onPlayHide(){
                setTimeout(hideDiv, 8000);
              }
@@ -102,8 +103,10 @@ usemap="#planetmap" id = "script">
                    document.getElementById("scrabble").style.display="block";
                }
 
-          document.querySelector("area").coords = "" + $(window).width() * .32343 + "," + $(window).height() *.5486111 + ", 10";
-
+          document.querySelector("area").coords = "" + $(window).width() * .3234 + "," + $(window).height() *.5486111 + ", 10";
+          function display(){
+            alert("DDBBT READ TO WIN")
+          }
 
    </script>
  </html>
