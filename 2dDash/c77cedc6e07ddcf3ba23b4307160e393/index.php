@@ -37,6 +37,17 @@ if(isset($_POST["user"])){
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
+     <style media="screen">
+     video{
+       position:fixed;
+       height: 101vh;
+       width: 101vw;
+       z-index:-100;
+     }
+     body{
+       overflow:hidden;
+     }
+     </style>
 </head>
 <body>
   <video controls autoplay onplay = "onPlayHide()" id="myVideo">
