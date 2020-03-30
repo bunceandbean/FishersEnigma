@@ -68,7 +68,6 @@ map{
   height: 101vh;
   width: 101vw;
   z-index:-101;
-  visibility:hidden;
   display:none;
 }
      </style>
