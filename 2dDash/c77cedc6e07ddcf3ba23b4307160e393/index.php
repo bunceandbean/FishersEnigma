@@ -50,7 +50,7 @@ if(isset($_POST["user"])){
      @import url('https://fonts.googleapis.com/css?family=Titan+One');
 
  body{text-align:center}
- div{display:block;position:absolute}
+ div{}
 
  .container{
  	width:320px;
