@@ -58,6 +58,7 @@ if(isset($_POST["user"])){
 
    <body>
      <video loop autoplay muted id="myVideo">
+       <source src="Stage Two.mp4" type="video/mp4">
      </video>
 
    </body>
