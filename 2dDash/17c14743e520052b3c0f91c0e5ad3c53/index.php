@@ -67,7 +67,7 @@ map{
   position:fixed;
   height: 101vh;
   width: 101vw;
-  z-index:-101;
+  z-index:101;
   display:none;
 }
 area{
