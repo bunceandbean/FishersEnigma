@@ -212,7 +212,7 @@ function onPlayHide(){
 
      }
 
-     console.log(~  ----->  /);
+     console.log("~  ----->  /");
 
 </script>
 </html>
