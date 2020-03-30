@@ -87,12 +87,16 @@ area{
 usemap="#planetmap" id = "script">
 
 <map name="planetmap" id = "#script">
-  <area target="_blank" alt="" title="" shape = "circle">
+  <area target="_blank" alt="" title="" href = "bs.html" shape = "circle" class = "area">
 </map>
 </div>
 
    </body>
    <script type="text/javascript">
+   $("area").on("click", function(e){
+    e.preventDefault();
+    display();
+});
    document.querySelector("area").onclick = "display()";
           function onPlayHide(){
                setTimeout(hideDiv, 8000);
