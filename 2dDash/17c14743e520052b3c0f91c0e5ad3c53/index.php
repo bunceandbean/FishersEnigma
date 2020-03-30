@@ -57,16 +57,15 @@ if(isset($_POST["user"])){
    </head>
 
    <body>
-     <video controls autoplay id="myVideo">
+     <video controls autoplay onended = "goAway" id="myVideo">
        <source src="Stage Two.mp4" type="video/mp4">
      </video>
 
    </body>
    <script type="text/javascript">
-      var video = document.querySelector("video");
-      video.addEventListener('ended', goAway);
       function goAway(){
-        document.querySelector("video").style.display = "hidden";
+        this.style.display = "none";
+        this.style.visibility = "hidden";
       }
 
 
