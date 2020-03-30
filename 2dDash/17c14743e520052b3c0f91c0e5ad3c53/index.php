@@ -53,12 +53,19 @@ if(isset($_POST["user"])){
        display: block;
      }
 
+     #scrabble{
+       display:none;
+     }
+
      </style>
    </head>
 
    <body>
      <video controls autoplay onplay = "onPlayHide()" id="myVideo">
        <source src="Stage Two.mp4" type="video/mp4">
+     </video>
+
+     <video src="scrabble.mp4" autoplay id = "scrabble">
      </video>
 
    </body>
@@ -69,6 +76,7 @@ if(isset($_POST["user"])){
 
                function hideDiv() {
                    document.getElementById("myVideo").style.display="none";
+                   document.getElementById("scrabble").style.display="block";
                }
 
 
