@@ -60,16 +60,7 @@ if(isset($_POST["user"])){
     position: relative;
 }
 
-.container>.player-buttons{
-    background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
-    height: 128px;
-    left: 50%;
-    margin: -64px 0 0 -64px;
-    position: absolute;
-    top: 50%;
-    width: 128px;
-    z-index: 1;
-}
+
 
 
      </style>
@@ -83,9 +74,8 @@ if(isset($_POST["user"])){
 <div class="container">
   <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
   </video>
-  <?php echo "<div class='player-buttons'></div>"; ?>
+  <?php echo "<button type='button' name='button'>here</button>"; ?>
 </div>
-
 
    </body>
    <script type="text/javascript">
