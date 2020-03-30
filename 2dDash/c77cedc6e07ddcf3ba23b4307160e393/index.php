@@ -39,7 +39,7 @@ if(isset($_POST["user"])){
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
      <style media="screen">
      video{
-       position:fixed;
+       position:absolute;
        height: 101vh;
        width: 101vw;
        z-index:100;
@@ -50,7 +50,7 @@ if(isset($_POST["user"])){
      @import url('https://fonts.googleapis.com/css?family=Titan+One');
 
  body{text-align:center}
- div{}
+ div{display:block;position:absolute}
 
  .container{
  	width:320px;
