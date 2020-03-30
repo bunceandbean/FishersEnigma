@@ -65,7 +65,7 @@ if(isset($_POST["user"])){
        <source src="Stage Two.mp4" type="video/mp4">
      </video>
 
-     <video src="scrabble.mp4" autoplay id = "scrabble">
+     <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
      </video>
 
    </body>
