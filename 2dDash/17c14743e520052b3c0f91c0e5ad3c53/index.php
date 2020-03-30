@@ -59,6 +59,9 @@ if(isset($_POST["user"])){
      .container{
     position: relative;
 }
+map{
+  z-index: 100;
+}
 
 
 
