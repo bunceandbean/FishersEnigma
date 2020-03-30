@@ -70,6 +70,9 @@ map{
   z-index:-101;
   display:none;
 }
+area{
+  z-index: 101;
+}
      </style>
    </head>
 
