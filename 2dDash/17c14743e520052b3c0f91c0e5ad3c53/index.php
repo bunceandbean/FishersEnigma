@@ -63,10 +63,10 @@ if(isset($_POST["user"])){
 
    </body>
    <script type="text/javascript">
-      function goAway(){
-        this.style.display = "none";
-        this.style.visibility = "hidden";
-      }
+               setTimeout(hideDiv, 8000);
+               function hideDiv() {
+                   document.getElementById("#myVideo").style.display="none";
+               }
 
 
    </script>
