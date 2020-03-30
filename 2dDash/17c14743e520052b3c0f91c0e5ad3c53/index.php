@@ -81,7 +81,7 @@ map{
 usemap="#planetmap">
 
 <map name="planetmap">
-  <area target="_blank" alt="" title="" href="book.html" coords="405,402,420,420">
+  <area target="_blank" alt="" title="" href="book.html" coords="400,395,414,414">
 </map>
 </div>
 
