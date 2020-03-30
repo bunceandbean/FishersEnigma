@@ -49,7 +49,7 @@ if(isset($_POST["user"])){
      }
      </style>
 </head>
-<body>
+<body onkeypress = "myKeyPress(event)">
   <video controls autoplay onplay = "onPlayHide()" id="myVideo">
     <source src="Stage Three.mp4" type="video/mp4">
   </video>
@@ -57,18 +57,24 @@ if(isset($_POST["user"])){
 </body>
 <script type="text/javascript">
 
-function setKey(e){
-  $('body').keyup(function(){
-       alert($(e).val());
-  });
-}
+function myKeyPress(e){
+   var keynum;
+
+   if(window.event) { // IE
+     keynum = e.keyCode;
+   } else if(e.which){ // Netscape/Firefox/Opera
+     keynum = e.which;
+   }
+
+   alert(String.fromCharCode(keynum));
+ }
+
 function onPlayHide(){
      setTimeout(hideDiv, 8000);
    }
 
      function hideDiv() {
          document.getElementById("myVideo").style.display="none";
-         setKey();
 
      }
 
