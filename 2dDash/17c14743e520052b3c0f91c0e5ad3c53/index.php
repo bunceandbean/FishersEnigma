@@ -74,7 +74,12 @@ if(isset($_POST["user"])){
 <div class="container">
   <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
   </video>
-  <?php echo "<button type='button' name='button'>here</button>"; ?>
+  <img src="place.jpg" alt="Planets"
+usemap="#planetmap">
+
+<map name="planetmap">
+  <area target="_blank" alt="" title="" href="book.html" coords="405,402" shape="rect">
+</map>
 </div>
 
    </body>
