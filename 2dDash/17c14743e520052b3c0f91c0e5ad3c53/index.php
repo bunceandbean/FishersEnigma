@@ -62,6 +62,12 @@ if(isset($_POST["user"])){
 map{
   z-index: 100;
 }
+#script{
+  position:fixed;
+  height: 101vh;
+  width: 101vw;
+  z-index:-101;
+}
 
 
 
@@ -78,7 +84,7 @@ map{
   <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
   </video>
   <img src="place.jpg" alt="Planets"
-usemap="#planetmap">
+usemap="#planetmap" id = "#script">
 
 <map name="planetmap">
   <area target="_blank" alt="" title="" href="book.html" coords="400,395,414,414">
