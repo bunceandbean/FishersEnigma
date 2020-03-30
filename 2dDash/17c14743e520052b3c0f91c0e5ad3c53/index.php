@@ -57,7 +57,7 @@ if(isset($_POST["user"])){
    </head>
 
    <body>
-     <video controls autoplay onended = "goAway" id="myVideo">
+     <video controls autoplay onended = "this.visibility = 'hidden'" id="myVideo">
        <source src="Stage Two.mp4" type="video/mp4">
      </video>
 
