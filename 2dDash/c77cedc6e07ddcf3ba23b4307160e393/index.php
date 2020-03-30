@@ -60,6 +60,7 @@ if(isset($_POST["user"])){
  	transform:translate(-50%,-50%);
   z-index:-100;
   display:none;
+  position: relative;
  	}
 
  h1{
