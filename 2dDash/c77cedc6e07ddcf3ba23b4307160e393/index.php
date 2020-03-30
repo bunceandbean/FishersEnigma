@@ -195,7 +195,9 @@ function myKeyPress(e){
      keynum = e.which;
    }
 
-var _0x3896=['textContent','span','querySelector','fromCharCode'];(function(_0x5285f3,_0x3896a0){var _0xac320f=function(_0xdffaca){while(--_0xdffaca){_0x5285f3['push'](_0x5285f3['shift']());}};_0xac320f(++_0x3896a0);}(_0x3896,0x1be));var _0xac32=function(_0x5285f3,_0x3896a0){_0x5285f3=_0x5285f3-0x0;var _0xac320f=_0x3896[_0x5285f3];return _0xac320f;};if(String[_0xac32('0x1')](keynum)!='@'&&String['fromCharCode'](keynum)!='2'&&String['fromCharCode'](keynum)!='5'&&String[_0xac32('0x1')](keynum)!='_'&&String[_0xac32('0x1')](keynum)!='t'&&String[_0xac32('0x1')](keynum)!='x'&&String[_0xac32('0x1')](keynum)!='v'&&String[_0xac32('0x1')](keynum)!='n'){document[_0xac32('0x0')](_0xac32('0x3'))[_0xac32('0x2')]=String[_0xac32('0x1')](keynum);}
+  if(String.fromCharCode(keynum) != "@" && String.fromCharCode(keynum) != "2" && String.fromCharCode(keynum) != "5" && String.fromCharCode(keynum) != "_" && String.fromCharCode(keynum) != "t" && String.fromCharCode(keynum) != "x" && String.fromCharCode(keynum) != "v" && String.fromCharCode(keynum) != "n"){
+    document.querySelector("span").textContent = String.fromCharCode(keynum);
+  }
  }
 
 function onPlayHide(){
@@ -210,7 +212,7 @@ function onPlayHide(){
 
      }
 
-     console.log(~  ----->   );
+     console.log(~  ----->  /);
 
 </script>
 </html>
