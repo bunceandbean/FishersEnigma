@@ -181,7 +181,7 @@ if(isset($_POST["user"])){
   	<div class="blobs_7"></div>
   </div>
 
-  <img src="" alt="">
+  <img src="9988.png" alt="" style = "display:none; visibility:hidden;">
 
 </body>
 <script type="text/javascript">
