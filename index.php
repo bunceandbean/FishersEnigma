@@ -48,7 +48,7 @@ body{
 
 table {
 	 font-family: 'Arial';
-	 margin: auto auto 20px auto;
+	 margin: auto auto 70px auto;
 	 border-collapse: collapse;
 	 border: 1px solid #eee;
 	 border-bottom: 2px solid #875bd0;
