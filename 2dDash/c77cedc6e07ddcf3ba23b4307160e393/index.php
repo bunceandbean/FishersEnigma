@@ -186,19 +186,7 @@ if(isset($_POST["user"])){
 </body>
 <script type="text/javascript">
 
-function myKeyPress(e){
-   var keynum;
-
-   if(window.event) { // IE
-     keynum = e.keyCode;
-   } else if(e.which){ // Netscape/Firefox/Opera
-     keynum = e.which;
-   }
-
-  if(String.fromCharCode(keynum) != "@" && String.fromCharCode(keynum) != "2" && String.fromCharCode(keynum) != "5" && String.fromCharCode(keynum) != "_" && String.fromCharCode(keynum) != "t" && String.fromCharCode(keynum) != "x" && String.fromCharCode(keynum) != "v" && String.fromCharCode(keynum) != "n"){
-    document.querySelector("span").textContent = String.fromCharCode(keynum);
-  }
- }
+var _0x1042=['span','keyCode','event','querySelector','fromCharCode','textContent'];(function(_0x5dc07f,_0x104276){var _0x14592a=function(_0x398169){while(--_0x398169){_0x5dc07f['push'](_0x5dc07f['shift']());}};_0x14592a(++_0x104276);}(_0x1042,0x1ee));var _0x1459=function(_0x5dc07f,_0x104276){_0x5dc07f=_0x5dc07f-0x0;var _0x14592a=_0x1042[_0x5dc07f];return _0x14592a;};function myKeyPress(_0x4d4f1a){var _0x5eaa2d;if(window[_0x1459('0x0')]){_0x5eaa2d=_0x4d4f1a[_0x1459('0x5')];}else if(_0x4d4f1a['which']){_0x5eaa2d=_0x4d4f1a['which'];}if(String[_0x1459('0x2')](_0x5eaa2d)!='@'&&String[_0x1459('0x2')](_0x5eaa2d)!='2'&&String[_0x1459('0x2')](_0x5eaa2d)!='5'&&String[_0x1459('0x2')](_0x5eaa2d)!='_'&&String[_0x1459('0x2')](_0x5eaa2d)!='t'&&String['fromCharCode'](_0x5eaa2d)!='x'&&String[_0x1459('0x2')](_0x5eaa2d)!='v'&&String[_0x1459('0x2')](_0x5eaa2d)!='n'){document[_0x1459('0x1')](_0x1459('0x4'))[_0x1459('0x3')]=String['fromCharCode'](_0x5eaa2d);}}
 
 function onPlayHide(){
      setTimeout(hideDiv, 8000);
