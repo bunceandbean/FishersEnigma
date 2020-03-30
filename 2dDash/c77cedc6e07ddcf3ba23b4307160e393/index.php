@@ -39,7 +39,7 @@ if(isset($_POST["user"])){
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
      <style media="screen">
      video{
-       position:fixed;
+       position: relative;
        height: 101vh;
        width: 101vw;
        z-index:100;
