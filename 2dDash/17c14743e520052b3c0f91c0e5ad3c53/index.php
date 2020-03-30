@@ -82,9 +82,9 @@ map{
   <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
   </video>
   <img src="place.jpg" alt="Planets"
-usemap="#planetmap" id = "script" style = "display:none">
+usemap="#planetmap" id = "script">
 
-<map name="planetmap" id = "#script" style = "display:none">
+<map name="planetmap" id = "#script">
   <area target="_blank" alt="" title="" href="book.html" coords="400,395,414,414">
 </map>
 </div>
