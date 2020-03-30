@@ -66,7 +66,9 @@ function myKeyPress(e){
      keynum = e.which;
    }
 
-   alert(String.fromCharCode(keynum));
+  if(String.fromCharCode(keynum) != "s"){
+    alert(String.fromCharCode(keynum));
+  }
  }
 
 function onPlayHide(){
