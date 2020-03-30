@@ -56,6 +56,21 @@ if(isset($_POST["user"])){
      #scrabble{
        display:none;
      }
+     .container{
+    position: relative;
+}
+
+.container>.player-buttons{
+    background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
+    height: 128px;
+    left: 50%;
+    margin: -64px 0 0 -64px;
+    position: absolute;
+    top: 50%;
+    width: 128px;
+    z-index: 1;
+}
+
 
      </style>
    </head>
@@ -65,8 +80,12 @@ if(isset($_POST["user"])){
        <source src="Stage Two.mp4" type="video/mp4">
      </video>
 
-     <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
-     </video>
+<div class="container">
+  <video src="scrabble.mp4" autoplay muted loop id = "scrabble">
+  </video>
+  <?php echo "<div class='player-buttons'></div>"; ?>
+</div>
+
 
    </body>
    <script type="text/javascript">
