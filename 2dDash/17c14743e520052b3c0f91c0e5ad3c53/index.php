@@ -85,7 +85,7 @@ map{
 usemap="#planetmap" id = "script">
 
 <map name="planetmap" id = "#script">
-  <area target="_blank" alt="" title="" href="book.html" coords="400,395,414,414">
+  <area target="_blank" alt="" title="" href="book.html">
 </map>
 </div>
 
@@ -99,6 +99,8 @@ usemap="#planetmap" id = "script">
                    document.getElementById("myVideo").style.display="none";
                    document.getElementById("scrabble").style.display="block";
                }
+
+          document.querySelector("area").coords = "" + $(window).width() * .3125 + "," + $(window).height() * .5486111 + "," + $(window).width() * .3234375 + "," + $(window).height() * .3234375 + "";
 
 
    </script>
