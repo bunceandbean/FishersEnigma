@@ -57,15 +57,18 @@ if(isset($_POST["user"])){
    </head>
 
    <body>
-     <video controls autoplay onended = "this.visibility = 'hidden'" id="myVideo">
+     <video controls autoplay onplay = "onPlayHide()" id="myVideo">
        <source src="Stage Two.mp4" type="video/mp4">
      </video>
 
    </body>
    <script type="text/javascript">
+          function onPlayHide(){
                setTimeout(hideDiv, 8000);
+             }
+
                function hideDiv() {
-                   document.getElementById("#myVideo").style.display="none";
+                   document.getElementById("myVideo").style.display="none";
                }
 
 
