@@ -46,9 +46,9 @@ if(isset($_POST["user"])){
 </body>
 <script type="text/javascript">
 
-function setKey(){
+function setKey(e){
   $('body').keyup(function(){
-       alert($(this).val());
+       alert($(e).val());
   });
 }
 function onPlayHide(){
