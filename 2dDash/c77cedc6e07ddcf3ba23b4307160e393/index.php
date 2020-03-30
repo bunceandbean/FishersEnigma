@@ -59,6 +59,7 @@ if(isset($_POST["user"])){
  	left:50%;
  	transform:translate(-50%,-50%);
   z-index:-100;
+  display:none;
  	}
 
  h1{
@@ -166,7 +167,7 @@ if(isset($_POST["user"])){
   <video controls autoplay onplay = "onPlayHide()" id="myVideo">
     <source src="Stage Three.mp4" type="video/mp4">
   </video>
-  <div class="container">
+  <div class="container" id = "cont">
   	<h1><span id = "span"></span></h1>
 
   	<div class="blobs_1"></div>
@@ -177,6 +178,8 @@ if(isset($_POST["user"])){
   	<div class="blobs_6"></div>
   	<div class="blobs_7"></div>
   </div>
+
+  <img src="" alt="">
 
 </body>
 <script type="text/javascript">
@@ -201,6 +204,7 @@ function onPlayHide(){
 
      function hideDiv() {
          document.getElementById("myVideo").style.display="none";
+         document.getElementById("cont").style.display="block";
 
      }
 
