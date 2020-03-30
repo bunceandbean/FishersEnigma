@@ -102,7 +102,7 @@ usemap="#planetmap" id = "script">
                    document.getElementById("scrabble").style.display="block";
                }
 
-          document.querySelector("area").coords = "" + $(window).width() * .3234375 + "," + $(window).height() *.5486111 + ", 20";
+          document.querySelector("area").coords = "" + $(window).width() * .32343 + "," + $(window).height() *.5486111 + ", 10";
 
 
    </script>
