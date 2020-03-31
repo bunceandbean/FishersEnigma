@@ -77,20 +77,31 @@ if(isset($_POST["user"])){
             this.echo('h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌');
           }
       },
+      crow: function(){
+        this.echo($('<img src="crow.jpg">'));
+      },
       destroy: function() {
-        if(desCount < 2){
           this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
           desCount++;
-        }else{
-          // TODO:
-        }
       },
       terminate: function() {
           this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
           desCount++;
+      },
+      help: function(){
+        if(desCount < 1){
+        this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
+        }else{
+          this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ndestroy: terminate terminal \nterminate: terminate terminal');
+        }
+      },
+      t̷e̵r̸m̶i̸n̶a̷t̸e̸ : function(){
+        if(desCount >= 1){
+        this.echo('Clever...');
+        }
       }
   }, {
-      greetings: 'Enigma Terminal'
+      greetings: 'Enigma Terminal -- type "help" to get a list of commands'
   });
 
       </script>
