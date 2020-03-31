@@ -37,6 +37,9 @@ if(isset($_POST["user"])){
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
      <style media="screen">
      video{
        position: relative;
@@ -52,26 +55,13 @@ if(isset($_POST["user"])){
 
        </body>
       <script type="text/javascript">
-      jQuery(function($, undefined) {
-  $('#term_demo').terminal(function(command) {
-      if (command !== '') {
-          try {
-              var result = window.eval(command);
-              if (result !== undefined) {
-                  this.echo(new String(result));
-              }
-          } catch(e) {
-              this.error(new String(e));
-          }
-      } else {
-         this.echo('');
+      $('body').terminal({
+      hello: function(what) {
+          this.echo('Hello, ' + what +
+                    '. Wellcome to this terminal.');
       }
   }, {
-      greetings: 'Enigma Terminal',
-      name: 'js_demo',
-      height: 200,
-      prompt: 'js> '
+      greetings: 'My First Terminal'
   });
-});
       </script>
 </html>
