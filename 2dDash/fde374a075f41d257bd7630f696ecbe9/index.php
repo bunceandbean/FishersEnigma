@@ -67,6 +67,7 @@ if(isset($_POST["user"])){
       },
       destroy: function() {
           this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
+          desCount++;
       }
   }, {
       greetings: 'Enigma Terminal'
