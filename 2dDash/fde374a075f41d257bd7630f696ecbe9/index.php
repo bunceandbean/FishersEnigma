@@ -55,10 +55,15 @@ if(isset($_POST["user"])){
 
        </body>
       <script type="text/javascript">
+      var desCount = 0;
       $('body').terminal({
       hello: function(what) {
+        if(desCount == 0){
           this.echo('Hello, ' + what +
                     '. Wellcome to this terminal.');
+          }else{
+            this.echo('h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌');
+          }
       },
       destroy: function() {
           this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
