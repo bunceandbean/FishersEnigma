@@ -67,7 +67,9 @@ if(isset($_POST["user"])){
          document.getElementById("myVideo").style.display="none";
         }
       /////////////////////////
+      var help2 = false;
       var desCount = 0;
+      var c = 0;
       $('body').terminal({
       hello: function(what) {
         if(desCount == 0){
@@ -78,7 +80,14 @@ if(isset($_POST["user"])){
           }
       },
       crow: function(){
+        if(c != 3){
         this.echo($('<img src="crow.jpg">'));
+        if(help2){
+          c++;
+        }
+      }else{
+        document.querySelector("body").style.display = "none";
+        }
       },
       destroy: function() {
           this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
@@ -91,13 +100,16 @@ if(isset($_POST["user"])){
       help: function(){
         if(desCount < 1){
         this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \ndestroy: terminate terminal \nterminate: terminate terminal');
-        }else{
+      }else if (!help2){
           this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
+        }else{
+          this.echo('murder him');
         }
       },
       t̷e̵r̸m̶i̸n̶a̷t̸e̸ : function(){
         if(desCount >= 1){
-        this.echo('Clever...');
+        this.echo('Never...');
+        help2 = true;
         }
       }
   }, {
