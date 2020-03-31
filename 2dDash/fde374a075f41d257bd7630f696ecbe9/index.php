@@ -24,3 +24,54 @@ if(isset($_POST["user"])){
 
 
  ?>
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>Stage Three: Tu effingo?</title>
+     <meta charset="UTF-8">
+     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon.png">
+     <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.png">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
+     <style media="screen">
+     video{
+       position: relative;
+       height: 101vh;
+       width: 101vw;
+       z-index:100;
+     }
+     body{
+       overflow:hidden;
+     }
+     </style>
+       <body>
+
+       </body>
+      <script type="text/javascript">
+      jQuery(function($, undefined) {
+  $('#term_demo').terminal(function(command) {
+      if (command !== '') {
+          try {
+              var result = window.eval(command);
+              if (result !== undefined) {
+                  this.echo(new String(result));
+              }
+          } catch(e) {
+              this.error(new String(e));
+          }
+      } else {
+         this.echo('');
+      }
+  }, {
+      greetings: 'Enigma Terminal',
+      name: 'js_demo',
+      height: 200,
+      prompt: 'js> '
+  });
+});
+      </script>
+</html>
