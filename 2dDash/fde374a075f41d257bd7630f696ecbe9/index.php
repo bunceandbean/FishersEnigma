@@ -67,7 +67,57 @@ if(isset($_POST["user"])){
          document.getElementById("myVideo").style.display="none";
         }
       /////////////////////////
-  var _0x1689=['thethreebirds','<img\x20src=\x22crow.jpg\x22>','murder\x20him','textContent','hello:\x20h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0adestroy:\x20t̷e̵r̸m̶i̸n̶a̷t̸e̸\x20\x20\x0aterminate:\x20t̷e̵r̸m̶i̸n̶a̷t̸e̸\x20','querySelector','none','h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌','hello:\x20type\x20\x22hello\x22\x20followed\x20by\x20a\x20name\x20to\x20get\x20a\x20greeting\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0adestroy:\x20terminate\x20terminal\x20\x0aterminate:\x20terminate\x20terminal','echo','display','Enigma\x20Terminal\x20--\x20type\x20\x22help\x22\x20to\x20get\x20a\x20list\x20of\x20commands','<img\x20src=\x22https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg\x22>','body','block','.\x20Wellcome\x20to\x20this\x20terminal.'];(function(_0x36d990,_0x1689c0){var _0x209722=function(_0xcdb5a1){while(--_0xcdb5a1){_0x36d990['push'](_0x36d990['shift']());}};_0x209722(++_0x1689c0);}(_0x1689,0x14a));var _0x2097=function(_0x36d990,_0x1689c0){_0x36d990=_0x36d990-0x0;var _0x209722=_0x1689[_0x36d990];return _0x209722;};var help2=![];var desCount=0x0;var c=0x0;$(_0x2097('0x3'))['terminal']({'hello':function(_0x50becf){if(desCount==0x0){this[_0x2097('0xf')]('Hello,\x20'+_0x50becf+_0x2097('0x5'));}else{this[_0x2097('0xf')](_0x2097('0xd'));}},'crow':function(){if(c!=0x2){this['echo']($(_0x2097('0x7')));if(help2){c++;}}else{document[_0x2097('0xb')]('.terminal')['style'][_0x2097('0x0')]=_0x2097('0xc');document[_0x2097('0xb')]('p')['style'][_0x2097('0x0')]=_0x2097('0x4');document[_0x2097('0xb')]('p')[_0x2097('0x9')]=_0x2097('0x6');}},'destroy':function(){this[_0x2097('0xf')]($(_0x2097('0x2')));desCount++;},'terminate':function(){this[_0x2097('0xf')]($(_0x2097('0x2')));desCount++;},'help':function(){if(desCount<0x1){this[_0x2097('0xf')](_0x2097('0xe'));}else if(!help2){this[_0x2097('0xf')](_0x2097('0xa'));}else{this['echo'](_0x2097('0x8'));}},'t̷e̵r̸m̶i̸n̶a̷t̸e̸':function(){if(desCount>=0x1){this[_0x2097('0xf')]('Never...');help2=!![];}}},{'greetings':_0x2097('0x1')});
+      var help2 = false;
+      var desCount = 0;
+      var c = 0;
+      $('body').terminal({
+      hello: function(what) {
+        if(desCount == 0){
+          this.echo('Hello, ' + what +
+                    '. Wellcome to this terminal.');
+          }else{
+            this.echo('h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌');
+          }
+      },
+      crow: function(){
+        if(c != 2){
+        this.echo($('<img src="crow.jpg">'));
+        if(help2){
+          c++;
+        }
+      }else{
+        document.querySelector(".terminal").style.display = "none";
+        document.querySelector("p").style.display = "block";
+        document.querySelector("p").textContent = "thethreebirds";
+
+        }
+      },
+      destroy: function() {
+          this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
+          desCount++;
+      },
+      terminate: function() {
+          this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
+          desCount++;
+      },
+      help: function(){
+        if(desCount < 1){
+        this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \ndestroy: terminate terminal \nterminate: terminate terminal');
+      }else if (!help2){
+          this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
+        }else{
+          this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \ndestroy: murder him \nterminate: murder him');
+        }
+      },
+      t̷e̵r̸m̶i̸n̶a̷t̸e̸ : function(){
+        if(desCount >= 1){
+        this.echo('Never...');
+        help2 = true;
+        }
+      }
+  }, {
+      greetings: 'Enigma Terminal -- type "help" to get a list of commands'
+  });
 
       </script>
 </html>
