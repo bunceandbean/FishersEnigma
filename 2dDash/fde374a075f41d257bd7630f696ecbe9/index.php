@@ -42,7 +42,7 @@ if(isset($_POST["user"])){
       <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
      <style media="screen">
      video{
-       position: relative;
+       position: fixed;
        height: 101vh;
        width: 101vw;
        z-index:100;
