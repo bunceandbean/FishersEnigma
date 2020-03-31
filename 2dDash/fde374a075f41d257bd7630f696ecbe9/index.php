@@ -60,8 +60,8 @@ if(isset($_POST["user"])){
           this.echo('Hello, ' + what +
                     '. Wellcome to this terminal.');
       },
-      cat: function() {
-          this.echo($('<img src="https://placekitten.com/408/287">'));
+      destroy: function() {
+          this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
       }
   }, {
       greetings: 'Enigma Terminal'
