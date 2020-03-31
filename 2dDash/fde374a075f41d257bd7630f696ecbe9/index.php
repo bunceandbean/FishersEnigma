@@ -59,15 +59,13 @@ if(isset($_POST["user"])){
       hello: function(what) {
           this.echo('Hello, ' + what +
                     '. Wellcome to this terminal.');
+      },
+      cat: function() {
+          this.echo($('<img src="https://placekitten.com/408/287">'));
       }
   }, {
       greetings: 'Enigma Terminal'
   });
 
-  $('body').terminal({
-    cat: function() {
-        this.echo($('<img src="https://placekitten.com/408/287">'));
-    }
-});
       </script>
 </html>
