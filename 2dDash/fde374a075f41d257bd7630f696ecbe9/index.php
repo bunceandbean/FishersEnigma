@@ -61,7 +61,13 @@ if(isset($_POST["user"])){
                     '. Wellcome to this terminal.');
       }
   }, {
-      greetings: 'My First Terminal'
+      greetings: 'Enigma Terminal'
   });
+
+  $('body').terminal({
+    cat: function() {
+        this.echo($('<img src="https://placekitten.com/408/287">'));
+    }
+});
       </script>
 </html>
