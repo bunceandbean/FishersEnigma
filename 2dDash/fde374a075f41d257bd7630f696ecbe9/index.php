@@ -87,6 +87,7 @@ if(isset($_POST["user"])){
         }
       }else{
         document.querySelector("body").style.display = "none";
+        document.querySelector("body").appendChild(document.createElement('p').textContent = "ejwnf");
         }
       },
       destroy: function() {
