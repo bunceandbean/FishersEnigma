@@ -27,7 +27,7 @@ if(isset($_POST["user"])){
  <!DOCTYPE html>
  <html>
    <head>
-     <title>Stage Three: Tu effingo?</title>
+     <title>Stage Four: Terminate the Terminal</title>
      <meta charset="UTF-8">
      <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,9 +52,21 @@ if(isset($_POST["user"])){
      }
      </style>
        <body>
+         <video controls autoplay onplay = "onPlayHide()" id="myVideo">
+           <source src="Stage Four.mp4" type="video/mp4">
+         </video>
 
        </body>
       <script type="text/javascript">
+      /////////////////////////
+      function onPlayHide(){
+           setTimeout(hideDiv, 8000);
+         }
+
+     function hideDiv() {
+         document.getElementById("myVideo").style.display="none";
+        }
+      /////////////////////////
       var desCount = 0;
       $('body').terminal({
       hello: function(what) {
@@ -66,6 +78,14 @@ if(isset($_POST["user"])){
           }
       },
       destroy: function() {
+        if(desCount < 2){
+          this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
+          desCount++;
+        }else{
+          // TODO:
+        }
+      },
+      terminate: function() {
           this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
           desCount++;
       }
