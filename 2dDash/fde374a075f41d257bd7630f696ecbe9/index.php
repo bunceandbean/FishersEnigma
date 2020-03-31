@@ -80,7 +80,7 @@ if(isset($_POST["user"])){
           }
       },
       crow: function(){
-        if(c != 3){
+        if(c != 2){
         this.echo($('<img src="crow.jpg">'));
         if(help2){
           c++;
