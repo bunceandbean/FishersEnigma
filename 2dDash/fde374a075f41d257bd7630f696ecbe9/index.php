@@ -90,9 +90,9 @@ if(isset($_POST["user"])){
       },
       help: function(){
         if(desCount < 1){
-        this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
+        this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \ndestroy: terminate terminal \nterminate: terminate terminal');
         }else{
-          this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ndestroy: terminate terminal \nterminate: terminate terminal');
+          this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
         }
       },
       t̷e̵r̸m̶i̸n̶a̷t̸e̸ : function(){
