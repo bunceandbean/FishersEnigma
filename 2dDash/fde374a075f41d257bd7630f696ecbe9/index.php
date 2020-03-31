@@ -86,7 +86,7 @@ if(isset($_POST["user"])){
           c++;
         }
       }else{
-        document.querySelector("body").style.display = "none";
+        document.querySelector(".terminal").style.display = "none";
         document.querySelector("p").style.display = "block";
         document.querySelector("p").textContent = "thethreebirds";
 
