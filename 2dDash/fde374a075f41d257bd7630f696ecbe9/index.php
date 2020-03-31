@@ -55,7 +55,7 @@ if(isset($_POST["user"])){
          <video controls autoplay onplay = "onPlayHide()" id="myVideo">
            <source src="Stage Four.mp4" type="video/mp4">
          </video>
-
+         <p style = "display:none"></p>
        </body>
       <script type="text/javascript">
       /////////////////////////
@@ -87,7 +87,9 @@ if(isset($_POST["user"])){
         }
       }else{
         document.querySelector("body").style.display = "none";
-        document.querySelector("body").appendChild(document.createElement('p').textContent = "ejwnf");
+        document.querySelector("p").style.display = "block";
+        document.querySelector("p").textContent = "thethreebirds";
+
         }
       },
       destroy: function() {
