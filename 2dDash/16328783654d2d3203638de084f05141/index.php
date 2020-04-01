@@ -76,7 +76,7 @@ if(isset($_POST["user"])){
      var height = ctx.canvas.height;
      var rad = 200;
      var count = 0;
-     function draw(){
+     function draw(r){
        ctx.clearRect(0,0,width,height);;
        ctx.beginPath();
         ctx.arc(width/2, height/2,r, 0, 2 * Math.PI);
