@@ -79,8 +79,5 @@ if(isset($_POST["user"])){
       ctx.stroke();
 
 
-
-
-      x: 0,
      </script>
  </html>
