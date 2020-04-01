@@ -89,7 +89,7 @@ if(isset($_POST["user"])){
       }
     }
 
-    setTimeout(draw,1500);
+    setTimeout(draw,15000);
 
 
      </script>
