@@ -75,7 +75,12 @@ if(isset($_POST["user"])){
      var width = ctx.canvas.width;
      var height = ctx.canvas.height;
      ctx.beginPath();
-      ctx.rect(width/2-100, height/2-100, 150, 150);
+      ctx.arc(width/2-100, height/2-100, 50, 0, 2 * Math.PI);
       ctx.stroke();
+
+
+
+
+      x: 0,
      </script>
  </html>
