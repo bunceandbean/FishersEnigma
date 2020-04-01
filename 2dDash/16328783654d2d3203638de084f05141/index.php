@@ -27,7 +27,7 @@ if(isset($_POST["user"])){
  <!DOCTYPE html>
  <html>
    <head>
-     <title>3rd</title>
+     <title>Volume</title>
      <meta charset="UTF-8">
      <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,6 +55,7 @@ if(isset($_POST["user"])){
        <video controls autoplay onplay = "onPlayHide()" id="myVideo">
          <source src="Stage Five.mp4" type="video/mp4">
        </video>
+       <canvas id="canvas" width="300" height="300"></canvas>
 
      </body>
      <script type="text/javascript">
@@ -67,5 +68,14 @@ if(isset($_POST["user"])){
         document.getElementById("myVideo").style.display="none";
        }
      /////////////////////////
+     var canvas = document.querySelector("canvas");
+     var ctx = canvas.getContext('2d');
+     ctx.canvas.width  = window.innerWidth;
+     ctx.canvas.height = window.innerHeight;
+     var width = ctx.canvas.width;
+     var height = ctx.canvas.height;
+     ctx.beginPath();
+      ctx.rect(width/2-150, height/2-150, 150, 150);
+      ctx.stroke();
      </script>
  </html>
