@@ -61,7 +61,7 @@ if(isset($_POST["user"])){
      <script type="text/javascript">
      /////////////////////////
      function onPlayHide(){
-          setTimeout(hideDiv, 8000);
+          setTimeout(hideDiv, 13000);
         }
 
     function hideDiv() {
@@ -75,7 +75,7 @@ if(isset($_POST["user"])){
      var width = ctx.canvas.width;
      var height = ctx.canvas.height;
      ctx.beginPath();
-      ctx.rect(width/2-150, height/2-150, 150, 150);
+      ctx.rect(width/2-100, height/2-100, 150, 150);
       ctx.stroke();
      </script>
  </html>
