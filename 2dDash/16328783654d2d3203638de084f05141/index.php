@@ -74,9 +74,18 @@ if(isset($_POST["user"])){
      ctx.canvas.height = window.innerHeight;
      var width = ctx.canvas.width;
      var height = ctx.canvas.height;
-     ctx.beginPath();
-      ctx.arc(width/2, height/2, 200, 0, 2 * Math.PI);
-      ctx.stroke();
+     var rad = 200;
+     var count = 0;
+     function draw(){
+       ctx.clearRect(0,0,width,height);;
+       ctx.beginPath();
+        ctx.arc(width/2, height/2,r, 0, 2 * Math.PI);
+        ctx.stroke();
+        count+=10;
+        setTimeout(draw(rad-count), 200);
+    }
+
+    setTimeout(draw,1500);
 
 
      </script>
