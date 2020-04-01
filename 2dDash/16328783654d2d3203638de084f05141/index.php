@@ -82,7 +82,11 @@ if(isset($_POST["user"])){
         ctx.arc(width/2, height/2,r, 0, 2 * Math.PI);
         ctx.stroke();
         count+=10;
-        setTimeout(draw(rad-count), 200);
+        if(rad-count > 0){
+        setTimeout(draw(rad-count), 700);
+      }else{
+        rad = 200;
+      }
     }
 
     setTimeout(draw,1500);
