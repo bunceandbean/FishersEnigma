@@ -53,7 +53,7 @@ if(isset($_POST["user"])){
      </style>
      <body>
        <video controls autoplay onplay = "onPlayHide()" id="myVideo">
-         <source src="Stage Five.mp4" type="video/mp4">
+         <source src="StageFive.mp4" type="video/mp4">
        </video>
        <canvas id="canvas" width="300" height="300">
        </canvas>
