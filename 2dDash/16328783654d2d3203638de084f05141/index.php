@@ -76,19 +76,23 @@ if(isset($_POST["user"])){
      var height = ctx.canvas.height;
      var rad = 200;
      var count = 0;
-     function draw(r){
+     async function draw(r){
        ctx.clearRect(0,0,width,height);;
        ctx.beginPath();
         ctx.arc(width/2, height/2,r, 0, 2 * Math.PI);
         ctx.stroke();
         count+=10;
         if(rad-count > 0){
-        setTimeout(draw(rad-count), 700);
+        await delay();
+        draw(rad-count);
       }else{
         rad = 200;
       }
     }
 
+function delay(){
+  return new Promise(resolve => setTimeout(resolve, 700));
+}
     setTimeout(draw,15000);
 
 
