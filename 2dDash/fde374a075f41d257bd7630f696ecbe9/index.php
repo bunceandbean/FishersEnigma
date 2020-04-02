@@ -67,58 +67,6 @@ if(isset($_POST["user"])){
          document.getElementById("myVideo").style.display="none";
         }
       /////////////////////////
-      var help2 = false;
-      var desCount = 0;
-      var c = 0;
-      $('body').terminal({
-      hello: function(what) {
-        if(desCount == 0){
-          this.echo('Hello, ' + what +
-                    '. Wellcome to this terminal.');
-          }else{
-            this.echo('h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌');
-          }
-      },
-      crow: function(){
-        if(c != 2){
-        this.echo($('<img src="crow.jpg">'));
-        if(help2){
-          c++;
-        }
-      }else{
-        document.querySelector(".terminal").style.display = "none";
-        document.querySelector("p").style.display = "block";
-        document.querySelector("p").textContent = "thethreebirds";
-    }
-  },
-  book: function(){
-    this.echo($('<img src="https://www.calendarlabs.com/holidays/images/world-book-day.jpg">'));
-  },
-  destroy: function() {
-      this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
-      desCount++;
-  },
-  terminate: function() {
-      this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
-      desCount++;
-  },
-  help: function(){
-    if(desCount < 1){
-    this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \nbook: displays image of a book \ndestroy: terminate terminal \nterminate: terminate terminal');
-  }else if (!help2){
-      this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \nbook: displays image of a book \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
-    }else{
-      this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \nbook: displays image of a book \ndestroy: murder him \nterminate: murder him');
-    }
-    },
-    t̷e̵r̸m̶i̸n̶a̷t̸e̸ : function(){
-      if(desCount >= 1){
-      this.echo('Never...');
-      help2 = true;
-      }
-    }
-}, {
-    greetings: 'Enigma Terminal -- type "help" to get a list of commands'
-});
+var _0x445d=['terminal','none','hello:\x20h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0abook:\x20displays\x20image\x20of\x20a\x20book\x20\x0adestroy:\x20murder\x20him\x20\x0aterminate:\x20murder\x20him','sGVeu','hello:\x20h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0abook:\x20displays\x20image\x20of\x20a\x20book\x20\x0adestroy:\x20t̷e̵r̸m̶i̸n̶a̷t̸e̸\x20\x20\x0aterminate:\x20t̷e̵r̸m̶i̸n̶a̷t̸e̸\x20','<img\x20src=\x22https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg\x22>','.terminal','style','afiEM','<img\x20src=\x22crow.jpg\x22>','block','ehwsi','<img\x20src=\x22https://www.calendarlabs.com/holidays/images/world-book-day.jpg\x22>','querySelector','h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌','zrCkq','hello:\x20type\x20\x22hello\x22\x20followed\x20by\x20a\x20name\x20to\x20get\x20a\x20greeting\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0abook:\x20displays\x20image\x20of\x20a\x20book\x20\x0adestroy:\x20terminate\x20terminal\x20\x0aterminate:\x20terminate\x20terminal','display','thethreebirds','rxbdc','mHhOl','vNZqZ','textContent','Never...','echo','Enigma\x20Terminal\x20--\x20type\x20\x22help\x22\x20to\x20get\x20a\x20list\x20of\x20commands','ckxII','.\x20Wellcome\x20to\x20this\x20terminal.'];(function(_0x330403,_0x445de9){var _0x2c2cdf=function(_0x54ca59){while(--_0x54ca59){_0x330403['push'](_0x330403['shift']());}};_0x2c2cdf(++_0x445de9);}(_0x445d,0x13a));var _0x2c2c=function(_0x330403,_0x445de9){_0x330403=_0x330403-0x0;var _0x2c2cdf=_0x445d[_0x330403];return _0x2c2cdf;};var help2=![];var desCount=0x0;var c=0x0;$('body')[_0x2c2c('0x16')]({'hello':function(_0xdd84a7){if(desCount==0x0){this['echo']('Hello,\x20'+_0xdd84a7+_0x2c2c('0x15'));}else{this[_0x2c2c('0x12')](_0x2c2c('0x8'));}},'crow':function(){if(c!=0x2){if(_0x2c2c('0x19')==='sGVeu'){this[_0x2c2c('0x12')]($(_0x2c2c('0x3')));if(help2){if(_0x2c2c('0x14')!=='RUKqu'){c++;}else{this[_0x2c2c('0x12')]($(_0x2c2c('0x6')));}}}else{this[_0x2c2c('0x12')](_0x2c2c('0x18'));}}else{if(_0x2c2c('0xd')==='rxbdc'){document['querySelector'](_0x2c2c('0x0'))[_0x2c2c('0x1')][_0x2c2c('0xb')]=_0x2c2c('0x17');document['querySelector']('p')['style'][_0x2c2c('0xb')]=_0x2c2c('0x4');document[_0x2c2c('0x7')]('p')['textContent']=_0x2c2c('0xc');}else{document[_0x2c2c('0x7')](_0x2c2c('0x0'))[_0x2c2c('0x1')][_0x2c2c('0xb')]=_0x2c2c('0x17');document[_0x2c2c('0x7')]('p')[_0x2c2c('0x1')][_0x2c2c('0xb')]='block';document[_0x2c2c('0x7')]('p')[_0x2c2c('0x10')]='thethreebirds';}}},'book':function(){this['echo']($(_0x2c2c('0x6')));},'destroy':function(){this[_0x2c2c('0x12')]($(_0x2c2c('0x1b')));desCount++;},'terminate':function(){this[_0x2c2c('0x12')]($('<img\x20src=\x22https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg\x22>'));desCount++;},'help':function(){if(desCount<0x1){if('afiEM'===_0x2c2c('0x2')){this[_0x2c2c('0x12')](_0x2c2c('0xa'));}else{this['echo']('h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌');}}else if(!help2){this[_0x2c2c('0x12')](_0x2c2c('0x1a'));}else{if(_0x2c2c('0xe')!==_0x2c2c('0x9')){this[_0x2c2c('0x12')](_0x2c2c('0x18'));}else{c++;}}},'t̷e̵r̸m̶i̸n̶a̷t̸e̸':function(){if(desCount>=0x1){if(_0x2c2c('0xf')!==_0x2c2c('0x5')){this[_0x2c2c('0x12')](_0x2c2c('0x11'));help2=!![];}else{if(desCount>=0x1){this[_0x2c2c('0x12')]('Never...');help2=!![];}}}}},{'greetings':_0x2c2c('0x13')});
       </script>
 </html>
