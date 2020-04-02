@@ -55,7 +55,8 @@ if(isset($_POST["user"])){
        <video controls autoplay onplay = "onPlayHide()" id="myVideo">
          <source src="Stage Five.mp4" type="video/mp4">
        </video>
-       <canvas id="canvas" width="300" height="300"></canvas>
+       <canvas id="canvas" width="300" height="300">
+       </canvas>
 
      </body>
      <script type="text/javascript">
@@ -68,32 +69,40 @@ if(isset($_POST["user"])){
         document.getElementById("myVideo").style.display="none";
        }
      /////////////////////////
-     var canvas = document.querySelector("canvas");
-     var ctx = canvas.getContext('2d');
-     ctx.canvas.width  = window.innerWidth;
-     ctx.canvas.height = window.innerHeight;
-     var width = ctx.canvas.width;
-     var height = ctx.canvas.height;
-     var rad = 200;
-     var count = 0;
-     async function draw(r){
+    var canvas = document.querySelector("canvas");
+    var ctx = canvas.getContext('2d');
+    ctx.canvas.width  = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+    var width = ctx.canvas.width;
+    var height = ctx.canvas.height;
+    var rad = 200;
+    var count = 0;
+    async function draw(r){
        ctx.clearRect(0,0,width,height);;
        ctx.beginPath();
         ctx.arc(width/2, height/2,r, 0, 2 * Math.PI);
         ctx.stroke();
-        count+=10;
-        if(rad-count > 0){
-        await delay();
-        draw(rad-count);
-      }else{
-        rad = 200;
+        count+=1;
+        if(count < 200){
+          await delay(100);
+          draw(count);
+        }else if(count <= 400){
+          await delay(100);
+          draw(rad - (count-rad));
+        }
+    }
+    async function repeatDraw(){
+      draw(0);
+      for(var i =0; i < 4; i++){
+        await delay(50000);
+        count =0;
+        draw(0);
       }
     }
-
-function delay(){
-  return new Promise(resolve => setTimeout(resolve, 700));
-}
-    setTimeout(draw,15000);
+    function delay(time){
+      return new Promise(resolve => setTimeout(resolve, time));
+    }
+    setTimeout(repeatDraw,15000);
 
 
      </script>
