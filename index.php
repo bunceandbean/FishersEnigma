@@ -152,7 +152,7 @@ table {
     left:-440px;
     bottom: 0px;
     right: 0px;
-    width: 200px;
+    width: 220px;
     z-index: 100;
     font-family: verdana, sans-serif;
     font-size: 30px;
@@ -174,6 +174,7 @@ table {
     color: #444;
     display: block;
     cursor: pointer;
+    word-break:break-all;
   }
   /* .leaderboard{
     align: center;
@@ -191,6 +192,11 @@ table {
     color: #444;
     display: block;
     cursor: pointer;
+  }
+  @media screen and (max-width: 500px){
+      .sidenav p{
+          font-size:5vw;
+      }
   }
 
   /* When you mouse over the navigation links, change their color */
@@ -347,6 +353,8 @@ canvas {
     left:25vw;
     border-radius: 60px;
     transition:0.5s;
+    width: 10vw;
+    height: 10vw;
   }
   .button{
     background-color: transparent;
@@ -457,7 +465,7 @@ $('table tr').last().addClass('row-last')
 <script type = "text/javascript">
 var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography," +
 "and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.\n"+
- "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.";
+ "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from April 1st to April 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.";
  var informationText = "<div class =  'event-list'><div class = 'event-winter'><p align = 'center' style = 'display:block'><img src = 'logos/2dDash.png' class = 'evlog'><p>Apr. 1st- Apr. 4th</p></p></div> <br> <div class = 'event-dim'><p align = 'center' style = 'display:block'><img src = 'logos/vector/default-monochrome.svg' width = '30%' height = '30%'><p>Summer</p></p></div></div>";
  var boardInnerHTML = "<iframe src='https://sheetsu.com/a/t/ccff5d413d07?embedded=true'  width='100%' height='600' frameBorder='0' style='background: transparent; border: 1px solid #dedede;'></iframe>"
 // var loadingContent;
