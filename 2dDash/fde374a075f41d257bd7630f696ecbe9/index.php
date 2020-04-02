@@ -67,6 +67,58 @@ if(isset($_POST["user"])){
          document.getElementById("myVideo").style.display="none";
         }
       /////////////////////////
-  var _0x84b4=['mukcL','.terminal','querySelector','vOYrC','sjfGY','thethreebirds','hello:\x20h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0adestroy:\x20murder\x20him\x20\x0aterminate:\x20murder\x20him','hello:\x20type\x20\x22hello\x22\x20followed\x20by\x20a\x20name\x20to\x20get\x20a\x20greeting\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0adestroy:\x20terminate\x20terminal\x20\x0aterminate:\x20terminate\x20terminal','.\x20Wellcome\x20to\x20this\x20terminal.','block','style','zwhCS','echo','body','Hello,\x20','DAngL','terminal','none','display','lUyqD','<img\x20src=\x22crow.jpg\x22>','<img\x20src=\x22https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg\x22>','afSEY','h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌','hello:\x20h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0adestroy:\x20t̷e̵r̸m̶i̸n̶a̷t̸e̸\x20\x20\x0aterminate:\x20t̷e̵r̸m̶i̸n̶a̷t̸e̸\x20','POihh','textContent','NKzvG'];(function(_0x469858,_0x84b451){var _0x30af92=function(_0xfbf7e3){while(--_0xfbf7e3){_0x469858['push'](_0x469858['shift']());}};_0x30af92(++_0x84b451);}(_0x84b4,0x18c));var _0x30af=function(_0x469858,_0x84b451){_0x469858=_0x469858-0x0;var _0x30af92=_0x84b4[_0x469858];return _0x30af92;};var help2=![];var desCount=0x0;var c=0x0;$(_0x30af('0x9'))[_0x30af('0xc')]({'hello':function(_0x5e04eb){if(desCount==0x0){if(_0x30af('0x0')===_0x30af('0x1b')){if(desCount<0x1){this[_0x30af('0x8')](_0x30af('0x3'));}else if(!help2){this[_0x30af('0x8')](_0x30af('0x14'));}else{this['echo'](_0x30af('0x2'));}}else{this[_0x30af('0x8')](_0x30af('0xa')+_0x5e04eb+_0x30af('0x4'));}}else{this[_0x30af('0x8')](_0x30af('0x13'));}},'crow':function(){if(c!=0x2){if('POihh'===_0x30af('0x15')){this[_0x30af('0x8')]($(_0x30af('0x10')));if(help2){if('DAngL'===_0x30af('0xb')){c++;}else{this[_0x30af('0x8')]('hello:\x20h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠\x20̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴\x20\x0acrow:\x20displays\x20image\x20of\x20a\x20crow\x20\x0adestroy:\x20murder\x20him\x20\x0aterminate:\x20murder\x20him');}}}else{document[_0x30af('0x1a')]('.terminal')[_0x30af('0x6')][_0x30af('0xe')]=_0x30af('0xd');document[_0x30af('0x1a')]('p')[_0x30af('0x6')][_0x30af('0xe')]=_0x30af('0x5');document[_0x30af('0x1a')]('p')[_0x30af('0x16')]=_0x30af('0x1');}}else{if(_0x30af('0x12')!=='afSEY'){this[_0x30af('0x8')]($(_0x30af('0x10')));if(help2){c++;}}else{document['querySelector'](_0x30af('0x19'))[_0x30af('0x6')][_0x30af('0xe')]=_0x30af('0xd');document[_0x30af('0x1a')]('p')[_0x30af('0x6')][_0x30af('0xe')]=_0x30af('0x5');document[_0x30af('0x1a')]('p')[_0x30af('0x16')]=_0x30af('0x1');}}},'destroy':function(){this[_0x30af('0x8')]($('<img\x20src=\x22https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg\x22>'));desCount++;},'terminate':function(){this[_0x30af('0x8')]($('<img\x20src=\x22https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg\x22>'));desCount++;},'help':function(){if(desCount<0x1){this[_0x30af('0x8')](_0x30af('0x3'));}else if(!help2){if(_0x30af('0x18')!==_0x30af('0x18')){if(desCount>=0x1){this[_0x30af('0x8')]('Never...');help2=!![];}}else{this['echo'](_0x30af('0x14'));}}else{if(_0x30af('0x7')===_0x30af('0x17')){this[_0x30af('0x8')]($(_0x30af('0x11')));desCount++;}else{this[_0x30af('0x8')](_0x30af('0x2'));}}},'t̷e̵r̸m̶i̸n̶a̷t̸e̸':function(){if(desCount>=0x1){if(_0x30af('0xf')!==_0x30af('0xf')){this[_0x30af('0x8')](_0x30af('0x3'));}else{this[_0x30af('0x8')]('Never...');help2=!![];}}}},{'greetings':'Enigma\x20Terminal\x20--\x20type\x20\x22help\x22\x20to\x20get\x20a\x20list\x20of\x20commands'});
+      var help2 = false;
+      var desCount = 0;
+      var c = 0;
+      $('body').terminal({
+      hello: function(what) {
+        if(desCount == 0){
+          this.echo('Hello, ' + what +
+                    '. Wellcome to this terminal.');
+          }else{
+            this.echo('h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴̡̋͌');
+          }
+      },
+      crow: function(){
+        if(c != 2){
+        this.echo($('<img src="crow.jpg">'));
+        if(help2){
+          c++;
+        }
+      }else{
+        document.querySelector(".terminal").style.display = "none";
+        document.querySelector("p").style.display = "block";
+        document.querySelector("p").textContent = "thethreebirds";
+    }
+  },
+  book: function(){
+    this.echo($('<img src="https://www.calendarlabs.com/holidays/images/world-book-day.jpg">'));
+  },
+  destroy: function() {
+      this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
+      desCount++;
+  },
+  terminate: function() {
+      this.echo($('<img src="https://i.ytimg.com/vi/7Nl5BTPSLC0/hqdefault.jpg">'));
+      desCount++;
+  },
+  help: function(){
+    if(desCount < 1){
+    this.echo('hello: type "hello" followed by a name to get a greeting \ncrow: displays image of a crow \nbook: displays image of a book \ndestroy: terminate terminal \nterminate: terminate terminal');
+  }else if (!help2){
+      this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \nbook: displays image of a book \ndestroy: t̷e̵r̸m̶i̸n̶a̷t̸e̸  \nterminate: t̷e̵r̸m̶i̸n̶a̷t̸e̸ ');
+    }else{
+      this.echo('hello: h̷̹͍̍̄e̷̹̩̟̿̽l̵̜̬͉̏̍l̴̡͙̬̪̪̑̀̃o̷̧͕̗͍̬͌̓͋͠ ̶̤͉̣̉͛̓͗͜͝t̷̹͑̊̄͂͠r̶̠̋̔̓a̵̧̠͚̼̻̍͜ỉ̸̗͚̥͎́̍͗̕t̵̡̨͕͖̗̀o̷̱̝̹̍̎̈́̔͜͝r̴ \ncrow: displays image of a crow \nbook: displays image of a book \ndestroy: murder him \nterminate: murder him');
+    }
+    },
+    t̷e̵r̸m̶i̸n̶a̷t̸e̸ : function(){
+      if(desCount >= 1){
+      this.echo('Never...');
+      help2 = true;
+      }
+    }
+}, {
+    greetings: 'Enigma Terminal -- type "help" to get a list of commands'
+});
       </script>
 </html>
