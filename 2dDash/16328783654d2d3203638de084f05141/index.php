@@ -49,6 +49,7 @@ if(isset($_POST["user"])){
      }
      body{
        overflow:hidden;
+       twoshapes: growing/shrinking different;
      }
      </style>
      <body>
@@ -78,7 +79,7 @@ if(isset($_POST["user"])){
     var rad = 200;
     var count = 0;
     async function draw(r){
-       ctx.clearRect(0,0,width,height);;
+       ctx.clearRect(0,0,width,height);
        ctx.beginPath();
         ctx.arc(width/2, height/2,r, 0, 2 * Math.PI);
         ctx.stroke();
