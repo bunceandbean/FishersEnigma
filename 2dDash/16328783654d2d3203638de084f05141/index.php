@@ -76,7 +76,7 @@ if(isset($_POST["user"])){
     ctx.canvas.height = window.innerHeight;
     var width = ctx.canvas.width;
     var height = ctx.canvas.height;
-    var shapeHeight = 3;
+    var shapeHeight = 2;
     var rad = 200;
     var count = 0;
     async function draw(r){
