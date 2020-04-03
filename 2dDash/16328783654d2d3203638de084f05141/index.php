@@ -49,7 +49,7 @@ if(isset($_POST["user"])){
      }
      body{
        overflow:hidden;
-       twosameshapes: growing/shrinking different;
+       twosameshapes: growing/shrinking different, but same size;
      }
      </style>
      <body>
