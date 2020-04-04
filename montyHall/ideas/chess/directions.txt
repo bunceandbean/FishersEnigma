@@ -1,3 +1,6 @@
 Have to move the white biShop, paWn, knIght, kiNg, and quEen to the 5th row. Spells 'Swine'.
 (we can change this later and I'm not sure what to do after)
+
+click the piece to move, then use arrow keys
+
 There are no directional limitations since i don't care to make them... yet.
