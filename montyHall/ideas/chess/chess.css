@@ -9,6 +9,7 @@
   width: 90vmin;
   position: relative;
   margin: auto;
+  background: radial-gradient(black, transparent);
 }
 .board-color-white{
   background-color: #ddd;
@@ -23,4 +24,12 @@ img{
   height:11vmin;
   z-index: 5;
   position: absolute;
+}
+.dead{
+  display: inline-block;
+  width:5vmin;
+  height:5vmin;
+  top:100vmin !important;
+  position: unset;
+  margin:auto;
 }
