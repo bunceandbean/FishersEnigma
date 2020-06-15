@@ -1,0 +1,137 @@
+<div class = "abouts" id= "abouts" align = "center" >
+<p id = "abouts">
+  Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography,
+  and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.
+  Whichever team/player finishes stage 5 first recieves ? dollars (TBD).Join us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.
+</p>
+</div>
+
+
+<nav id = "navigator" onmouseover="showMenu(true);" onmouseout="showMenu(false);">
+  <div class = "row-display content-perm">
+    <p class = "content">Menu</p>
+  </div>
+  <div class = "row-display">
+    <p class = "content" onclick = "display('home')">Home</p>
+  </div>
+  <div class = "row-display">
+    <p class = "content" onclick = "display('about')">About</p>
+  </div>
+  <div class = "row-display">
+    <p class = "content" onclick = "display('events')">Events</p>
+  </div>
+  <div class = "row-display">
+    <p class = "content" onclick = "display('leaderboard')">Leaderboard</p>
+  </div>
+  <div class = "row-display">
+    <p class = "content"><a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Register</a></p>
+  </div>
+</nav>
+
+
+<script type="text/javascript">
+function showMenu(alt){
+  document.querySelector(".content-perm").style = (alt)? "display:none;" : "display:inline-block";
+  let hhgreg = document.querySelectorAll(".row-display");
+  for(var i = 1; i < hhgreg.length; i++){
+    hhgreg[i].style = (alt)? "display:inline-block;":"display:none";
+  }
+}
+  function display(group){
+    let currentDisplay = [];
+    let rouge = document.querySelectorAll(".showing");
+    for(var i =0; i < rouge.length; i++){
+      rouge[i].classList.toggle("showing");
+    }
+    switch (group) {
+      case 'home':
+        currentDisplay.push('.main-logo');
+        currentDisplay.push('.main-logo');
+        currentDisplay.push('.input-area');
+      break;
+      case 'about':
+          currentDisplay.push('#abouts');
+      break;
+      case 'events':
+          currentDisplay.push('#information');
+      break;
+      case 'leaderboard':
+      // document.getElementById("leaderboard-frame").style.display = "inline";
+      // document.getElementById("load-board").innerHTML = loadingContent;
+      // document.getElementById("load-board").style.paddingTop = "400px";
+      break;
+
+
+    }
+    let j =0;
+    for(var k =0; k < currentDisplay.length; k++){
+      let multi=  document.querySelectorAll(currentDisplay[k]);
+      if(multi.length == 1){
+      multi[0].classList.toggle("showing");
+    }else{
+      multi[j].classList.toggle("showing");
+      j++;
+    }
+    }
+  }
+  function destroyLittleShits(){
+    let target = document.querySelector("#navigator");
+    let shitPile = [];
+    for(var i =0; i < target.childNodes.length; i++){
+      if(target.childNodes[i].nodeName == "#text"){
+        shitPile.push(target.childNodes[i]);
+      }
+    }
+    for(var k =0; k < shitPile.length; k++){
+      shitPile[k].parentNode.removeChild(shitPile[k]);
+    }
+    console.log(shitPile);
+  }
+</script>
+
+
+:root{
+  --modifier: 1;
+}
+
+#navigator{
+  width: 10%;
+  height: fit-content;
+  top:0px;
+  left: 0px;
+  position: fixed;
+  background: #fad4ff85;
+  font-size: 0vw;
+  transition: width 0.3s;
+  padding: 1vh 1vw 1vh 1vw;
+
+}
+#navigator:hover{
+  width:100%;
+  transition: width 0.5s;
+  font-size: calc(2vw / var(--modifier));
+
+}
+.content{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+.content-perm{
+  font-size:calc(2vw / var(--modifier)) !important;
+  width:100% !important;
+}
+.row-display{
+  width:calc(100%/5);
+  height:fit-content;
+  font-size: inherit;
+  display:inline-block;
+}
+.row-display:hover{
+  background: #caa4cf85;
+}
+
+  :root{
+    --modifier: 0.7;
+  }

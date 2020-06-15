@@ -11,10 +11,51 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style media="screen">
+:root{
+  --modifier: 1;
+}
 body{
   overflow: hidden;
 }
-  .main-logo,.event-logo,.evlog{
+#navigator{
+  width: calc(10%/ var(--modifier));
+  height: fit-content;
+  top:0px;
+  left: 0px;
+  position: fixed;
+  background: #fad4ff85;
+  font-size: 0vw;
+  transition: width 0.3s;
+  padding: 1vh 1vw 1vh 1vw;
+
+}
+#navigator:hover{
+  width:100%;
+  transition: width 0.5s;
+  font-size: calc(2vw / var(--modifier));
+
+}
+.content{
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+.content-perm{
+  font-size:calc(2vw / var(--modifier)) !important;
+  width:100% !important;
+}
+.row-display{
+  width:calc(100%/5);
+  height:fit-content;
+  font-size: inherit;
+  display:inline-block;
+  cursor: pointer;
+}
+.row-display:hover{
+  background: #caa4cf85;
+}
+
+  .main-logo.showing,.event-logo.showing,.evlog{
     align: center;
     padding-top: 60px;
     position: relative;
@@ -30,11 +71,11 @@ body{
   height: auto ;
   display: block;
   }
-.main-logo.active{
+.main-logo, .event-logo{
   display:none;
 }
 
-.abouts.active{
+.abouts.showing{
   margin-top: 100px;
   align: center;
   padding-top: 4%;
@@ -45,8 +86,12 @@ body{
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1.5s;
+  display: block;
 }
-.information.active{
+.abouts, .information{
+  display: none;
+}
+.information.showing{
   margin-top: 100px;
   align: center;
   padding-top: 4%;
@@ -57,8 +102,8 @@ body{
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1.5s;
+  display: block;
 }
-
 .fade-in{
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -83,127 +128,32 @@ body{
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 25px #F00, 0 0 30px #F00, 0 0 35px #F00;
   }
 }
-  /* The sidebar menu */
-  .sidenav {
-    background-color: #875bd0;
-    position: fixed;
-    top: 0px;
-    left:-440px;
-    bottom: 0px;
-    right: 0px;
-    width: 200px;
-    z-index: 100;
-    font-family: verdana, sans-serif;
-    font-size: 30px;
-    margin: 0px;
-    padding: 15px;
-    opacity: 0.85;
-    transition: all 0.4s;
-  }
 
-  .sidenav.active{
-  left:0px;
-
-  }
-  /* The navigation menu links */
-  .sidenav p {
-    padding-left: 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #444;
-    display: block;
-    cursor: pointer;
-  }
-  /* .leaderboard{
-    align: center;
-  } */
-  /* When you mouse over the navigation links, change their color */
-  .sidenav p:hover {
-    transition:0.5s;
-    color: #f1f1f1;
-    cursor: pointer;
-  }
-  .sidenav a {
-    padding-left: 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #444;
-    display: block;
-    cursor: pointer;
-  }
-
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-    cursor: pointer;
-    transition:0.5s;
-
-  }
   /* Style page content */
   .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
-  }
-  .close-icon
-  {
-    position: absolute;
-    height: 60px;
-    left:135px;
-    border-radius: 60px;
-    transition:0.5s;
-  }
-  .close-icon:hover{
-    transition:0.5s;
-    background-color: #444;
-    opacity: 0.7;
-  }
-  .ham-a.active
-  {
-    display: none;
-  }
-  .ham-a:hover{
-    position: fixed;
-    top:10px;
-    left:10px;
-    height:75px;
-    width:75px;
-    border-radius: 80px;
-    background-color: #555;
-    transition:0.5s;
-
+text-align: center;
   }
 
-  .ham
-  {
-    position: fixed;
-    margin: auto;
-    height: 65px;
-    width: 65px;
-    top: 15px;
-    left: 15px;
-    cursor: pointer;
-    transition:0.5s;
-
-  }
   .button {
- background-color: blue; /* Green */
- border-radius: 10px;
- border-color:darkblue;
- border-style: solid;
- color: white;
- padding: 10px 25px;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
- opacity: 1;
- animation-name: fadeInOpacity, neon1;
- animation-iteration-count: 1, infinite;
- animation-timing-function: ease-in, ease-in-out;
- animation-duration: 3s, 0.75s;
- animation-direction: normal,alternate;
- cursor: pointer;
- transition: .5s;
+    border-radius: 10px;
+    color: #FF6347;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease-in, ease-in-out;
+    animation-duration: 3s, 0.75s;
+    animation-direction: normal,alternate;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: purple;
+    transition: .5s;
+    border-style: double;
+    text-align: center;
 }
 
 
@@ -227,18 +177,24 @@ body{
 
 }
 .passInput{
-  border-color: darkblue;
-  border-radius: 5px;
-  border-style: solid;
+  background: transparent;
+  border-color: purple;
+  border-radius: 20px;
+  border-style: double;
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 2.5s;
+  text-align: center;
 }
-.input-area{
-  padding-top: 60px;
+.input-area.showing{
+  padding-top: 10px;
   align: center;
+  display: block;
+}
+.butcent{
+  text-align: center;
 }
 .button.active{
   display:none;
@@ -250,7 +206,7 @@ canvas {
 	position: absolute;
   z-index: -1;
 }
-.input-area.active{
+.input-area{
   display:none;
 }
 .load-board{
@@ -261,19 +217,10 @@ canvas {
 } */
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (orientation:portrait) {
-  .sidenav.active {
-    top: 0px;
-    padding-top: 15px;
-    padding-left: 5px;
-    width: 35vw;
+  :root{
+    --modifier:0.7;
   }
-  .close-icon
-  {
-    position: absolute;
-    left:25vw;
-    border-radius: 60px;
-    transition:0.5s;
-  }
+
   .button{
     background-color:#191970;
     border-color:#191970;
@@ -290,10 +237,10 @@ canvas {
 
 
 
-<body style = "background-color:white;"> <!-- #552c99 -->
-<p class = "main-logo" id = "main-logo" align = "center">
-<img src="logos/logo(keyp).png" alt="" class = "main-logo">
-<img src="logos/2dDash.png" alt="" class = 'event-logo'>
+<body style = "background-color:white;" onload = "destroyLittleShits();"> <!-- #552c99 -->
+<p class = "main-logo showing" id = "main-logo" align = "center">
+<img src="logos/logo(keyp).png" alt="" class = "main-logo showing">
+<img src="logos/2dDash.png" alt="" class = 'event-logo showing'>
 </p>
 
 
@@ -307,12 +254,32 @@ canvas {
 
 <div class = "abouts" id= "abouts" align = "center" >
 <p id = "abouts">
+  Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography,
+  and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.
+  Whichever team/player finishes stage 5 first recieves ? dollars (TBD).Join us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.
 </p>
 </div>
 
 <div class = "information" id= "information" align = "center" >
-<p id = "information">
-</p>
+  <div class="event-list">
+    <div class="event-winter">
+      <p align="center" style="display:block">
+        <img src="logos/2dDash.png" class="evlog">
+      </p>
+      <p>Apr. 1st- Apr. 4th</p>
+      <p>
+      </p>
+    </div>
+    <br>
+    <div class="event-dim">
+      <p align="center" style="display:block">
+        <img src="logos/vector/default-monochrome.svg" width="30%" height="30%">
+      </p>
+      <p>Summer</p>
+      <p>
+      </p>
+    </div>
+  </div>
 </div>
 
 <div id= "leaderboard" align = "center">
@@ -322,35 +289,47 @@ width="50%" height="600" frameBorder="0" id= "leaderboard-frame" class = "leader
 style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe>
 </div>
 
-<div class="input-area">
+<div class="input-area showing">
     <p align = "center">
+<form class="main" action = "" method="post">
+        <input type="hidden" name="user" value="" id = "user">
+        <input type="text" name="idpas" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "teamid">
+<br>
+<br>
+      <input type="text" name="userpas" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
+<br>
+<br>
+</form>
 
-      <input type="text" name="Team ID" value="" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "username">
-<br>
-<br>
-      <input type="text" name="Stage Password" value="" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
-<br>
-<br>
-      <button class = "button" id = "enter" onclick = "pasCheck()">
+    <p class ="butcent">
+      <button type = "submit" class = "button" id = "enter" onclick = "pasCheck()">
         Submit
       </button>
     </p>
+
+    </p>
 </div>
 
-<a id = "ham-a" class = "ham-a" role="button" onclick="showSidebar()">
-  <img src="images/Hamburger_icon.png" class="ham" id = "ham-switch">
-</a>
-<!-- Side navigation -->
-<div class="sidenav">
-  <a class = "close-sidebar" role="button" onclick="showSidebar()">
-  <img src="images/close-icon.png" class="close-icon">
-</a>
-  <p onclick = "DisplayLogo()">Home</p>
-  <p onclick="DisplayAbouts()">About</p>
-  <p onclick= "DisplayInformation()">Events</p>
-  <p onclick= "DisplayLeaderboard()">Leaderboard</p>
-  <a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Sign Up</a>
-</div>
+<nav id = "navigator" onmouseover="showMenu(true);" onmouseout="showMenu(false);">
+  <div class = "row-display content-perm">
+    <p class = "content">Menu</p>
+  </div>
+  <div class = "row-display" onclick = "display('home')">
+    <p class = "content" >Home</p>
+  </div>
+  <div class = "row-display" onclick = "display('about')">
+    <p class = "content" >About</p>
+  </div>
+  <div class = "row-display" onclick = "display('events')">
+    <p class = "content" >Events</p>
+  </div>
+  <div class = "row-display" onclick = "display('leaderboard')">
+    <p class = "content" >Leaderboard</p>
+  </div>
+  <div class = "row-display">
+    <p class = "content"><a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Register</a></p>
+  </div>
+</nav>
 
 
 </body>
@@ -360,46 +339,103 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 <script src = "js/index.js">
 
 </script>
+<script type="text/javascript">
+function showMenu(alt){
+  document.querySelector(".content-perm").style = (alt)? "display:none;" : "display:inline-block";
+  let hhgreg = document.querySelectorAll(".row-display");
+  for(var i = 1; i < hhgreg.length; i++){
+    hhgreg[i].style = (alt)? "display:inline-block;":"display:none";
+  }
+}
+  function display(group){
+    let currentDisplay = [];
+    let rouge = document.querySelectorAll(".showing");
+    for(var i =0; i < rouge.length; i++){
+      rouge[i].classList.toggle("showing");
+    }
+    switch (group) {
+      case 'home':
+        currentDisplay.push('.main-logo');
+        currentDisplay.push('.main-logo');
+        currentDisplay.push('.event-logo');
+        currentDisplay.push('.input-area');
+      break;
+      case 'about':
+          currentDisplay.push('#abouts');
+      break;
+      case 'events':
+          currentDisplay.push('#information');
+      break;
+      case 'leaderboard':
+      // document.getElementById("leaderboard-frame").style.display = "inline";
+      // document.getElementById("load-board").innerHTML = loadingContent;
+      // document.getElementById("load-board").style.paddingTop = "400px";
+      break;
+
+
+    }
+    let j =0;
+    for(var k =0; k < currentDisplay.length; k++){
+      let multi=  document.querySelectorAll(currentDisplay[k]);
+      if(multi.length == 1){
+      multi[0].classList.toggle("showing");
+    }else{
+      multi[j].classList.toggle("showing");
+      j++;
+    }
+    }
+  }
+  function destroyLittleShits(){
+    let target = document.querySelector("#navigator");
+    let shitPile = [];
+    for(var i =0; i < target.childNodes.length; i++){
+      if(target.childNodes[i].nodeName == "#text"){
+        shitPile.push(target.childNodes[i]);
+      }
+    }
+    for(var k =0; k < shitPile.length; k++){
+      shitPile[k].parentNode.removeChild(shitPile[k]);
+    }
+    console.log(shitPile);
+  }
+</script>
 
 <script type = "text/javascript">
-var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography," +
-"and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.\n"+
- "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.";
  var informationText = "<div class =  'event-list'><div class = 'event-winter'><p align = 'center' style = 'display:block'><img src = 'logos/2dDash.png' class = 'evlog'><p>Apr. 1st- Apr. 4th</p></p></div> <br> <div class = 'event-dim'><p align = 'center' style = 'display:block'><img src = 'logos/vector/default-monochrome.svg' width = '30%' height = '30%'><p>Summer</p></p></div></div>";
  var boardInnerHTML = "<iframe src='https://sheetsu.com/a/t/ccff5d413d07?embedded=true'  width='100%' height='600' frameBorder='0' style='background: transparent; border: 1px solid #dedede;'></iframe>"
-var loadingContent = "$link = mysqli_connect("localhost", "fhschijn_localuser", "localpassword", "fhschijn_poll_test");
-$cal = 0;
-$splash = 0;
-$numRows = 0;
-$class = "zui-table";
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-$sql = "SELECT * FROM themeSurvey";
-if($result = mysqli_query($link, $sql)){
-    if(mysqli_num_rows($result) > 0){
-        echo "<table class = 'zui-table'>";
-            echo "<thead> <tr>";
-                echo "<th>Favorite Theme</th>";
-                echo "<th>Calendar Score</th>";
-                echo "<th>Splash Score</th>";
-                echo "<th>Other Notes</th>";
-            echo "</tr> </thead>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['themeChoice'] . "</td>";
-                echo "<td>" . $row['calScale'] . "</td>";
-                echo "<td>" . $row['splashScale'] . "</td>";
-                echo "<td>" . $row['other'] . "</td>";
-
-                $cal = $cal + $row['calScale'];
-                $splash = $splash + $row['splashScale'];
-                $numRows++;
-
-                ///////////////////////////////////
-            echo "</tr>";
-          }
-          echo "</table>";";
+// var loadingContent = "$link = mysqli_connect("localhost", "fhschijn_localuser", "localpassword", "fhschijn_poll_test");
+// $cal = 0;
+// $splash = 0;
+// $numRows = 0;
+// $class = "zui-table";
+// if($link === false){
+//     die("ERROR: Could not connect. " . mysqli_connect_error());
+// }
+// $sql = "SELECT * FROM themeSurvey";
+// if($result = mysqli_query($link, $sql)){
+//     if(mysqli_num_rows($result) > 0){
+//         echo "<table class = 'zui-table'>";
+//             echo "<thead> <tr>";
+//                 echo "<th>Favorite Theme</th>";
+//                 echo "<th>Calendar Score</th>";
+//                 echo "<th>Splash Score</th>";
+//                 echo "<th>Other Notes</th>";
+//             echo "</tr> </thead>";
+//         while($row = mysqli_fetch_array($result)){
+//             echo "<tr>";
+//                 echo "<td>" . $row['themeChoice'] . "</td>";
+//                 echo "<td>" . $row['calScale'] . "</td>";
+//                 echo "<td>" . $row['splashScale'] . "</td>";
+//                 echo "<td>" . $row['other'] . "</td>";
+//
+//                 $cal = $cal + $row['calScale'];
+//                 $splash = $splash + $row['splashScale'];
+//                 $numRows++;
+//
+//                 ///////////////////////////////////
+//             echo "</tr>";
+//           }
+//           echo "</table>";";
 
 window.addEventListener("resize", resizeLogo);
 
@@ -410,52 +446,7 @@ function showSidebar()
   document.querySelector(".ham-a").classList.toggle('active');
 
 }
-function Reset(){
-  document.getElementById("abouts").textContent = "";
-  document.getElementById("abouts").className = "abouts";
-  document.getElementById("information").className = "information";
-  document.getElementById("information").textContent = "";
-  document.getElementById("leaderboard").className = "leaderboard";
-  document.getElementById("leaderboard-frame").style.display = "none";
-  document.getElementById("load-board").textContent = "";
-  showSidebar();
-}
 
-function DisplayAbouts(){
-  Reset();
-  var t = document.getElementById("abouts").className;
-  var logoStatus = document.getElementById("main-logo").className;
-
-  if(logoStatus == "main-logo"){
-    document.querySelector(".main-logo").classList.toggle('active');
-    document.querySelector(".input-area").classList.toggle('active');
-  }
-  if(t != "abouts active"){
-    document.querySelector(".abouts").classList.toggle('active');
-  }
-  document.getElementById("abouts").textContent = aboutText;
-}
-function DisplayLogo(){
-Reset();
-var logoStatus = document.getElementById("main-logo").className;
-if(logoStatus != "main-logo"){
-  document.querySelector(".main-logo").classList.toggle('active');
-  document.querySelector(".input-area").classList.toggle('active');
-}
-}
-function DisplayInformation(){
-  Reset();
-  var logoStatus = document.getElementById("main-logo").className;
-  var t = document.getElementById("information").className;
-  if(logoStatus == "main-logo"){
-    document.querySelector(".main-logo").classList.toggle('active');
-    document.querySelector(".input-area").classList.toggle('active');
-  }
-  if(t != "information active"){
-    document.querySelector(".information").classList.toggle('active');
-  }
-  document.getElementById("information").innerHTML = informationText;
-}
 function DisplayLeaderboard(){
   Reset();
   var logoStatus = document.getElementById("main-logo").className;
