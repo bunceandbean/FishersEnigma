@@ -376,7 +376,7 @@ canvas {
 <body style = "background-color:white;"> <!-- #552c99 -->
 <p class = "main-logo" id = "main-logo" align = "center">
 <img src="logos/logo(keyp).png" alt="" class = "main-logo">
-<img src="logos/2dDash.png" alt="" class = 'event-logo'>
+<img src="logos/vector/default-monochrome.svg" alt="" class = 'event-logo'>
 </p>
 
 
