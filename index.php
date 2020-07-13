@@ -380,7 +380,7 @@ canvas {
 <body> <!-- #552c99 -->
 <p class = "main-logo" id = "main-logo" align = "center">
 <img src="logos/logo(keyp).png" alt="" class = "main-logo">
-<img src="logos/vector/default-monochrome-black.png" alt="" class = 'event-logo'>
+<img src="logos/vector/default-monochrome.png" alt="" class = 'event-logo'>
 </p>
 
 
