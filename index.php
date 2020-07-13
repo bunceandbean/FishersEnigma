@@ -147,7 +147,7 @@ table {
 }
   /* The sidebar menu */
   .sidenav {
-    background-color: #875bd0;
+    background-color: #844112;
     position: fixed;
     top: 0px;
     left:-440px;
