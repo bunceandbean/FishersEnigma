@@ -44,6 +44,7 @@ if($result = mysqli_query($link, $sql)){
 <style media="screen">
 body{
   overflow: hidden;
+  background-color: #d3c1ab;
 }
 
 table {
