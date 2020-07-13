@@ -366,6 +366,8 @@ canvas {
 
   .event-logo{
     display:inline-block;
+    width: 50%;
+    height:50%;
   }
 }
 </style>
