@@ -1,3 +1,33 @@
+<!-- <?php
+
+$link = mysqli_connect("localhost", "fishbpzf_admin", "b3b57af55c7a898bcfff2732ae06660e", "fishbpzf_2dDash");
+$cal = 0;
+$splash = 0;
+$numRows = 0;
+$tbData = "";
+$class = "zui-table";
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+$sql = "SELECT * FROM leaderboard";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        // echo "<table>";
+        //     echo "<thead> <tr>";
+        //         echo "<th>Team</th>";
+        //         echo "<th>Stage</th>";
+        //     echo "</tr> </thead>";
+        while($row = mysqli_fetch_array($result)){
+            // echo "<tr>";
+                // echo "<td>" . $row['Team'] . "</td>";
+                // echo "<td>" . $row['Stage'] . "</td>";
+                $tbData = $tbData."<tr><td>" . $row['Team'] . "</td>"."<td>" . $row['Stage'] . "</td></tr>";
+            // echo "</tr>";
+          }
+          // echo "</table>";
+        }
+      }
+?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,226 +40,151 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
 <style media="screen">
-:root{
-  --modifier: 1;
-}
 body{
   overflow: hidden;
-}
-#navigator{
-  width: calc(10%/ var(--modifier));
-  height: fit-content;
-  top:0px;
-  left: 0px;
-  position: fixed;
-  background: #fad4ff85;
-  font-size: 0vw;
-  transition: width 0.3s;
-  padding: 1vh 1vw 1vh 1vw;
-
-}
-#navigator:hover{
-  width:100%;
-  transition: width 0.5s;
-  font-size: calc(2vw / var(--modifier));
-
-}
-.content{
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-}
-.content-perm{
-  font-size:calc(2vw / var(--modifier)) !important;
-  width:100% !important;
-}
-.row-display{
-  width:calc(100%/5);
-  height:fit-content;
-  font-size: inherit;
-  display:inline-block;
-  cursor: pointer;
-}
-.row-display:hover{
-  background: #caa4cf85;
+  background-color: #d3c1ab;
 }
 
-  .main-logo.showing,.event-logo.showing,.evlog{
-    align: center;
-    padding-top: 60px;
-    position: relative;
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 1s;
-    animation-direction: normal;
-    width: auto ;
-  max-width: 100% ;
-  min-width: 25%%;
-  height: auto ;
-  display: block;
-  }
-.main-logo, .event-logo{
-  display:none;
+table {
+	 margin: auto auto 70px auto;
+	 border-collapse: collapse;
+	 border: 1px solid #eee;
+	 border-bottom: 2px solid #875bd0;
+	 box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
 }
-
-.abouts.showing{
-  margin-top: 100px;
-  align: center;
-  padding-top: 4%;
-  position: relative;
+ table tr:hover {
+	 background: #f4f4f4;
+}
+ table tr:hover td {
+	 color: #555;
+}
+ table th, table td {
+	 color: #999;
+	 border: 1px solid #eee;
+	 padding: 12px 35px;
+	 border-collapse: collapse;
+}
+ table th {
+	 background: #875bd0;
+	 color: #fff;
+	 text-transform: uppercase;
+	 font-size: 12px;
+}
+ table th.last {
+	 border-right: none;
+}
+:root{
+  --mod: .7;
+}
+@keyframes fadeInOpacity {
+0% {
+opacity: 0;
+}
+100% {0]0]0]0]0]0]0]n
+opacity: 1;
+}
+}
+section{
+  width: 90%;
+  margin:auto;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   opacity: 1;
-  font-size: 30px;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1.5s;
-  display: block;
-}
-.abouts, .information{
   display: none;
 }
-.information.showing{
-  margin-top: 100px;
-  align: center;
-  padding-top: 4%;
-  position: relative;
-  opacity: 1;
-  font-size: 30px;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1.5s;
-  display: block;
-}
-.fade-in{
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 2s;
-}
-
-  @keyframes fadeInOpacity {
-  0% {
-  opacity: 0;
-  }
-  100% {0]0]0]0]0]0]0]n
-  opacity: 1;
-  }
-  }
-  @-webkit-keyframes neon1 {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f00, 0 0 50px #f00, 0 0 60px #F00, 0 0 70px #F00;
-  }
-  to {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 25px #F00, 0 0 30px #F00, 0 0 35px #F00;
-  }
-}
-
-  /* Style page content */
-  .main {
-text-align: center;
-  }
-
-  .button {
-    border-radius: 10px;
-    color: #FF6347;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1, infinite;
-    animation-timing-function: ease-in, ease-in-out;
-    animation-duration: 3s, 0.75s;
-    animation-direction: normal,alternate;
-    cursor: pointer;
-    background-color: transparent;
-    border-color: purple;
-    transition: .5s;
-    border-style: double;
-    text-align: center;
-}
-
-
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-.shadowfilter {
-    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-     filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
-   }
-.button:hover{
-  background-color:#191970;
-  border-color:#191970;
-  transition: .5s;
-
-}
-.passInput{
-  background: transparent;
-  border-color: purple;
-  border-radius: 20px;
-  border-style: double;
-  opacity: 1;
+.fade-animation{
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 2.5s;
-  text-align: center;
 }
-.input-area.showing{
-  padding-top: 10px;
-  align: center;
+p{
+  margin: 0;
+  text-align: center;
+  font-size: calc(3vw/var(--mod));
+  font-family: 'Arial';
+}
+#main-logo img{
+  padding: calc(2vw/var(--mod)) calc(1vw/var(--mod));
   display: block;
+  margin:auto;
+  max-width: 100%;
 }
-.butcent{
+#home form, #home .butcent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  outline:none;
+}
+.butcent button:hover{
+  background-color: #191970;
+    border-color: #191970;
+    transition: .5s;
+    color: #FF6347;
+    cursor:pointer;
+}
+input[type = "text"], button[type = "submit"]{
+  background: transparent;
+    border-color: purple;
+    border-radius: 20px;
+    border-style: double;
+    opacity: 1;
+    text-align: center;
+    padding: .5vw 1vw;
+    width:fit-content;
+    align-self: center;
+    margin: 10px;
+    font-size:calc(3vw/var(--mod));
+    font-family: 'Arial';
+    outline:none;
+}
+.visible{
+  display: flex;
+}
+nav{
+  position: fixed;
+  top: 0;
+  height:auto;
+  transition: width 5s ease;
+  width:100%;
+}
+nav div{
+  height: auto;
+  display: none;
+  flex-wrap: wrap;
+  background: #978b6844;
+  padding:10px;
+}
+nav div p{
+  padding: 1vw;
+  flex:1;
   text-align: center;
 }
-.button.active{
-  display:none;
+nav div p:hover{
+  background: #978b6877;
+  cursor:pointer;
 }
-.passInput.active{
-  display:none;
+.event-list{
+  height:80%;
+  overflow-y: scroll;
 }
-canvas {
-	position: absolute;
-  z-index: -1;
+.event-list div{
+  height: 25%;
+  display: block;
+  margin-bottom: 15px;
 }
-.input-area{
-  display:none;
+.event-list div img{
+  width:75%;
+  height:15vh;
+  margin:0 12.5%;
 }
-.load-board{
-  padding-top:50%;
-}
-/* .leaderboard.active{
-  display:none;
-} */
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (orientation:portrait) {
+@media screen and (min-width: 768px){
   :root{
-    --modifier:0.7;
-  }
-
-  .button{
-    background-color:#191970;
-    border-color:#191970;
-    transition: .5s;
-
-  }
-
-  .event-logo{
-    display:inline-block;
+    --mod:2;
   }
 }
 </style>
@@ -237,68 +192,31 @@ canvas {
 
 
 
-<body style = "background-color:white;" onload = "destroyLittleShits();"> <!-- #552c99 -->
-<p class = "main-logo showing" id = "main-logo" align = "center">
-<img src="logos/logo(keyp).png" alt="" class = "main-logo showing">
-<img src="logos/2dDash.png" alt="" class = 'event-logo showing'>
-</p>
-
-
-
-
-
-<div class = "signups" id = "signups" align = "center" >
-<p id = "signups">
-</p>
-</div>
-
-<div class = "abouts" id= "abouts" align = "center" >
-<p id = "abouts">
-  Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography,
-  and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.
-  Whichever team/player finishes stage 5 first recieves ? dollars (TBD).Join us for this event that will run from January 1st to January 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.
-</p>
-</div>
-
-<div class = "information" id= "information" align = "center" >
-  <div class="event-list">
-    <div class="event-winter">
-      <p align="center" style="display:block">
-        <img src="logos/2dDash.png" class="evlog">
-      </p>
-      <p>Apr. 1st- Apr. 4th</p>
-      <p>
-      </p>
-    </div>
-    <br>
-    <div class="event-dim">
-      <p align="center" style="display:block">
-        <img src="logos/vector/default-monochrome.svg" width="30%" height="30%">
-      </p>
-      <p>Summer</p>
-      <p>
-      </p>
-    </div>
+<body> <!-- #552c99 -->
+<nav onmouseover="displayMenu(true)" onmouseout="displayMenu(false)">
+  <div id = "menu" class = "visible">
+    <p>Menu</p>
   </div>
-</div>
+  <div id = "menu-content">
+    <p onclick = "displayContent('home')">Home</p>
+    <p onclick = "displayContent('abouts')">About</p>
+    <p onclick = "displayContent('information')">Events</p>
+    <p onclick = "displayContent('leaderboard')">Leaderboard</p>
+    <p><a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Sign Up</a></p>
+  </div>
+</nav>
+<section id = "home" class = "fade-animation visible">
+<p class = "main-logo" id = "main-logo" align = "center">
+<img src="logos/logo(keyp).png" alt="" class = "main-logo">
+<img src="logos/vector/default-monochrome.png" alt="" class = 'event-logo'>
+</p>
 
-<div id= "leaderboard" align = "center">
-  <p id = "load-board"></p>
-  <iframe
-width="50%" height="600" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
-style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe>
-</div>
-
-<div class="input-area showing">
+<div class="input-area">
     <p align = "center">
 <form class="main" action = "" method="post">
         <input type="hidden" name="user" value="" id = "user">
         <input type="text" name="idpas" align = "center" placeholder = "Team ID" id = "idpas" class = "passInput" autocomplete = "teamid">
-<br>
-<br>
       <input type="text" name="userpas" align = "center" placeholder = "Stage Password" id = "userpas" class = "passInput">
-<br>
-<br>
 </form>
 
     <p class ="butcent">
@@ -309,144 +227,134 @@ style="background: transparent;display:none;padding-top:150px;transition:1.5s"><
 
     </p>
 </div>
+</section>
 
-<nav id = "navigator" onmouseover="showMenu(true);" onmouseout="showMenu(false);">
-  <div class = "row-display content-perm">
-    <p class = "content">Menu</p>
+
+
+<section class = "signups" id = "signups" >
+<p id = "signups">
+</p>
+</section>
+
+<section class = "abouts fade-animation" id= "abouts">
+<p id = "abouts">
+  Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography, and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles. Whichever team/player finishes stage 5 first recieves ? dollars (TBD). Join us for this event that will run from April 1st to April 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.
+</p>
+</section>
+
+<section class = "information fade-animation" id= "information">
+  <div class =  'event-list'>
+    <div>
+        <img src = 'logos/2dDash.png' class = 'evlog'>
+        <p>Apr. 1st- Apr. 4th</p>
+    </div>
+    <div>
+        <img src = 'logos/vector/default-monochrome.svg' width = '30%' height = '30%'>
+        <p>Summer</p>
+    </div>
   </div>
-  <div class = "row-display" onclick = "display('home')">
-    <p class = "content" >Home</p>
-  </div>
-  <div class = "row-display" onclick = "display('about')">
-    <p class = "content" >About</p>
-  </div>
-  <div class = "row-display" onclick = "display('events')">
-    <p class = "content" >Events</p>
-  </div>
-  <div class = "row-display" onclick = "display('leaderboard')">
-    <p class = "content" >Leaderboard</p>
-  </div>
-  <div class = "row-display">
-    <p class = "content"><a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Register</a></p>
-  </div>
-</nav>
+</section>
+
+<section id= "leaderboard" class = "fade-animation">
+  <p id = "load-board"></p>
+  <!-- <iframe
+width="1" height="1" frameBorder="0" id= "leaderboard-frame" class = "leaderboard" onload = "loadingOff()"
+style="background: transparent;display:none;padding-top:150px;transition:1.5s"></iframe> -->
+</section>
 
 
 </body>
+<!-- <a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Sign Up</a> -->
 
+ <!-- <script>
+    var loadingContent = '<table><thead><tr><th>Team</th><th>Stage</th></tr></thead>' + '<?php echo $tbData ?>';
+    $('table tr').each(function(){
+  $(this).find('th').first().addClass('first');
+  $(this).find('th').last().addClass('last');
+  $(this).find('td').first().addClass('first');
+  $(this).find('td').last().addClass('last');
+});
 
+$('table tr').first().addClass('row-first');
+$('table tr').last().addClass('row-last')
+ </script> -->
 
 <script src = "js/index.js">
 
 </script>
-<script type="text/javascript">
-function showMenu(alt){
-  document.querySelector(".content-perm").style = (alt)? "display:none;" : "display:inline-block";
-  let hhgreg = document.querySelectorAll(".row-display");
-  for(var i = 1; i < hhgreg.length; i++){
-    hhgreg[i].style = (alt)? "display:inline-block;":"display:none";
-  }
-}
-  function display(group){
-    let currentDisplay = [];
-    let rouge = document.querySelectorAll(".showing");
-    for(var i =0; i < rouge.length; i++){
-      rouge[i].classList.toggle("showing");
-    }
-    switch (group) {
-      case 'home':
-        currentDisplay.push('.main-logo');
-        currentDisplay.push('.main-logo');
-        currentDisplay.push('.event-logo');
-        currentDisplay.push('.input-area');
-      break;
-      case 'about':
-          currentDisplay.push('#abouts');
-      break;
-      case 'events':
-          currentDisplay.push('#information');
-      break;
-      case 'leaderboard':
-      // document.getElementById("leaderboard-frame").style.display = "inline";
-      // document.getElementById("load-board").innerHTML = loadingContent;
-      // document.getElementById("load-board").style.paddingTop = "400px";
-      break;
-
-
-    }
-    let j =0;
-    for(var k =0; k < currentDisplay.length; k++){
-      let multi=  document.querySelectorAll(currentDisplay[k]);
-      if(multi.length == 1){
-      multi[0].classList.toggle("showing");
-    }else{
-      multi[j].classList.toggle("showing");
-      j++;
-    }
-    }
-  }
-  function destroyLittleShits(){
-    let target = document.querySelector("#navigator");
-    let shitPile = [];
-    for(var i =0; i < target.childNodes.length; i++){
-      if(target.childNodes[i].nodeName == "#text"){
-        shitPile.push(target.childNodes[i]);
-      }
-    }
-    for(var k =0; k < shitPile.length; k++){
-      shitPile[k].parentNode.removeChild(shitPile[k]);
-    }
-    console.log(shitPile);
-  }
-</script>
 
 <script type = "text/javascript">
+var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography," +
+"and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles.\n"+
+ "Whichever team/player finishes stage 5 first recieves ? dollars (TBD).\nJoin us for this event that will run from April 1st to April 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.";
  var informationText = "<div class =  'event-list'><div class = 'event-winter'><p align = 'center' style = 'display:block'><img src = 'logos/2dDash.png' class = 'evlog'><p>Apr. 1st- Apr. 4th</p></p></div> <br> <div class = 'event-dim'><p align = 'center' style = 'display:block'><img src = 'logos/vector/default-monochrome.svg' width = '30%' height = '30%'><p>Summer</p></p></div></div>";
  var boardInnerHTML = "<iframe src='https://sheetsu.com/a/t/ccff5d413d07?embedded=true'  width='100%' height='600' frameBorder='0' style='background: transparent; border: 1px solid #dedede;'></iframe>"
-// var loadingContent = "$link = mysqli_connect("localhost", "fhschijn_localuser", "localpassword", "fhschijn_poll_test");
-// $cal = 0;
-// $splash = 0;
-// $numRows = 0;
-// $class = "zui-table";
-// if($link === false){
-//     die("ERROR: Could not connect. " . mysqli_connect_error());
-// }
-// $sql = "SELECT * FROM themeSurvey";
-// if($result = mysqli_query($link, $sql)){
-//     if(mysqli_num_rows($result) > 0){
-//         echo "<table class = 'zui-table'>";
-//             echo "<thead> <tr>";
-//                 echo "<th>Favorite Theme</th>";
-//                 echo "<th>Calendar Score</th>";
-//                 echo "<th>Splash Score</th>";
-//                 echo "<th>Other Notes</th>";
-//             echo "</tr> </thead>";
-//         while($row = mysqli_fetch_array($result)){
-//             echo "<tr>";
-//                 echo "<td>" . $row['themeChoice'] . "</td>";
-//                 echo "<td>" . $row['calScale'] . "</td>";
-//                 echo "<td>" . $row['splashScale'] . "</td>";
-//                 echo "<td>" . $row['other'] . "</td>";
-//
-//                 $cal = $cal + $row['calScale'];
-//                 $splash = $splash + $row['splashScale'];
-//                 $numRows++;
-//
-//                 ///////////////////////////////////
-//             echo "</tr>";
-//           }
-//           echo "</table>";";
+// var loadingContent;
 
-window.addEventListener("resize", resizeLogo);
+// window.addEventListener("resize", resizeLogo);
 
-
+function displayMenu(isMenu){
+  let parent = document.querySelector("nav");
+  parent.children[0].classList.toggle("visible");
+  parent.children[1].classList.toggle("visible");
+}
+function displayContent(area){
+  document.querySelector("section.visible").classList.toggle("visible");
+  document.querySelector("#"+area).classList.toggle("visible");
+}
 function showSidebar()
 {
   document.querySelector(".sidenav").classList.toggle('active');
   document.querySelector(".ham-a").classList.toggle('active');
 
 }
+function Reset(){
+  document.getElementById("abouts").textContent = "";
+  document.getElementById("abouts").className = "abouts";
+  document.getElementById("information").className = "information";
+  document.getElementById("information").textContent = "";
+  document.getElementById("leaderboard").className = "leaderboard";
+  document.getElementById("leaderboard-frame").style.display = "none";
+  document.getElementById("load-board").innerHTML = "";
+  showSidebar();
+}
 
+function DisplayAbouts(){
+  Reset();
+  var t = document.getElementById("abouts").className;
+  var logoStatus = document.getElementById("main-logo").className;
+
+  if(logoStatus == "main-logo"){
+    document.querySelector(".main-logo").classList.toggle('active');
+    document.querySelector(".input-area").classList.toggle('active');
+  }
+  if(t != "abouts active"){
+    document.querySelector(".abouts").classList.toggle('active');
+  }
+  document.getElementById("abouts").textContent = aboutText;
+}
+function DisplayLogo(){
+Reset();
+var logoStatus = document.getElementById("main-logo").className;
+if(logoStatus != "main-logo"){
+  document.querySelector(".main-logo").classList.toggle('active');
+  document.querySelector(".input-area").classList.toggle('active');
+}
+loadingOff();
+}
+function DisplayInformation(){
+  Reset();
+  var logoStatus = document.getElementById("main-logo").className;
+  var t = document.getElementById("information").className;
+  if(logoStatus == "main-logo"){
+    document.querySelector(".main-logo").classList.toggle('active');
+    document.querySelector(".input-area").classList.toggle('active');
+  }
+  if(t != "information active"){
+    document.querySelector(".information").classList.toggle('active');
+  }
+  document.getElementById("information").innerHTML = informationText;
+}
 function DisplayLeaderboard(){
   Reset();
   var logoStatus = document.getElementById("main-logo").className;
@@ -459,8 +367,9 @@ function DisplayLeaderboard(){
     document.querySelector(".leaderboard").classList.toggle('leaderboard');
   }
   document.getElementById("leaderboard-frame").style.display = "inline";
+  document.getElementById("load-board").style.display = "block";
   document.getElementById("load-board").innerHTML = loadingContent;
-  document.getElementById("load-board").style.paddingTop = "400px";
+  document.getElementById("load-board").style.paddingTop = "30vh";
 }
 function resizeLogo(){
   var screenWidth = screen.width;
@@ -1139,91 +1048,91 @@ function loadingOff(){
 //   return this;
 //
 // }(window, document));
-const debounce = (func, wait, immediate) => {
-	let timeout;
-	return function() {
-		let context = this, args = arguments;
-		let later = () => {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		let callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
-
-window.requestAnimFrame = (() =>{
-    return window.requestAnimationFrame ||
-        window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function(callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-})();
-
-let c = document.createElement("canvas");
-document.body.insertBefore(c,document.body.childNodes[0]);
-
-const getContext = () => {
-		let ctx = c.getContext("2d");
-		c.width = window.innerWidth;
-		c.height = window.innerHeight;
-		let cubes = [],
-				//more spacing less squares
-				spacing = 30,
-				xPos = 0,
-				n = window.innerWidth / spacing,
-				tSpeedFactor = [.2, .4, .6, .8, 1],
-				i;
-
-		const colors = ['#a5dff9', '#ef5285', '#feee7d']
-
-		for (i = 0; i < n; i++) {
-				cubes.push({
-						x: xPos,
-						y: Math.round(Math.random() * c.height),
-						width: Math.round(Math.random() * 10) * 2,
-						tSpeed: tSpeedFactor[Math.floor(Math.random() * tSpeedFactor.length)],
-						color: colors[Math.floor(Math.random() * colors.length)],
-						angle: 0,
-						upDownFactor: (Math.random() >= .5) ? 1 : -1
-				});
-				xPos += spacing;
-		}
-
-		const draw = () => {
-				let i;
-				ctx.clearRect(0, 0, c.width, c.height);
-				for (i = 0; i < n; i++) {
-						ctx.save();
-						ctx.translate(cubes[i].x + cubes[i].width / 2, cubes[i].y + cubes[i].width / 2);
-						ctx.rotate(cubes[i].angle);
-						ctx.fillStyle = cubes[i].color;
-						ctx.globalAlpha = 1;
-						ctx.fillRect(-cubes[i].width / 2, -cubes[i].width / 2, cubes[i].width, cubes[i].width);
-						ctx.restore();
-						cubes[i].y = cubes[i].y + cubes[i].tSpeed * cubes[i].upDownFactor;
-						cubes[i].angle += Math.PI / 360;
-						if (cubes[i].upDownFactor === -1) {
-								if (cubes[i].y + cubes[i].width < 0) {
-										cubes[i].y = c.height;
-								}
-						} else if (cubes[i].upDownFactor === 1) {
-								if (cubes[i].y >= c.height) {
-										cubes[i].y = -cubes[i].width;
-								}
-						}
-				}
-				window.requestAnimationFrame(draw);
-		}
-		draw();
-};
-getContext();
-window.addEventListener('resize', debounce(getContext, 500));
+// const debounce = (func, wait, immediate) => {
+// 	let timeout;
+// 	return function() {
+// 		let context = this, args = arguments;
+// 		let later = () => {
+// 			timeout = null;
+// 			if (!immediate) func.apply(context, args);
+// 		};
+// 		let callNow = immediate && !timeout;
+// 		clearTimeout(timeout);
+// 		timeout = setTimeout(later, wait);
+// 		if (callNow) func.apply(context, args);
+// 	};
+// };
+//
+// window.requestAnimFrame = (() =>{
+//     return window.requestAnimationFrame ||
+//         window.webkitRequestAnimationFrame ||
+//         window.mozRequestAnimationFrame ||
+//         window.oRequestAnimationFrame ||
+//         window.msRequestAnimationFrame ||
+//         function(callback) {
+//             window.setTimeout(callback, 1000 / 60);
+//         };
+// })();
+//
+// let c = document.createElement("canvas");
+// document.body.insertBefore(c,document.body.childNodes[0]);
+//
+// const getContext = () => {
+// 		let ctx = c.getContext("2d");
+// 		c.width = window.innerWidth;
+// 		c.height = window.innerHeight;
+// 		let cubes = [],
+// 				//more spacing less squares
+// 				spacing = 30,
+// 				xPos = 0,
+// 				n = window.innerWidth / spacing,
+// 				tSpeedFactor = [.2, .4, .6, .8, 1],
+// 				i;
+//
+// 		const colors = ['#a5dff9', '#ef5285', '#feee7d']
+//
+// 		for (i = 0; i < n; i++) {
+// 				cubes.push({
+// 						x: xPos,
+// 						y: Math.round(Math.random() * c.height),
+// 						width: Math.round(Math.random() * 10) * 2,
+// 						tSpeed: tSpeedFactor[Math.floor(Math.random() * tSpeedFactor.length)],
+// 						color: colors[Math.floor(Math.random() * colors.length)],
+// 						angle: 0,
+// 						upDownFactor: (Math.random() >= .5) ? 1 : -1
+// 				});
+// 				xPos += spacing;
+// 		}
+//
+// 		const draw = () => {
+// 				let i;
+// 				ctx.clearRect(0, 0, c.width, c.height);
+// 				for (i = 0; i < n; i++) {
+// 						ctx.save();
+// 						ctx.translate(cubes[i].x + cubes[i].width / 2, cubes[i].y + cubes[i].width / 2);
+// 						ctx.rotate(cubes[i].angle);
+// 						ctx.fillStyle = cubes[i].color;
+// 						ctx.globalAlpha = 1;
+// 						ctx.fillRect(-cubes[i].width / 2, -cubes[i].width / 2, cubes[i].width, cubes[i].width);
+// 						ctx.restore();
+// 						cubes[i].y = cubes[i].y + cubes[i].tSpeed * cubes[i].upDownFactor;
+// 						cubes[i].angle += Math.PI / 360;
+// 						if (cubes[i].upDownFactor === -1) {
+// 								if (cubes[i].y + cubes[i].width < 0) {
+// 										cubes[i].y = c.height;
+// 								}
+// 						} else if (cubes[i].upDownFactor === 1) {
+// 								if (cubes[i].y >= c.height) {
+// 										cubes[i].y = -cubes[i].width;
+// 								}
+// 						}
+// 				}
+// 				window.requestAnimationFrame(draw);
+// 		}
+// 		draw();
+// };
+// getContext();
+// window.addEventListener('resize', debounce(getContext, 500));
 </script>
 
 </body>
