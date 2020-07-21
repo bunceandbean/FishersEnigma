@@ -41,6 +41,7 @@ if($result = mysqli_query($link, $sql)){
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?n=1"></script>
+<script type="text/javascript" src = "js/Animatable.js"></script>
 <style media="screen">
 body{
   overflow: hidden;
@@ -84,6 +85,14 @@ opacity: 0;
 }
 100% {0]0]0]0]0]0]0]n
 opacity: 1;
+}
+}
+@keyframes roll-in {
+0%{
+  left:-100%;
+}
+100%{
+  left:0%;
 }
 }
 section{
@@ -163,6 +172,7 @@ nav div p{
   padding: 1vw;
   flex:1;
   text-align: center;
+  align-self:center;
 }
 nav div p:hover{
   background: #978b6877;
@@ -193,11 +203,11 @@ nav div p:hover{
 
 
 <body> <!-- #552c99 -->
-<nav onmouseover="displayMenu(true)" onmouseout="displayMenu(false)">
+<nav onclick="displayMenu(true)" onmouseleave="if(!this.children[0].classList.contains('visible')){displayMenu(false)}">
   <div id = "menu" class = "visible">
     <p>Menu</p>
   </div>
-  <div id = "menu-content">
+  <div id = "menu-content" style = "transform: rotateX(-90deg)">
     <p onclick = "displayContent('home')">Home</p>
     <p onclick = "displayContent('abouts')">About</p>
     <p onclick = "displayContent('information')">Events</p>
@@ -223,8 +233,6 @@ nav div p:hover{
       <button type = "submit" class = "button" id = "enter" onclick = "pasCheck()">
         Submit
       </button>
-    </p>
-
     </p>
 </div>
 </section>
@@ -292,11 +300,16 @@ var aboutText= "Welcome to Fishers Enigma, an event based on puzzles, riddles, c
 // var loadingContent;
 
 // window.addEventListener("resize", resizeLogo);
-
+const d = new Animatable(0.2);
 function displayMenu(isMenu){
   let parent = document.querySelector("nav");
-  parent.children[0].classList.toggle("visible");
-  parent.children[1].classList.toggle("visible");
+  if(isMenu){
+    d.twirlX(document.querySelector("#menu"),90).then(function(){  parent.children[0].classList.toggle("visible");
+      parent.children[1].classList.toggle("visible");}).then(function(){ return d.twirlX(document.querySelector("#menu-content"),90)});
+  }else{
+    d.twirlX(document.querySelector("#menu-content"),-90).then(function(){  parent.children[0].classList.toggle("visible");
+      parent.children[1].classList.toggle("visible");}).then(function(){ return d.twirlX(document.querySelector("#menu"),-90)});
+  }
 }
 function displayContent(area){
   document.querySelector("section.visible").classList.toggle("visible");
