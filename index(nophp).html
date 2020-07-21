@@ -203,9 +203,9 @@ nav div p:hover{
 
 
 <body> <!-- #552c99 -->
-<nav onclick="displayMenu(true)" onmouseleave="if(!this.children[0].classList.contains('visible')){displayMenu(false)}">
+<nav onmouseleave="if(!this.children[0].classList.contains('visible')){displayMenu(false)}">
   <div id = "menu" class = "visible">
-    <p>Menu</p>
+    <p  onclick="displayMenu(true)">Menu</p>
   </div>
   <div id = "menu-content" style = "transform: rotateX(-90deg)">
     <p onclick = "displayContent('home')">Home</p>
