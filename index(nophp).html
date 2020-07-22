@@ -209,7 +209,7 @@ nav div p:hover{
   </div>
   <div id = "menu-content" style = "transform: rotateX(-90deg)">
     <p onclick = "displayContent('home')">Home</p>
-    <p onclick = "displayContent('abouts')">About</p>
+    <p onclick = "displayContent('abouts'); d.characterFade(document.querySelector('#abouts-content'),3,3);">About</p>
     <p onclick = "displayContent('information')">Events</p>
     <p onclick = "displayContent('leaderboard')">Leaderboard</p>
     <p><a href= "https://forms.gle/pCK5VxFVWWWERNhw6" target = "_blank">Sign Up</a></p>
@@ -244,8 +244,8 @@ nav div p:hover{
 </p>
 </section>
 
-<section class = "abouts fade-animation" id= "abouts">
-<p id = "abouts">
+<section onload = "hi()" class = "abouts" id= "abouts">
+<p id = "abouts-content">
   Welcome to Fishers Enigma, an event based on puzzles, riddles, cryptography, and other involved elements. The players will traverse through 5 unique stages, each with different challenges and puzzles. Whichever team/player finishes stage 5 first recieves ? dollars (TBD). Join us for this event that will run from April 1st to April 4th. Teams/competitors will be issued a Team ID that will be used to verify and update scores. These identifications are NOT to be shared with other teams.
 </p>
 </section>
