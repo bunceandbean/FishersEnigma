@@ -1,1 +1,0 @@
-use the 'volumechange' DOM event to do certain things when the player changes their volume.
