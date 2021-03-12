@@ -1,5 +1,5 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"] . "/global/authorization_check.php";
+include "/global/authorization_check.php";
 
 
 $result = (cookie_check()->fetch_assoc());
