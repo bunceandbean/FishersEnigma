@@ -2,7 +2,7 @@
 include "global/authorization_check.php";
 
 
-$result = (cookie_check()->fetch_assoc());
+// $result = (cookie_check()->fetch_assoc());
 $conn->close();
  ?>
 
