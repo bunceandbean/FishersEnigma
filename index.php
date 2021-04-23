@@ -15,7 +15,7 @@
     <!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fishers Enigma</title>
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="img/favicon.png">
 
 
     <!-- scripts -->
