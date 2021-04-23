@@ -1,7 +1,7 @@
 .images-section{
   height: 60vh;
   display: flex;
-  animation: fadeIn 5s 1.5s forwards
+  animation: fadeIn 2s 1.5s forwards
 }
 .input-section{
   height: 40vh;
