@@ -3,7 +3,7 @@
 // TEMP: THIS NEEDS FIXED
 
 // $result = (cookie_check()->fetch_assoc());
-$conn->close();
+// $conn->close();
  ?>
 
 
