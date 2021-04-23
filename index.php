@@ -1,6 +1,6 @@
 <?php
-include "global/authorization_check.php";
-
+// include "global/authorization_check.php";
+// TEMP: THIS NEEDS FIXED
 
 // $result = (cookie_check()->fetch_assoc());
 $conn->close();
