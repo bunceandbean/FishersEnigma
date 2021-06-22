@@ -10,12 +10,12 @@
 </section>
 <section class = "input-section">
   <div class="input-container">
-    <form class="input-form" action="#" method="post">
+    <form class="input-form" action="global/authorization_check.php" method="post">
       <input type="text" name="ID" value="" placeholder="Team ID" required>
       <br>
       <input type="password" name="Pass" value="" placeholder="Password" required>
       <br>
-      <button type="submit" name="button">Log In</button>
+      <button type="submit" name="button">Submit</button>
     </form>
   </div>
 </section>
