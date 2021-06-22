@@ -10,7 +10,7 @@
 </section>
 <section class = "input-section">
   <div class="input-container">
-    <form class="input-form" action="global/authorization_check.php" method="post">
+    <form class="input-form" action="#" method="post">
       <input type="text" name="ID" value="" placeholder="Team ID" required>
       <br>
       <input type="password" name="Pass" value="" placeholder="Password" required>
