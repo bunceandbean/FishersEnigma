@@ -1,6 +1,7 @@
-Stage 1:
+Stage 1:Call Number with Information
 	
-Stage 2:
+Stage 2:Library "Cryptid Creatures: a Field Guide" Grille Cipher
+from last stage.
 
 Stage 3:
 
