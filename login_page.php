@@ -15,7 +15,7 @@
       <br>
       <input type="password" name="Pass" value="" placeholder="Password" required>
       <br>
-      <button type="submit" name="button">Log In</button>
+      <button type="submit" name="button">Submit</button>
     </form>
   </div>
 </section>
