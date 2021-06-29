@@ -39,10 +39,7 @@ const EVENT = "decrypted"
 document.addEventListener("DOMContentLoaded", function(){
     const num = "<?php echo $stageNum ?>",
     doc = document.querySelector(".stages-positioner"),
-    header = document.querySelector("header"),
-    img = header.querySelector("img"),
     ipt = document.querySelector("#gb");
-    doc.style = "margin-top:" + (document.querySelector("header").clientHeight) + "px";
     for (let i =0; i < num; i++){
       doc.appendChild(createStageButton(i+1, "/" + EVENT + "/stage_" + (i+1) + "/" ));
     }
