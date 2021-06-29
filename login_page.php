@@ -15,7 +15,7 @@
       <br>
       <input type="password" name="Pass" value="" placeholder="Password" required>
       <br>
-      <button type="submit" name="button">Submit</button>
+      <button type="submit" name="button">Login</button>
     </form>
   </div>
 </section>
@@ -26,7 +26,7 @@ $ID = htmlentities($_POST['ID'], ENT_QUOTES);
 $pass = htmlentities($_POST['Pass'],ENT_QUOTES);
 
 $result = cookie_check($ID, $pass);
-if ($result !== NULL) {
+if ($result !== NULL && mysqli_num_rows($result) > 0) {
   setcookie("teamID",$ID,time() + (86400 * 30),"/");
   setcookie("teamPass",$pass,time() + (86400 * 30),"/");
   header("Refresh:0");

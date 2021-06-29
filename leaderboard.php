@@ -2,17 +2,18 @@
 include $_SERVER["DOCUMENT_ROOT"] . "/global/authorization_check.php";
 
 $result = get_leaderboard_content();
-$conn->close();
 
 $membersArr = [];
 $stages = [];
 
 if(mysqli_num_rows($result) > 0){
   while($row = $result->fetch_assoc()){
+    //  var_dump(json_decode($row["Members"]));
     array_push($membersArr, json_decode($row["Members"]));
     array_push($stages, $row["stage"]);
   }
 }
+// var_dump($membersArr);
 ?>
 
 
@@ -85,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
     doc = document.querySelector(".leaderboard-positioner"),
     header = document.querySelector("header"),
     img = header.querySelector("img");
+    console.log(mems);
 
     //as long as the icon loads in xampp this works properly
     doc.style = "margin-top:" + (header.clientHeight) + "px;";
