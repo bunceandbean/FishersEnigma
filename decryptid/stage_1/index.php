@@ -1,3 +1,11 @@
+<?php
+include $_SERVER["DOCUMENT_ROOT"] . "/global/authorization_check.php";
+
+if( !(authorize(1)) ){
+  header("HTTP/1.0 404 Not Found");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
