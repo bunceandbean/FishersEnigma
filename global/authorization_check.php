@@ -66,7 +66,7 @@ function update_stage_num(){
     }
 }
 function authorize($current_stage){
-  $result = cookie_check();
+  $r = cookie_check();
   if(mysqli_num_rows($r) > 0){
     $stage = ($r->fetch_assoc())["stage"];
     if($current_stage <= $stage){
