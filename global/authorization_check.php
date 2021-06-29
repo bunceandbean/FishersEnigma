@@ -69,6 +69,8 @@ function authorize($current_stage){
   $r = cookie_check();
   if(mysqli_num_rows($r) > 0){
     $stage = ($r->fetch_assoc())["stage"];
+    print($stage);
+    print($current_stage);
     if($current_stage <= $stage){
       return TRUE;
     }
