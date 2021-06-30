@@ -12,23 +12,23 @@ if( !(authorize(1)) ){
   <head>
     <meta charset="utf-8">
     <title>The Phone Call</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/global.css">
   </head>
   <body>
-    <p>1-623-269-4600</p>
+    <?php include("global/header.html") ?>
+    <article class="">
+      <section>
+        <p>1-623-269-4600</p>
+      </section>
+    </article>
   </body>
 
   <style media="screen">
-    body{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-    }
-    p{
-      align-self:center;
-      font-size: 10vw;
-    }
+  p{
+    font-size: 2rem;
+    align-self: center;
+  }
   </style>
 </html>
