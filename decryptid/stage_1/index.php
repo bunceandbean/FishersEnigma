@@ -18,7 +18,7 @@ if( !(authorize(1)) ){
   </head>
   <body>
     <article class="">
-      <?php include($_SERVER["DOCUMENT_ROOT"] . "global/header.html") ?>
+      <?php include($_SERVER["DOCUMENT_ROOT"] . "/global/header.html") ?>
       <section>
         <p>1-623-269-4600</p>
       </section>
