@@ -27,7 +27,7 @@ if(isset($_POST['gummy_bear'])){
 </section>
 
 <script type="text/javascript">
-const EVENT = "decrypted"
+const EVENT = "decryptid"
   function createStageButton(num, href = ""){
       let a = document.createElement("a");
       a.innerHTML = "Stage " + num;
