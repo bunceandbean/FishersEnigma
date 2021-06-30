@@ -26,6 +26,11 @@ if(isset($_POST['gummy_bear'])){
 </form>
 </section>
 
+<section class = "description">
+  <div class = "stages-positioner"></div>
+  <p>The next two stages will unlock on midnight of the following day.</p>
+</section>
+
 <script type="text/javascript">
 const EVENT = "decryptid"
   function createStageButton(num, href = ""){
