@@ -13,11 +13,11 @@ if( !(authorize(1)) ){
     <meta charset="utf-8">
     <title>The Phone Call</title>
 
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/global.css">
   </head>
   <body>
-    <?php include("global/header.html") ?>
+    <?php include $_SERVER["DOCUMENT_ROOT"] . "global/header.html" ?>
     <article class="">
       <section>
         <p>1-623-269-4600</p>
