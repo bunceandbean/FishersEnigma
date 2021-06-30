@@ -23,12 +23,8 @@ if(isset($_POST['gummy_bear'])){
         <input type = "text" name = "gummy_bear" placeholder = "" id = "gb"></input>
         <button type = "submit">Check</button>
     </div>
+    <p>The next two stages will unlock on midnight of the following day.</p>
 </form>
-</section>
-
-<section class = "description">
-  <div class = "stages-positioner"></div>
-  <p>The next two stages will unlock on midnight of the following day.</p>
 </section>
 
 <script type="text/javascript">
