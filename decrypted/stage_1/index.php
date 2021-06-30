@@ -2,9 +2,9 @@
 include $_SERVER["DOCUMENT_ROOT"] . "/global/authorization_check.php";
 
 if( !(authorize(1)) ){
-  http_response_code(404);
-  include('404.html');
-  die();
+  header("HTTP/1.0 404 Not Found",TRUE, 404);
+  include($_SERVER["DOCUMENT_ROOT"] . "/404.html");
+  exit();
 }
 ?>
 <!DOCTYPE html>
