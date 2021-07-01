@@ -26,16 +26,17 @@ $result = (cookie_check()->fetch_assoc());
   </head>
   <body>
 <!-- <canvas id="canvas"></canvas> -->
+<div class="wrapper">
+<?php include("global/header.html") ?>
 <article class="main">
-  <?php include("global/header.html") ?>
   <?php
   if($result !== NULL){
     include("stage_view.php");
   }else{
     include("login_page.php");
   }
-
   ?>
 </article>
+</div>
   </body>
 </html>
