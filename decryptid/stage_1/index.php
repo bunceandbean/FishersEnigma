@@ -28,9 +28,16 @@ if( !(authorize(1)) ){
   </body>
 
   <style media="screen">
+  article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   p{
     font-size: 2rem;
-    align-self: center;
+    text-align: center;
+    margin: 0;
   }
   </style>
 </html>
