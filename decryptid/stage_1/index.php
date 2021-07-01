@@ -10,7 +10,9 @@ if( !(authorize(1)) ){
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Phone Call</title>
 
     <link rel="stylesheet" href="/css/header.css">
