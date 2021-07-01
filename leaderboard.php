@@ -30,8 +30,10 @@ if(mysqli_num_rows($result) > 0){
     <link rel="stylesheet" href="css/global.css">
   </head>
   <body>
+    <div class="wrapper">
 <?php include 'global/header.html'; ?>
 
+<article class="">
 <section class = "leaderboard-container">
 <div class="leaderboard-positioner">
 <table id = "leaderboard">
@@ -45,7 +47,8 @@ if(mysqli_num_rows($result) > 0){
 </table>
 </div>
 </section>
-
+</article>
+</div>
 <script type="text/javascript">
 function createRow(stg, members){
   tr = document.createElement("tr"),
@@ -83,13 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const mems = <?php echo json_encode($membersArr); ?>,
     stgs = <?php echo json_encode($stages); ?>,
     table = document.querySelector("table tbody");
-    doc = document.querySelector(".leaderboard-positioner"),
-    header = document.querySelector("header"),
-    img = header.querySelector("img");
-    console.log(mems);
 
-    //as long as the icon loads in xampp this works properly
-    doc.style = "margin-top:" + (header.clientHeight) + "px;";
     for(let k =0; k < mems.length; k++){
       table.appendChild(createRow(stgs[k],mems[k]));
     }
