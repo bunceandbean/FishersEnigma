@@ -17,12 +17,14 @@ if( !(authorize(1)) ){
     <link rel="stylesheet" href="/css/global.css">
   </head>
   <body>
+    <div class="wrapper">
+    <?php include($_SERVER["DOCUMENT_ROOT"] . "/global/header.html") ?>
     <article class="">
-      <?php include($_SERVER["DOCUMENT_ROOT"] . "/global/header.html") ?>
       <section>
         <p>1-623-269-4600</p>
       </section>
     </article>
+  </div>
   </body>
 
   <style media="screen">
