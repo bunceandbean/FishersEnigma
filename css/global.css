@@ -15,8 +15,11 @@ body{
   overflow-x: hidden;
   background: var(--background);
 }
-article{
+.wrapper{
+  width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 article, section{
   margin: 0;
