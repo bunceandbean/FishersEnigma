@@ -24,7 +24,7 @@ if( !(authorize(1)) ){
     <article class="">
       <section style = "object-fit:fill">
         <!-- <p>1-623-269-4600</p> -->
-        <video src="enigma_s1.mp4" autoplay loop width = "600">
+        <video src="enigma_s1.mp4" autoplay loop width = "100%">
         </video>
       </section>
     </article>
