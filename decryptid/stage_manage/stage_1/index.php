@@ -24,7 +24,7 @@ if( !(authorize(1)) ){
     <article class="">
       <section>
         <!-- <p>1-623-269-4600</p> -->
-        <video src="enigma_s1.MOV" autoplay loop>
+        <video src="enigma_s1.mp4" autoplay loop>
         </video>
       </section>
     </article>
