@@ -22,7 +22,7 @@ if( !(authorize(1)) ){
     <div class="wrapper">
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/global/header.html") ?>
     <article class="">
-      <section>
+      <section style = "object-fit:fill">
         <!-- <p>1-623-269-4600</p> -->
         <video src="enigma_s1.mp4" autoplay loop width = "600">
         </video>
