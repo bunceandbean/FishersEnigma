@@ -1,0 +1,26 @@
+responses = {
+      "greet":"Welcome to CryptOS v1.3!" + "\n" + "This is Dr. Bauer, the password to my CryptOS account is the name of a town." +
+      " Please use this as a hint: 9781883362102, 166." + "\n" +
+      "Type 'login' followed by a password to access your account."
+    }
+    $('body').terminal({
+        login: function(what) {
+          if(what == "churubusco" || what == "Churubusco"){
+              this.echo("Welcome, Dr. Ivy Bauer. Your account has been deactivated due to d̴͖̤̏͂e̸̢̙̫͒á̵̡͙͊t̸̨̓h̴̞͂̉̔. To reactivate your account, " +
+              "please type 'activate' followed by the 14-digit Noblesville Southeastern Public Library barcode number.");
+            }else{
+              this.echo("-- Error, no user found.")
+            }
+        },
+        activate: function(what){
+          if(what == "50508014929278"){
+            this.echo("Your account has been reactivated. Your last recorded cryptid was, 'The Beast of Busco' with an ID number" +
+            " of: 18648304.");
+          }else{
+            this.echo("--Incorrect verification number.")
+          }
+        }
+
+    }, {
+        greetings: responses.greet
+    });
