@@ -28,7 +28,7 @@ if( !(authorize(1)) ){
 
   </body>
 
-  <style media="screen">
+  <!-- <style media="screen">
   article{
     display: flex;
     flex-direction: column;
@@ -40,7 +40,7 @@ if( !(authorize(1)) ){
     text-align: center;
     margin: 0;
   }
-  </style>
+  </style> -->
   <script>
     responses = {
       "greet":"Welcome to CryptOS v1.3!" + "\n" + "This is Dr. Bauer, the password to my CryptOS account is the name of a town." +
