@@ -3,7 +3,7 @@ responses = {
       " Please use this as a hint: 9781883362102, 166." + "\n" +
       "Type 'login' followed by a password to access your account."
     }
-    $('.wrapper').terminal({
+    $('.term_container').terminal({
         login: function(what) {
           if(what == "churubusco" || what == "Churubusco"){
               this.echo("Welcome, Dr. Ivy Bauer. Your account has been deactivated due to d̴͖̤̏͂e̸̢̙̫͒á̵̡͙͊t̸̨̓h̴̞͂̉̔. To reactivate your account, " +
