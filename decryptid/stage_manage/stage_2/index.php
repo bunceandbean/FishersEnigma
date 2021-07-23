@@ -18,12 +18,12 @@ if( !(authorize(1)) ){
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/global.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper full-screen-terminal">
     <?php include($_SERVER["DOCUMENT_ROOT"] . "/global/header.html") ?>
-    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
     </div>
 
   </body>
