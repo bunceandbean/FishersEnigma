@@ -1,0 +1,3 @@
+- Explain default ID and how cryptid IDs work
+- Center this stage around a certain cryptid
+- Utilize the grille cipher/ library somehow
