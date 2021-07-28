@@ -13,7 +13,7 @@ if( !(authorize(1)) ){
     <meta charset="UTF-8">
     <!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Phone Call</title>
+    <title>Cool Out</title>
 
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/global.css">
