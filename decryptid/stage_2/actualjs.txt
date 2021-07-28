@@ -19,7 +19,13 @@ responses = {
           }else{
             this.echo("--Incorrect verification number.")
           }
-        }
+        },
+	getid: function(what){
+	 if(what == "yeti" || what == "Yeti"){
+		this.echo("Go to the place my feet would be happy!");
+		}
+	
+	}
 
     }, {
         greetings: responses.greet
