@@ -26,6 +26,7 @@ $result = (cookie_check()->fetch_assoc());
   </head>
   <body>
 <!-- <canvas id="canvas"></canvas> -->
+   <!--HIDDEN-->
 <div class="wrapper">
 <?php include("global/header.html") ?>
 <article class="main">
